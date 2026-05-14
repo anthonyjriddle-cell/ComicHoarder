@@ -1,0 +1,6 @@
+﻿In package manager:
+
+
+Scaffold-DbContext "Server=192.168.155.101;Database=ComicHoarder;Uid=sa;Pwd=MyPassword;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir Context -Context CHContext
+
+Create Scaffold from the Utility.DBScaffold class, copy CHContext.cs to SQL Plugin and copy Models to Core class
