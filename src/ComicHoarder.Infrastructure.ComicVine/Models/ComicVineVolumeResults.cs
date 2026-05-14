@@ -1,0 +1,27 @@
+﻿namespace ComicHoarder.Infrastructure.ComicVine.Models
+{
+    public class ComicVineVolumeResults
+    {
+        public string? aliases { get; set; }
+        public string? api_detail_url { get; set; }
+        public List<ComicVineAbbreviatedCharacterWithCount>? characters { get; set; }
+        public List<ComicVineAbbreviateConceptWithCount>? concepts { get; set; }
+        public int count_of_issues { get; set; }
+        public string? date_added { get; set; }
+        public string? date_last_updated { get; set; }
+        public string? deck { get; set; }
+        public string? description { get; set; }
+        public ComicVineFirstIssue? first_issue { get; set; }
+        public int id { get; set; }
+        public ComicVineImage? image { get; set; }
+        public List<ComicVineAbbreviatedIssue>? issues { get; set; }
+        public ComicVineLastIssue? last_issue { get; set; }
+        public List<ComicVineAbbreviatedLocationWithCount>? locations { get; set; }
+        public string? name { get; set; }
+        public List<ComicVineAbbreviatedObjectWithCount>? objects { get; set; }
+        public List<ComicVineAbbreviatedPersonWithCount>? people { get; set; }
+        public ComicVineAbbreviatedPublisher? publisher { get; set; }
+        public string? site_detail_url { get; set; }
+        public string? start_year { get; set; }
+    }
+}
