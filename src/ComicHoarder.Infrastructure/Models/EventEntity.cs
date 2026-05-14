@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class Event
+public partial class EventEntity
 {
     public int Id { get; set; }
 
@@ -17,9 +17,9 @@ public partial class Event
 
     public bool Enabled { get; set; }
 
-    public virtual ICollection<EventIssue> EventIssues { get; set; } = new List<EventIssue>();
+    public virtual ICollection<EventIssueEntity> EventIssues { get; set; } = new List<EventIssueEntity>();
 
-    public virtual Publisher? Publisher { get; set; }
+    public virtual PublisherEntity? Publisher { get; set; }
 
-    public virtual EventType TypeNavigation { get; set; } = null!;
+    public virtual EventTypeEntity TypeNavigation { get; set; } = null!;
 }

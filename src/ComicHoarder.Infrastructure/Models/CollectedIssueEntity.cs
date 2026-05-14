@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class CollectedIssue
+public partial class CollectedIssueEntity
 {
     public int Id { get; set; }
 
@@ -11,7 +11,7 @@ public partial class CollectedIssue
 
     public int ChildId { get; set; }
 
-    public virtual Issue Child { get; set; } = null!;
+    public virtual IssueEntity Child { get; set; } = null!;
 
-    public virtual Issue Parent { get; set; } = null!;
+    public virtual IssueEntity Parent { get; set; } = null!;
 }

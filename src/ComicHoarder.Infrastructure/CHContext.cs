@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using ComicHoarder.Infrastructure.Models;
 
-namespace ComicHoarder.Infrastructure.Context;
+namespace ComicHoarder.Infrastructure;
 
 public partial class CHContext : DbContext
 {
@@ -16,7 +16,7 @@ public partial class CHContext : DbContext
     {
     }
 
-    public virtual DbSet<CollectedIssue> CollectedIssues { get; set; }
+    public virtual DbSet<CollectedIssueEntity> CollectedIssues { get; set; }
 
     public virtual DbSet<ComicEventReadingOrderWithComicPath> ComicEventReadingOrderWithComicPaths { get; set; }
 
@@ -30,23 +30,23 @@ public partial class CHContext : DbContext
 
     public virtual DbSet<ComicIssuesToCollectWithLink> ComicIssuesToCollectWithLinks { get; set; }
 
-    public virtual DbSet<Event> Events { get; set; }
+    public virtual DbSet<EventEntity> Events { get; set; }
 
-    public virtual DbSet<EventIssue> EventIssues { get; set; }
+    public virtual DbSet<EventIssueEntity> EventIssues { get; set; }
 
-    public virtual DbSet<EventIssueType> EventIssueTypes { get; set; }
+    public virtual DbSet<EventIssueTypeEntity> EventIssueTypes { get; set; }
 
-    public virtual DbSet<EventType> EventTypes { get; set; }
+    public virtual DbSet<EventTypeEntity> EventTypes { get; set; }
 
-    public virtual DbSet<Issue> Issues { get; set; }
+    public virtual DbSet<IssueEntity> Issues { get; set; }
 
-    public virtual DbSet<IssueFormat> IssueFormats { get; set; }
+    public virtual DbSet<IssueFormatEntity> IssueFormats { get; set; }
 
-    public virtual DbSet<Publisher> Publishers { get; set; }
+    public virtual DbSet<PublisherEntity> Publishers { get; set; }
 
-    public virtual DbSet<Setting> Settings { get; set; }
+    public virtual DbSet<SettingEntity> Settings { get; set; }
 
-    public virtual DbSet<Volume> Volumes { get; set; }
+    public virtual DbSet<VolumeEntity> Volumes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -54,7 +54,7 @@ public partial class CHContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CollectedIssue>(entity =>
+        modelBuilder.Entity<CollectedIssueEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_issueissue");
 
@@ -149,7 +149,7 @@ public partial class CHContext : DbContext
             entity.Property(e => e.Volume).HasMaxLength(100);
         });
 
-        modelBuilder.Entity<Event>(entity =>
+        modelBuilder.Entity<EventEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_event");
 
@@ -168,7 +168,7 @@ public partial class CHContext : DbContext
                 .HasConstraintName("fk_eventtype");
         });
 
-        modelBuilder.Entity<EventIssue>(entity =>
+        modelBuilder.Entity<EventIssueEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_eventcomic");
 
@@ -185,21 +185,21 @@ public partial class CHContext : DbContext
                 .HasConstraintName("fk_comic");
         });
 
-        modelBuilder.Entity<EventIssueType>(entity =>
+        modelBuilder.Entity<EventIssueTypeEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_eventissuetype");
 
             entity.ToTable("EventIssueType");
         });
 
-        modelBuilder.Entity<EventType>(entity =>
+        modelBuilder.Entity<EventTypeEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_eventtype");
 
             entity.ToTable("EventType");
         });
 
-        modelBuilder.Entity<Issue>(entity =>
+        modelBuilder.Entity<IssueEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_issue");
 
@@ -224,14 +224,14 @@ public partial class CHContext : DbContext
                 .HasConstraintName("fk_volume");
         });
 
-        modelBuilder.Entity<IssueFormat>(entity =>
+        modelBuilder.Entity<IssueFormatEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_issueformat");
 
             entity.ToTable("IssueFormat");
         });
 
-        modelBuilder.Entity<Publisher>(entity =>
+        modelBuilder.Entity<PublisherEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_publisher");
 
@@ -245,7 +245,7 @@ public partial class CHContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(100);
         });
 
-        modelBuilder.Entity<Setting>(entity =>
+        modelBuilder.Entity<SettingEntity>(entity =>
         {
             entity.HasNoKey();
 
@@ -254,7 +254,7 @@ public partial class CHContext : DbContext
             entity.Property(e => e.Value).HasMaxLength(50);
         });
 
-        modelBuilder.Entity<Volume>(entity =>
+        modelBuilder.Entity<VolumeEntity>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_volume");
 

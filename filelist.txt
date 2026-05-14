@@ -1,0 +1,601 @@
+Directory of D:\Projects\ComicHoarder\src
+
+05/14/2026  11:42 AM    <DIR>          .
+05/14/2026  02:11 PM    <DIR>          ..
+05/14/2026  12:11 PM    <DIR>          ComicHoarder.Application
+05/13/2026  11:31 PM    <DIR>          ComicHoarder.Blazor
+05/14/2026  10:52 AM    <DIR>          ComicHoarder.Domain
+05/13/2026  11:41 PM    <DIR>          ComicHoarder.Infrastructure
+05/14/2026  12:33 PM    <DIR>          ComicHoarder.Infrastructure.ComicVine
+05/14/2026  12:11 PM             3,808 ComicHoarder.sln
+05/13/2026  11:40 PM    <DIR>          Utility.DBScaffold
+               1 File(s)          3,808 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs
+
+05/14/2026  11:42 AM    <DIR>          ..
+05/13/2026  08:50 PM    <DIR>          ComicHoarder
+05/13/2026  09:31 PM    <DIR>          ProjectEvaluation
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          config
+05/13/2026  08:50 PM    <DIR>          DesignTimeBuild
+05/14/2026  12:33 PM    <DIR>          FileContentIndex
+05/14/2026  12:33 PM    <DIR>          v17
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\config
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+12/08/2023  08:08 PM            85,548 applicationhost.config
+               1 File(s)         85,548 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\DesignTimeBuild
+
+05/13/2026  08:50 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/14/2026  12:35 PM           224,115 .dtbcache.v2
+               1 File(s)        224,115 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\FileContentIndex
+
+05/14/2026  12:33 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/14/2026  12:11 PM           311,181 1d5b4b58-d3d8-482d-a1c1-8c9f7a465402.vsidx
+05/14/2026  12:33 PM            32,092 3e7c655d-9489-496f-8e12-7578fa1f2e2e.vsidx
+05/14/2026  12:12 PM            35,617 7aece0b9-7f29-4f18-b46b-11977169d8b8.vsidx
+05/14/2026  12:12 PM            34,654 bae7209f-0686-497f-9567-f3f478fa04ab.vsidx
+05/14/2026  12:33 PM            41,111 e53feb48-9fcd-4fb9-90e0-ed821c599147.vsidx
+               5 File(s)        454,655 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\v17
+
+05/14/2026  12:33 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:31 PM               280 .futdcache.v2
+05/14/2026  12:11 PM            74,259 DocumentLayout.backup.json
+05/14/2026  12:33 PM            71,518 DocumentLayout.json
+               3 File(s)        146,057 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\.vs\ProjectEvaluation
+
+05/13/2026  09:31 PM    <DIR>          .
+05/13/2026  09:31 PM             1,218 comichoarder.metadata.v9.bin
+05/13/2026  09:31 PM            35,155 comichoarder.projects.v9.bin
+05/13/2026  09:31 PM           162,602 comichoarder.strings.v9.bin
+               3 File(s)        198,975 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application
+
+05/14/2026  12:11 PM    <DIR>          .
+05/14/2026  11:42 AM    <DIR>          ..
+05/13/2026  11:08 PM    <DIR>          bin
+05/13/2026  11:08 PM                86 Class1.cs
+05/14/2026  12:11 PM               337 ComicHoarder.Application.csproj
+05/14/2026  12:33 PM    <DIR>          Interfaces
+05/13/2026  11:32 PM    <DIR>          obj
+05/14/2026  12:11 PM             1,872 ParseHelper.cs
+               3 File(s)          2,295 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin
+
+05/13/2026  11:08 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:08 PM    <DIR>          Debug
+05/13/2026  11:08 PM    <DIR>          Release
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Debug
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+05/14/2026  12:33 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Debug\net8.0
+
+05/14/2026  12:33 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+05/14/2026  12:33 PM               879 ComicHoarder.Application.deps.json
+05/14/2026  12:33 PM             6,656 ComicHoarder.Application.dll
+05/14/2026  12:33 PM            12,404 ComicHoarder.Application.pdb
+05/14/2026  12:11 PM             9,728 ComicHoarder.Domain.dll
+05/14/2026  12:11 PM            13,608 ComicHoarder.Domain.pdb
+               5 File(s)         43,275 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Release
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+05/13/2026  11:08 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Release\net8.0
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\Interfaces
+
+05/14/2026  12:33 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/14/2026  12:11 PM               158 IWebConnection.cs
+05/14/2026  12:11 PM               922 IWebDataService.cs
+               2 File(s)          1,080 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj
+
+05/13/2026  11:32 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:32 PM             5,152 ComicHoarder.Application.csproj.nuget.dgspec.json
+05/13/2026  11:08 PM             1,303 ComicHoarder.Application.csproj.nuget.g.props
+05/13/2026  11:08 PM               150 ComicHoarder.Application.csproj.nuget.g.targets
+05/13/2026  11:08 PM    <DIR>          Debug
+05/13/2026  11:09 PM             3,291 project.assets.json
+05/13/2026  11:32 PM               235 project.nuget.cache
+05/13/2026  11:08 PM    <DIR>          Release
+               5 File(s)         10,131 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:32 PM    <DIR>          ..
+05/14/2026  12:11 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0
+
+05/14/2026  12:11 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+05/13/2026  11:08 PM               198 .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+05/14/2026  12:33 PM                 0 ComicHoa.8C9304B3.Up2Date
+05/14/2026  11:42 AM             1,086 ComicHoarder.Application.AssemblyInfo.cs
+05/14/2026  11:42 AM                66 ComicHoarder.Application.AssemblyInfoInputs.cache
+05/13/2026  11:09 PM               228 ComicHoarder.Application.assets.cache
+05/14/2026  12:11 PM               491 ComicHoarder.Application.csproj.AssemblyReference.cache
+05/14/2026  12:33 PM                66 ComicHoarder.Application.csproj.CoreCompileInputs.cache
+05/13/2026  11:20 PM             1,757 ComicHoarder.Application.csproj.FileListAbsolute.txt
+05/14/2026  12:33 PM             6,656 ComicHoarder.Application.dll
+05/13/2026  11:08 PM               709 ComicHoarder.Application.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  11:08 PM               295 ComicHoarder.Application.GlobalUsings.g.cs
+05/14/2026  12:33 PM            12,404 ComicHoarder.Application.pdb
+05/14/2026  12:11 PM               159 ComicHoarder.Application.sourcelink.json
+05/13/2026  11:20 PM    <DIR>          ref
+05/13/2026  11:20 PM    <DIR>          refint
+              13 File(s)         24,115 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0\ref
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/14/2026  12:33 PM             6,656 ComicHoarder.Application.dll
+               1 File(s)          6,656 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0\refint
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/14/2026  12:33 PM             6,656 ComicHoarder.Application.dll
+               1 File(s)          6,656 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:32 PM    <DIR>          ..
+05/13/2026  11:08 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+05/13/2026  11:08 PM               198 .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+05/14/2026  11:49 AM             1,088 ComicHoarder.Application.AssemblyInfo.cs
+05/14/2026  11:49 AM                66 ComicHoarder.Application.AssemblyInfoInputs.cache
+05/13/2026  11:20 PM               228 ComicHoarder.Application.assets.cache
+05/13/2026  11:08 PM               709 ComicHoarder.Application.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  11:08 PM               295 ComicHoarder.Application.GlobalUsings.g.cs
+05/13/2026  11:08 PM    <DIR>          ref
+05/13/2026  11:08 PM    <DIR>          refint
+               6 File(s)          2,584 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0\ref
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0\refint
+
+05/13/2026  11:08 PM    <DIR>          .
+05/13/2026  11:08 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor
+
+05/13/2026  11:31 PM    <DIR>          .
+05/14/2026  11:42 AM    <DIR>          ..
+05/13/2026  09:03 PM               477 App.razor
+05/13/2026  09:03 PM               154 appsettings.Development.json
+05/13/2026  09:03 PM               151 appsettings.json
+05/13/2026  09:28 PM    <DIR>          bin
+05/13/2026  11:31 PM               434 ComicHoarder.Blazor.csproj
+05/13/2026  09:03 PM    <DIR>          Data
+05/13/2026  11:32 PM    <DIR>          obj
+05/13/2026  09:03 PM    <DIR>          Pages
+05/13/2026  09:03 PM               957 Program.cs
+05/13/2026  09:03 PM    <DIR>          Properties
+05/13/2026  09:03 PM    <DIR>          Shared
+05/13/2026  09:03 PM    <DIR>          wwwroot
+05/13/2026  09:03 PM               412 _Imports.razor
+               6 File(s)          2,585 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin
+
+05/13/2026  09:28 PM    <DIR>          .
+05/13/2026  11:31 PM    <DIR>          ..
+05/13/2026  09:03 PM    <DIR>          Debug
+05/13/2026  09:28 PM    <DIR>          Release
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  09:28 PM    <DIR>          ..
+05/13/2026  09:45 PM    <DIR>          net7.0
+05/13/2026  11:31 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net7.0
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  09:03 PM               154 appsettings.Development.json
+05/13/2026  09:03 PM               151 appsettings.json
+05/13/2026  09:45 PM               449 ComicHoarder.Blazor.deps.json
+05/13/2026  09:45 PM            47,104 ComicHoarder.Blazor.dll
+05/13/2026  09:45 PM           158,208 ComicHoarder.Blazor.exe
+05/13/2026  09:45 PM            40,576 ComicHoarder.Blazor.pdb
+05/13/2026  09:45 PM               416 ComicHoarder.Blazor.runtimeconfig.json
+05/13/2026  09:45 PM            29,823 ComicHoarder.Blazor.staticwebassets.endpoints.json
+05/13/2026  09:45 PM             2,417 ComicHoarder.Blazor.staticwebassets.runtime.json
+               9 File(s)        279,298 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0
+
+05/13/2026  11:31 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  09:03 PM               154 appsettings.Development.json
+05/13/2026  09:03 PM               151 appsettings.json
+05/13/2026  11:20 PM             4,608 ComicHoarder.Application.dll
+05/13/2026  11:20 PM            11,352 ComicHoarder.Application.pdb
+05/13/2026  11:31 PM             1,342 ComicHoarder.Blazor.deps.json
+05/13/2026  11:31 PM            46,592 ComicHoarder.Blazor.dll
+05/13/2026  11:31 PM           139,776 ComicHoarder.Blazor.exe
+05/13/2026  11:31 PM            41,060 ComicHoarder.Blazor.pdb
+05/13/2026  11:31 PM               416 ComicHoarder.Blazor.runtimeconfig.json
+05/13/2026  11:20 PM            29,823 ComicHoarder.Blazor.staticwebassets.endpoints.json
+05/13/2026  11:20 PM             2,417 ComicHoarder.Blazor.staticwebassets.runtime.json
+05/13/2026  11:20 PM             4,096 ComicHoarder.Domain.dll
+05/13/2026  11:20 PM            11,284 ComicHoarder.Domain.pdb
+              13 File(s)        293,071 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Release
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  09:28 PM    <DIR>          ..
+05/13/2026  09:28 PM    <DIR>          net7.0
+05/13/2026  11:20 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Release\net7.0
+
+05/13/2026  09:28 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Release\net8.0
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\Data
+
+05/13/2026  09:03 PM    <DIR>          .
+05/13/2026  11:31 PM    <DIR>          ..
+05/13/2026  09:03 PM               304 WeatherForecast.cs
+05/13/2026  09:03 PM               717 WeatherForecastService.cs
+               2 File(s)          1,021 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj
+
+05/13/2026  11:32 PM    <DIR>          .
+05/13/2026  11:31 PM    <DIR>          ..
+05/13/2026  11:32 PM             8,091 ComicHoarder.Blazor.csproj.nuget.dgspec.json
+05/13/2026  11:30 PM             1,303 ComicHoarder.Blazor.csproj.nuget.g.props
+05/13/2026  11:30 PM               150 ComicHoarder.Blazor.csproj.nuget.g.targets
+05/13/2026  09:03 PM    <DIR>          Debug
+05/13/2026  11:30 PM             4,288 project.assets.json
+05/13/2026  11:32 PM               225 project.nuget.cache
+05/13/2026  09:28 PM    <DIR>          Release
+               5 File(s)         14,057 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:32 PM    <DIR>          ..
+05/13/2026  09:45 PM    <DIR>          net7.0
+05/14/2026  12:11 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  09:03 PM               198 .NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+05/13/2026  09:45 PM                 2 ApiEndpoints.json
+05/13/2026  09:45 PM           158,208 apphost.exe
+05/13/2026  11:04 PM             1,071 ComicHoarder.Blazor.AssemblyInfo.cs
+05/13/2026  11:04 PM                66 ComicHoarder.Blazor.AssemblyInfoInputs.cache
+05/13/2026  11:09 PM               649 ComicHoarder.Blazor.assets.cache
+05/13/2026  09:45 PM                 0 ComicHoarder.Blazor.csproj.BuildWithSkipAnalyzers
+05/13/2026  09:45 PM                66 ComicHoarder.Blazor.csproj.CoreCompileInputs.cache
+05/13/2026  09:45 PM             3,947 ComicHoarder.Blazor.csproj.FileListAbsolute.txt
+05/13/2026  09:45 PM            47,104 ComicHoarder.Blazor.dll
+05/13/2026  09:32 PM             2,960 ComicHoarder.Blazor.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  09:45 PM                66 ComicHoarder.Blazor.genruntimeconfig.cache
+05/13/2026  09:03 PM               770 ComicHoarder.Blazor.GlobalUsings.g.cs
+05/13/2026  09:45 PM                 0 ComicHoarder.Blazor.MvcApplicationPartsAssemblyInfo.cache
+05/13/2026  09:45 PM            40,576 ComicHoarder.Blazor.pdb
+05/13/2026  09:03 PM                66 ComicHoarder.Blazor.RazorAssemblyInfo.cache
+05/13/2026  09:03 PM               732 ComicHoarder.Blazor.RazorAssemblyInfo.cs
+05/13/2026  09:45 PM               159 ComicHoarder.Blazor.sourcelink.json
+05/13/2026  09:03 PM    <DIR>          ref
+05/13/2026  09:03 PM    <DIR>          refint
+05/13/2026  09:45 PM    <DIR>          scopedcss
+05/13/2026  09:45 PM    <DIR>          staticwebassets
+05/13/2026  09:45 PM            29,823 staticwebassets.build.endpoints.json
+05/13/2026  09:45 PM            48,981 staticwebassets.build.json
+05/13/2026  09:45 PM             2,417 staticwebassets.development.json
+05/13/2026  09:45 PM             3,980 staticwebassets.pack.json
+05/13/2026  09:45 PM                 0 staticwebassets.references.upToDateCheck.txt
+05/13/2026  09:03 PM                 0 staticwebassets.removed.txt
+05/13/2026  09:45 PM               565 staticwebassets.upToDateCheck.txt
+              25 File(s)        342,406 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\ref
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM            14,336 ComicHoarder.Blazor.dll
+               1 File(s)         14,336 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\refint
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM            14,336 ComicHoarder.Blazor.dll
+               1 File(s)         14,336 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\scopedcss
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM    <DIR>          bundle
+05/13/2026  09:45 PM    <DIR>          projectbundle
+05/13/2026  09:45 PM    <DIR>          Shared
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\scopedcss\bundle
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM             3,029 ComicHoarder.Blazor.styles.css
+               1 File(s)          3,029 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\scopedcss\projectbundle
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM             3,029 ComicHoarder.Blazor.bundle.scp.css
+               1 File(s)          3,029 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\scopedcss\Shared
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM             1,475 MainLayout.razor.rz.scp.css
+05/13/2026  09:45 PM             1,415 NavMenu.razor.rz.scp.css
+               2 File(s)          2,890 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net7.0\staticwebassets
+
+05/13/2026  09:45 PM    <DIR>          .
+05/13/2026  09:45 PM    <DIR>          ..
+05/13/2026  09:45 PM               166 msbuild.build.ComicHoarder.Blazor.props
+05/13/2026  09:45 PM                83 msbuild.buildMultiTargeting.ComicHoarder.Blazor.props
+05/13/2026  09:45 PM                97 msbuild.buildTransitive.ComicHoarder.Blazor.props
+05/13/2026  09:45 PM            26,529 msbuild.ComicHoarder.Blazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+05/13/2026  09:45 PM            15,607 msbuild.ComicHoarder.Blazor.Microsoft.AspNetCore.StaticWebAssets.props
+               5 File(s)         42,482 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0
+
+05/14/2026  12:11 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  11:20 PM               198 .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+05/13/2026  11:31 PM           139,776 apphost.exe
+05/13/2026  11:20 PM                 0 ComicHoa.6AC976D7.Up2Date
+05/14/2026  11:42 AM             1,071 ComicHoarder.Blazor.AssemblyInfo.cs
+05/14/2026  11:42 AM                66 ComicHoarder.Blazor.AssemblyInfoInputs.cache
+05/13/2026  11:30 PM               228 ComicHoarder.Blazor.assets.cache
+05/14/2026  12:11 PM             1,006 ComicHoarder.Blazor.csproj.AssemblyReference.cache
+05/13/2026  11:20 PM                66 ComicHoarder.Blazor.csproj.CoreCompileInputs.cache
+05/13/2026  11:20 PM             4,532 ComicHoarder.Blazor.csproj.FileListAbsolute.txt
+05/13/2026  11:31 PM            46,592 ComicHoarder.Blazor.dll
+05/13/2026  11:30 PM             2,960 ComicHoarder.Blazor.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  11:20 PM                66 ComicHoarder.Blazor.genruntimeconfig.cache
+05/13/2026  11:20 PM               770 ComicHoarder.Blazor.GlobalUsings.g.cs
+05/13/2026  11:31 PM                 0 ComicHoarder.Blazor.MvcApplicationPartsAssemblyInfo.cache
+05/13/2026  11:31 PM            41,060 ComicHoarder.Blazor.pdb
+05/13/2026  11:20 PM                66 ComicHoarder.Blazor.RazorAssemblyInfo.cache
+05/13/2026  11:20 PM               732 ComicHoarder.Blazor.RazorAssemblyInfo.cs
+05/13/2026  11:20 PM               159 ComicHoarder.Blazor.sourcelink.json
+05/13/2026  11:20 PM    <DIR>          ref
+05/13/2026  11:20 PM    <DIR>          refint
+05/13/2026  11:20 PM    <DIR>          scopedcss
+05/13/2026  11:20 PM    <DIR>          staticwebassets
+05/13/2026  11:20 PM            29,823 staticwebassets.build.endpoints.json
+05/13/2026  11:20 PM            48,981 staticwebassets.build.json
+05/13/2026  11:20 PM             2,417 staticwebassets.development.json
+05/13/2026  11:20 PM             3,980 staticwebassets.pack.json
+05/13/2026  11:20 PM                 0 staticwebassets.references.upToDateCheck.txt
+05/13/2026  11:20 PM                 0 staticwebassets.removed.txt
+05/13/2026  11:20 PM               565 staticwebassets.upToDateCheck.txt
+              25 File(s)        325,114 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\ref
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:20 PM            13,824 ComicHoarder.Blazor.dll
+               1 File(s)         13,824 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\refint
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:31 PM            13,824 ComicHoarder.Blazor.dll
+               1 File(s)         13,824 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:20 PM    <DIR>          bundle
+05/13/2026  11:20 PM    <DIR>          projectbundle
+05/13/2026  11:20 PM    <DIR>          Shared
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\bundle
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  11:20 PM             3,029 ComicHoarder.Blazor.styles.css
+               1 File(s)          3,029 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\projectbundle
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  11:20 PM             3,029 ComicHoarder.Blazor.bundle.scp.css
+               1 File(s)          3,029 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\Shared
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  11:20 PM             1,475 MainLayout.razor.rz.scp.css
+05/13/2026  11:20 PM             1,415 NavMenu.razor.rz.scp.css
+               2 File(s)          2,890 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\staticwebassets
+
+05/13/2026  11:20 PM    <DIR>          .
+05/14/2026  12:11 PM    <DIR>          ..
+05/13/2026  11:20 PM               166 msbuild.build.ComicHoarder.Blazor.props
+05/13/2026  11:20 PM                83 msbuild.buildMultiTargeting.ComicHoarder.Blazor.props
+05/13/2026  11:20 PM                97 msbuild.buildTransitive.ComicHoarder.Blazor.props
+05/13/2026  11:20 PM            26,529 msbuild.ComicHoarder.Blazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+05/13/2026  11:20 PM            15,607 msbuild.ComicHoarder.Blazor.Microsoft.AspNetCore.StaticWebAssets.props
+               5 File(s)         42,482 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:32 PM    <DIR>          ..
+05/13/2026  09:28 PM    <DIR>          net7.0
+05/13/2026  11:20 PM    <DIR>          net8.0
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net7.0
+
+05/13/2026  09:28 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  09:28 PM               198 .NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+05/13/2026  09:28 PM             1,073 ComicHoarder.Blazor.AssemblyInfo.cs
+05/13/2026  09:28 PM                66 ComicHoarder.Blazor.AssemblyInfoInputs.cache
+05/13/2026  09:33 PM               228 ComicHoarder.Blazor.assets.cache
+05/13/2026  09:33 PM             2,960 ComicHoarder.Blazor.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  09:28 PM               770 ComicHoarder.Blazor.GlobalUsings.g.cs
+05/13/2026  09:28 PM                66 ComicHoarder.Blazor.RazorAssemblyInfo.cache
+05/13/2026  09:28 PM               732 ComicHoarder.Blazor.RazorAssemblyInfo.cs
+05/13/2026  09:28 PM    <DIR>          ref
+05/13/2026  09:28 PM    <DIR>          refint
+               8 File(s)          6,093 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net7.0\ref
+
+05/13/2026  09:28 PM    <DIR>          .
+05/13/2026  09:28 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net7.0\refint
+
+05/13/2026  09:28 PM    <DIR>          .
+05/13/2026  09:28 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+05/13/2026  11:20 PM               198 .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+05/14/2026  12:11 PM             1,073 ComicHoarder.Blazor.AssemblyInfo.cs
+05/14/2026  12:11 PM                66 ComicHoarder.Blazor.AssemblyInfoInputs.cache
+05/13/2026  11:31 PM               228 ComicHoarder.Blazor.assets.cache
+05/13/2026  11:20 PM             2,960 ComicHoarder.Blazor.GeneratedMSBuildEditorConfig.editorconfig
+05/13/2026  11:20 PM               770 ComicHoarder.Blazor.GlobalUsings.g.cs
+05/13/2026  11:20 PM                66 ComicHoarder.Blazor.RazorAssemblyInfo.cache
+05/13/2026  11:20 PM               732 ComicHoarder.Blazor.RazorAssemblyInfo.cs
+05/13/2026  11:20 PM    <DIR>          ref
+05/13/2026  11:20 PM    <DIR>          refint
+               8 File(s)          6,093 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0\ref
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0\refint
+
+05/13/2026  11:20 PM    <DIR>          .
+05/13/2026  11:20 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\Pages
+
+05/13/2026  09:03 PM    <DIR>          .
+05/13/2026  11:31 PM    <DIR>          ..
+05/13/2026  09:03 PM               332 Counter.razor
+05/13/2026  09:03 PM             1,577 Error.cshtml
+05/13/2026  09:03 PM               747 Error.cshtml.cs
+05/13/2026  09:03 PM             1,177 FetchData.razor
+05/13/2026  09:03 PM               159 Index.razor
+05/13/2026  09:03 PM             1,268 _Host.cshtml
+               6 File(s)          5,260 bytes
+
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\Properties
+
+05/13/2026  09:03 PM    <DIR>          .
+05/13/2026  11:31 PM    <DIR>          ..
+05/13/2026  09:03 PM               675 launchSettings.json
+               1 File(s)            675 bytes
+

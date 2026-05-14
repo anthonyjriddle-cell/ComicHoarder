@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class EventIssue
+public partial class EventIssueEntity
 {
     public int Id { get; set; }
 
@@ -13,7 +13,7 @@ public partial class EventIssue
 
     public int Order { get; set; }
 
-    public virtual Event Event { get; set; } = null!;
+    public virtual EventEntity Event { get; set; } = null!;
 
-    public virtual Issue Issue { get; set; } = null!;
+    public virtual IssueEntity Issue { get; set; } = null!;
 }

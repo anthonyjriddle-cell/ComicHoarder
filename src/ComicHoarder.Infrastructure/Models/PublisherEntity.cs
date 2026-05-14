@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class Publisher
+public partial class PublisherEntity
 {
     public int Id { get; set; }
 
@@ -15,7 +15,7 @@ public partial class Publisher
 
     public DateTime? DateLastUpdated { get; set; }
 
-    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+    public virtual ICollection<EventEntity> Events { get; set; } = new List<EventEntity>();
 
-    public virtual ICollection<Volume> Volumes { get; set; } = new List<Volume>();
+    public virtual ICollection<VolumeEntity> Volumes { get; set; } = new List<VolumeEntity>();
 }

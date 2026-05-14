@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class Issue
+public partial class IssueEntity
 {
     public int Id { get; set; }
 
@@ -33,13 +33,13 @@ public partial class Issue
 
     public DateTime? DateLastUpdated { get; set; }
 
-    public virtual ICollection<CollectedIssue> CollectedIssueChildren { get; set; } = new List<CollectedIssue>();
+    public virtual ICollection<CollectedIssueEntity> CollectedIssueChildren { get; set; } = new List<CollectedIssueEntity>();
 
-    public virtual ICollection<CollectedIssue> CollectedIssueParents { get; set; } = new List<CollectedIssue>();
+    public virtual ICollection<CollectedIssueEntity> CollectedIssueParents { get; set; } = new List<CollectedIssueEntity>();
 
-    public virtual ICollection<EventIssue> EventIssues { get; set; } = new List<EventIssue>();
+    public virtual ICollection<EventIssueEntity> EventIssues { get; set; } = new List<EventIssueEntity>();
 
-    public virtual IssueFormat? Format { get; set; }
+    public virtual IssueFormatEntity? Format { get; set; }
 
-    public virtual Volume? Volume { get; set; }
+    public virtual VolumeEntity? Volume { get; set; }
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ComicHoarder.Infrastructure.Models;
 
-public partial class Setting
+public partial class EventTypeEntity
 {
     public int Id { get; set; }
 
     public string? Name { get; set; }
 
-    public string? Value { get; set; }
+    public virtual ICollection<EventEntity> Events { get; set; } = new List<EventEntity>();
 }
