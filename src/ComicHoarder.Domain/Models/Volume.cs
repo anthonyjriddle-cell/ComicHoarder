@@ -8,16 +8,16 @@ namespace ComicHoarder.Domain.Models
 {
     public class Volume
     {
-        public int id { get; set; }
-        public int publisherId { get; set; }
-        public string? name { get; set; }
-        public string? description { get; set; }
-        public DateTime? dateAdded { get; set; }
-        public DateTime? dateLastUpdated { get; set; }
-        public bool collectable { get; set; }
-        public int countOfIssues { get; set; }
-        public int startYear { get; set; }
-        public bool enabled { get; set; }
-        public bool complete { get; set; }
+        public int Id { get; set; }
+        public int PublisherId { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public DateTime? DateAdded { get; set; }
+        public DateTime? DateLastUpdated { get; set; }
+        public bool Collectable { get; set; }
+        public int CountOfIssues { get; set; }
+        public int StartYear { get; set; }
+        public bool Enabled { get; set; }
+        public bool Complete { get; set; }
     }
 }

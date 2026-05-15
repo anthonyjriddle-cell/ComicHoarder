@@ -8,10 +8,10 @@ namespace ComicHoarder.Domain.Models
 {
     public class Event
     {
-        public int id { get; set; }
-        public string? name { get; set; }
-        public int type { get; set; }
-        public int order { get; set; }
-        public int publisherId { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public int Type { get; set; }
+        public int Order { get; set; }
+        public int PublisherId { get; set; }
     }
 }

@@ -43,19 +43,19 @@ namespace ComicHoarder.Infrastructure.ComicVine
 
             var issue = new Issue()
             {
-                id = cvIssue.id,
-                name = cvIssue.name,
-                volumeId = cvIssue.volume is not null ? cvIssue.volume.id : 0,
-                issueNumber = issueNumber,
-                issueNumberSuffix = issueSuffix,
-                publishMonth = publishDate.Month,
-                publishYear = publishDate.Year,
-                collected = false,
-                enabled = true,
-                summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
-                coverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
-                dateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
-                dateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
+                Id = cvIssue.id,
+                Name = cvIssue.name,
+                VolumeId = cvIssue.volume is not null ? cvIssue.volume.id : 0,
+                IssueNumber = issueNumber,
+                IssueNumberSuffix = issueSuffix,
+                PublishMonth = publishDate.Month,
+                PublishYear = publishDate.Year,
+                Collected = false,
+                Enabled = true,
+                Summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
+                CoverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
+                DateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
+                DateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
             };
             return issue;
         }
@@ -93,19 +93,19 @@ namespace ComicHoarder.Infrastructure.ComicVine
 
                 var issue = new Issue()
                 {
-                    id = cvIssue.id,
-                    name = cvIssue.name,
-                    volumeId = cvIssue.volume is not null ? cvIssue.volume.id : 0,
-                    issueNumber = issueNumber,
-                    issueNumberSuffix = issueSuffix,
-                    publishMonth = publishDate.Month,
-                    publishYear = publishDate.Year,
-                    collected = false,
-                    enabled = true,
-                    summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
-                    coverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
-                    dateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
-                    dateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
+                    Id = cvIssue.id,
+                    Name = cvIssue.name,
+                    VolumeId = cvIssue.volume is not null ? cvIssue.volume.id : 0,
+                    IssueNumber = issueNumber,
+                    IssueNumberSuffix = issueSuffix,
+                    PublishMonth = publishDate.Month,
+                    PublishYear = publishDate.Year,
+                    Collected = false,
+                    Enabled = true,
+                    Summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
+                    CoverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
+                    DateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
+                    DateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
                 };
                 issues.Add(issue);
             }
@@ -119,8 +119,8 @@ namespace ComicHoarder.Infrastructure.ComicVine
                 foreach (var cvIssue in cvVolume.issues)
                 {
                     Issue issue = new Issue();
-                    issue.id = cvIssue.id;
-                    issue.name = cvIssue.name;
+                    issue.Id = cvIssue.id;
+                    issue.Name = cvIssue.name;
                     if (cvIssue.issue_number is not null)
                     {
                         if (cvIssue.issue_number.Contains("au"))
@@ -128,14 +128,14 @@ namespace ComicHoarder.Infrastructure.ComicVine
                             float n = 0;
                             string p = "";
                             float.TryParse(new string(cvIssue.issue_number.Where(a => (Char.IsDigit(a) || a == '.')).ToArray()), out n);
-                            issue.issueNumber = ParseHelper.ParseFloat(n.ToString());
+                            issue.IssueNumber = ParseHelper.ParseFloat(n.ToString());
                             //issue.issueNumber = issue.issueNumber + .1f;
                             p = new string(cvIssue.issue_number.Where(a => !(Char.IsDigit(a) || a == '.')).ToArray());
-                            issue.issueNumberSuffix = p;
+                            issue.IssueNumberSuffix = p;
                         }
                         else
                         {
-                            issue.issueNumber = ParseHelper.ParseFloat(cvIssue.issue_number);
+                            issue.IssueNumber = ParseHelper.ParseFloat(cvIssue.issue_number);
                         }
                     }
                     issues.Add(issue);
@@ -149,25 +149,25 @@ namespace ComicHoarder.Infrastructure.ComicVine
         public static Volume ToVolume(this ComicVineVolumeResults cvVolume)
         {
             Volume volume = new Volume();
-            volume.id = cvVolume.id;
-            volume.publisherId = cvVolume.publisher is not null ? cvVolume.publisher.id : 0;
-            volume.name = cvVolume.name;
-            volume.description = cvVolume.description;
-            volume.dateAdded = ParseHelper.ParseNullableDateTime(cvVolume.date_added);
-            volume.dateLastUpdated = ParseHelper.ParseNullableDateTime(cvVolume.date_last_updated);
-            volume.collectable = true;
-            volume.countOfIssues = cvVolume.count_of_issues;
-            volume.startYear = ParseHelper.ParseInt(cvVolume.start_year);
-            volume.enabled = true;
-            if (volume.dateLastUpdated > DateTime.Now.AddMonths(-13))
+            volume.Id = cvVolume.id;
+            volume.PublisherId = cvVolume.publisher is not null ? cvVolume.publisher.id : 0;
+            volume.Name = cvVolume.name;
+            volume.Description = cvVolume.description;
+            volume.DateAdded = ParseHelper.ParseNullableDateTime(cvVolume.date_added);
+            volume.DateLastUpdated = ParseHelper.ParseNullableDateTime(cvVolume.date_last_updated);
+            volume.Collectable = true;
+            volume.CountOfIssues = cvVolume.count_of_issues;
+            volume.StartYear = ParseHelper.ParseInt(cvVolume.start_year);
+            volume.Enabled = true;
+            if (volume.DateLastUpdated > DateTime.Now.AddMonths(-13))
             {
-                volume.complete = false;
+                volume.Complete = false;
             }
             else
             {
-                volume.complete = true;
+                volume.Complete = true;
             }
-            volume.collectable = DetectReprint(volume);
+            volume.Collectable = DetectReprint(volume);
             return volume;
         }
 
@@ -179,8 +179,8 @@ namespace ComicHoarder.Infrastructure.ComicVine
                 foreach (var cvVolume in cvPublisher.volumes)
                 {
                     Volume volume = new Volume();
-                    volume.id = cvVolume.id;
-                    volume.name = cvVolume.name;
+                    volume.Id = cvVolume.id;
+                    volume.Name = cvVolume.name;
                     volumes.Add(volume);
                 }
             }
@@ -192,11 +192,11 @@ namespace ComicHoarder.Infrastructure.ComicVine
         public static Publisher ToPublisher(this ComicVinePublisherResults cvPublisher)
         {
             Publisher publisher = new Publisher();
-            publisher.id = cvPublisher.id;
-            publisher.name = cvPublisher.name;
-            publisher.description = cvPublisher.deck;
-            publisher.enabled = true;
-            publisher.dateLastUpdated = ParseHelper.ParseNullableDateTime(cvPublisher.date_last_updated);
+            publisher.Id = cvPublisher.id;
+            publisher.Name = cvPublisher.name;
+            publisher.Description = cvPublisher.deck;
+            publisher.Enabled = true;
+            publisher.DateLastUpdated = ParseHelper.ParseNullableDateTime(cvPublisher.date_last_updated);
             return publisher;
         }
 
@@ -207,11 +207,11 @@ namespace ComicHoarder.Infrastructure.ComicVine
             {
                 var publisher = new Publisher()
                 {
-                    id = cvPublisher.id,
-                    name = cvPublisher.name,
-                    description = cvPublisher.deck,
-                    enabled = true,
-                    dateLastUpdated = ParseHelper.ParseNullableDateTime(cvPublisher.date_last_updated)
+                    Id = cvPublisher.id,
+                    Name = cvPublisher.name,
+                    Description = cvPublisher.deck,
+                    Enabled = true,
+                    DateLastUpdated = ParseHelper.ParseNullableDateTime(cvPublisher.date_last_updated)
                 };
                 publishers.Add(publisher);
             }
@@ -221,16 +221,16 @@ namespace ComicHoarder.Infrastructure.ComicVine
 
         public static bool DetectReprint(Volume volume)
         {
-            if (volume.description is not null)
+            if (volume.Description is not null)
             {
-                if (volume.description.Contains("trade paperback") || volume.description.Contains("tradepaperback") || volume.description.Contains("tpb") || volume.description.Contains("a hardcover book which reprints") || volume.description.Contains("reprinting") || volume.description.Contains("reprints") || volume.description.Contains("collected in the following paperbacks"))
+                if (volume.Description.Contains("trade paperback") || volume.Description.Contains("tradepaperback") || volume.Description.Contains("tpb") || volume.Description.Contains("a hardcover book which reprints") || volume.Description.Contains("reprinting") || volume.Description.Contains("reprints") || volume.Description.Contains("collected in the following paperbacks"))
                 {
-                    volume.collectable = false;
+                    volume.Collectable = false;
                     return true;
                 }
-                else if (volume.description.Contains("collects") || volume.description.Contains("collecting"))
+                else if (volume.Description.Contains("collects") || volume.Description.Contains("collecting"))
                 {
-                    volume.collectable = false;
+                    volume.Collectable = false;
                     return true;
                 }
             }

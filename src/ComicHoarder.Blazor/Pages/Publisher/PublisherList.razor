@@ -1,0 +1,24 @@
+﻿@page "/Publishers"
+
+<div class="row">
+    <div class="col-auto"><h3>Publisher List</h3></div>
+    <div class="col-auto ms-auto"><a href="/AddPublisher" class="btn btn-primary">Add Publisher</a></div>
+</div>
+
+<br />
+<br />
+
+<br />
+<SearchComponent OnSearch="HandleSearch"></SearchComponent>
+<PublisherListComponent SearchPublisherFilter="@SearchFilter"></PublisherListComponent>
+<br />
+<br />
+
+@code {
+    private string? SearchFilter { get; set; }
+
+    private void HandleSearch(string SearchFilter)
+    {
+        this.SearchFilter = SearchFilter;
+    }
+}

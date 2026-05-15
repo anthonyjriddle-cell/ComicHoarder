@@ -17,11 +17,11 @@ namespace ComicHoarder.Infrastructure.Mappers
 
             return new Publisher
             {
-                id = data.Id,
-                name = data.Name,
-                description = data.Description,
-                enabled = data.Enabled,
-                dateLastUpdated = data.DateLastUpdated
+                Id = data.Id,
+                Name = data.Name,
+                Description = data.Description,
+                Enabled = data.Enabled,
+                DateLastUpdated = data.DateLastUpdated
             };
         }
 
@@ -32,11 +32,11 @@ namespace ComicHoarder.Infrastructure.Mappers
 
             return new PublisherEntity
             {
-                Id = domain.id,
-                Name = domain.name,
-                Description = domain.description,
-                Enabled = domain.enabled,
-                DateLastUpdated = domain.dateLastUpdated
+                Id = domain.Id,
+                Name = domain.Name,
+                Description = domain.Description,
+                Enabled = domain.Enabled,
+                DateLastUpdated = domain.DateLastUpdated
             };
         }
     }

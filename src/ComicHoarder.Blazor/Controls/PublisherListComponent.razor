@@ -1,0 +1,44 @@
+﻿@inject IViewPublishersByNameUseCase ViewPublishersByNameUseCase
+
+@if (publishers == null)
+{
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Enabled</th>
+                <th>Date Last Updated</th>
+                <th></th>
+                <th></th>
+                <th style="text-align: left"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (publishers != null && publishers.Count > 0)
+            {
+                foreach (var publisher in publishers)
+                {
+                    <PublisherListItemComponent Publisher="publisher"></PublisherListItemComponent>
+                }
+            }
+        </tbody>
+    </table>
+}
+@code {
+    [Parameter]
+    public string? SearchPublisherFilter { get; set; }
+
+    private List<Publisher>? publishers;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        publishers = (await ViewPublishersByNameUseCase.ExecuteAsync(SearchPublisherFilter ?? string.Empty)).ToList();
+    }
+}

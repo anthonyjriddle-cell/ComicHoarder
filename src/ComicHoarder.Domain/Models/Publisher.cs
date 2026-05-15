@@ -8,10 +8,10 @@ namespace ComicHoarder.Domain.Models
 {
     public class Publisher
     {
-        public int id { get; set; }
-        public string? name { get; set; }
-        public string? description { get; set; }
-        public bool enabled { get; set; }
-        public DateTime? dateLastUpdated { get; set; }
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public bool Enabled { get; set; }
+        public DateTime? DateLastUpdated { get; set; }
     }
 }

@@ -11,16 +11,16 @@ namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
     {
         public static bool DetectReprint(Volume volume)
         {
-            if (volume.description is not null)
+            if (volume.Description is not null)
             {
-                if (volume.description.Contains("trade paperback") || volume.description.Contains("tradepaperback") || volume.description.Contains("tpb") || volume.description.Contains("a hardcover book which reprints") || volume.description.Contains("reprinting") || volume.description.Contains("reprints") || volume.description.Contains("collected in the following paperbacks"))
+                if (volume.Description.Contains("trade paperback") || volume.Description.Contains("tradepaperback") || volume.Description.Contains("tpb") || volume.Description.Contains("a hardcover book which reprints") || volume.Description.Contains("reprinting") || volume.Description.Contains("reprints") || volume.Description.Contains("collected in the following paperbacks"))
                 {
-                    volume.collectable = false;
+                    volume.Collectable = false;
                     return true;
                 }
-                else if (volume.description.Contains("collects") || volume.description.Contains("collecting"))
+                else if (volume.Description.Contains("collects") || volume.Description.Contains("collecting"))
                 {
-                    volume.collectable = false;
+                    volume.Collectable = false;
                     return true;
                 }
             }

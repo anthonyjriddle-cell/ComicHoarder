@@ -17,6 +17,7 @@ namespace ComicHoarder.Blazor
             builder.Services.AddInfrastructure(
                 builder.Configuration.GetConnectionString("DefaultConnection"));
 
+
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();

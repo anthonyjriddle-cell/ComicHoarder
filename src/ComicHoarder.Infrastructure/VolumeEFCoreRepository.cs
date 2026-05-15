@@ -78,14 +78,14 @@ namespace ComicHoarder.Infrastructure
         {
             using var db = this.contextFactory.CreateDbContext();
             var vol = await db.Volumes
-                    .FirstOrDefaultAsync(x => x.Id == volume.id);
+                    .FirstOrDefaultAsync(x => x.Id == volume.Id);
 
             if (vol != null)
             {
-                vol.Name = volume.name;
-                vol.Description = volume.description;
-                vol.DateLastUpdated = volume.dateLastUpdated;
-                vol.Enabled = volume.enabled;
+                vol.Name = volume.Name;
+                vol.Description = volume.Description;
+                vol.DateLastUpdated = volume.DateLastUpdated;
+                vol.Enabled = volume.Enabled;
 
                 await db.SaveChangesAsync();
             }

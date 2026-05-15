@@ -17,17 +17,17 @@ namespace ComicHoarder.Infrastructure.Mappers
 
             return new Volume
             {
-                id = data.Id,
-                name = data.Name,
-                description = data.Description,
-                publisherId = data.PublisherId ?? 0,
-                startYear = data.StartYear ?? 0,
-                enabled = data.Enabled,
-                dateLastUpdated = data.DateLastUpdated,
-                dateAdded = data.DateAdded,
-                collectable = data.Collectable,
-                complete = data.Complete,
-                countOfIssues = data.CountOfIssues
+                Id = data.Id,
+                Name = data.Name,
+                Description = data.Description,
+                PublisherId = data.PublisherId ?? 0,
+                StartYear = data.StartYear ?? 0,
+                Enabled = data.Enabled,
+                DateLastUpdated = data.DateLastUpdated,
+                DateAdded = data.DateAdded,
+                Collectable = data.Collectable,
+                Complete = data.Complete,
+                CountOfIssues = data.CountOfIssues
             };
         }
 
@@ -38,17 +38,17 @@ namespace ComicHoarder.Infrastructure.Mappers
 
             return new VolumeEntity
             {
-                Id = domain.id,
-                Name = domain.name,
-                Description = domain.description,
-                PublisherId = domain.publisherId,
-                StartYear = domain.startYear,
-                Enabled = domain.enabled,
-                DateLastUpdated = domain.dateLastUpdated,
-                DateAdded = domain.dateAdded,
-                Collectable = domain.collectable,
-                Complete = domain.complete,
-                CountOfIssues = domain.countOfIssues
+                Id = domain.Id,
+                Name = domain.Name,
+                Description = domain.Description,
+                PublisherId = domain.PublisherId,
+                StartYear = domain.StartYear,
+                Enabled = domain.Enabled,
+                DateLastUpdated = domain.DateLastUpdated,
+                DateAdded = domain.DateAdded,
+                Collectable = domain.Collectable,
+                Complete = domain.Complete,
+                CountOfIssues = domain.CountOfIssues
             };
         }
     }

@@ -25,16 +25,16 @@ namespace ComicHoarder.Infrastructure
         {
             using var db = this.contextFactory.CreateDbContext();
             var pub = await db.Publishers
-                    .FirstOrDefaultAsync(x => x.Id == publisher.id);
+                    .FirstOrDefaultAsync(x => x.Id == publisher.Id);
 
             if (pub == null)
             {
                 pub = new PublisherEntity
                 {
-                    Name = publisher.name,
-                    Description = publisher.description,
-                    DateLastUpdated = publisher.dateLastUpdated,
-                    Enabled = publisher.enabled
+                    Name = publisher.Name,
+                    Description = publisher.Description,
+                    DateLastUpdated = publisher.DateLastUpdated,
+                    Enabled = publisher.Enabled
                 };
 
                 db.Add(pub);
@@ -78,14 +78,14 @@ namespace ComicHoarder.Infrastructure
         {
             using var db = this.contextFactory.CreateDbContext();
             var pub = await db.Publishers
-                    .FirstOrDefaultAsync(x => x.Id == publisher.id);
+                    .FirstOrDefaultAsync(x => x.Id == publisher.Id);
 
             if (pub != null)
             {
-                pub.Name = publisher.name;
-                pub.Description = publisher.description;
-                pub.DateLastUpdated = publisher.dateLastUpdated;
-                pub.Enabled = publisher.enabled;
+                pub.Name = publisher.Name;
+                pub.Description = publisher.Description;
+                pub.DateLastUpdated = publisher.DateLastUpdated;
+                pub.Enabled = publisher.Enabled;
 
                 await db.SaveChangesAsync();
             }
