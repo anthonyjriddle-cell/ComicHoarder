@@ -1,7 +1,9 @@
 ﻿@page "/Volumes/{pubId:int}"
 
+@inject IViewPublisherByIdUseCase ViewPublisherByIdUseCase
+
 <div class="row">
-    <div class="col-auto"><h3>Volume List</h3></div>
+    <div class="col-auto"><h3>Publisher: @(Publisher?.Name ?? "Loading…")</h3></div>
     <div class="col-auto ms-auto"><a href="/AddVolume" class="btn btn-primary">Add Volume</a></div>
 </div>
 
@@ -18,10 +20,17 @@
     [Parameter]
     public int pubId { get; set; }
 
+    private Publisher? Publisher { get; set; }
+
     private string? SearchFilter { get; set; }
 
     private void HandleSearch(string SearchFilter)
     {
         this.SearchFilter = SearchFilter;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Publisher = await ViewPublisherByIdUseCase.ExecuteAsync(pubId);
     }
 }

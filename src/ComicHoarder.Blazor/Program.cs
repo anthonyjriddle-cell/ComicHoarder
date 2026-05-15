@@ -9,6 +9,8 @@ using CH.UseCases.RepositoryUseCases.Volumes;
 using ComicHoarder.Application.UseCases.Volumes.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine;
+using ComicHoarder.Application.UseCases.Issues.Interfaces;
+using ComicHoarder.Application.UseCases.Issues;
 
 namespace ComicHoarder.Blazor
 {
@@ -52,6 +54,10 @@ namespace ComicHoarder.Blazor
             builder.Services.AddTransient<IViewVolumeByIdUseCase, ViewVolumeByIdUseCase>();
             builder.Services.AddTransient<IEditVolumeUseCase, EditVolumeUseCase>();
             builder.Services.AddTransient<IDeleteVolumeUseCase, DeleteVolumeUseCase>();
+            builder.Services.AddTransient<IViewIssuesByVolumeAndNameUseCase, ViewIssuesByVolumeAndNameUseCase>();
+            builder.Services.AddTransient<IViewIssueByIdUseCase, ViewIssueByIdUseCase>();
+            builder.Services.AddTransient<IEditIssueUseCase, EditIssueUseCase>();
+            builder.Services.AddTransient<IDeleteIssueUseCase, DeleteIssueUseCase>();
 
             builder.Services.AddTransient<ISearchComicVinePublisherUseCase, SearchComicVinePublisherUseCase>();
 

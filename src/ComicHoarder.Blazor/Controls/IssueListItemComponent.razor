@@ -1,0 +1,43 @@
+﻿@inject NavigationManager NavigationManager
+@inject IDeleteIssueUseCase DeleteIssueUseCase
+
+@if (Issue != null)
+{
+    <tr>
+        <td>@Issue.Name</td>
+        <td>@Issue.IssueNumber@Issue.IssueNumberSuffix</td>
+        <td>@Issue.PublishMonth/@Issue.PublishYear</td>
+        <td>@Issue.Collected</td>
+        <td>@Issue.Enabled</td>
+        <td>@Issue.DateLastUpdated</td>
+        <td>
+            <a href="/editissue/@Issue.Id" class="btn btn-primary">Edit</a>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger" @onclick="async () => await HandleDelete(Issue.Id)">Delete</button>
+        </td>
+    </tr>
+}
+
+<DeleteConfirmationDialogComponent ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></DeleteConfirmationDialogComponent>
+
+@code {
+    [Parameter]
+    public Issue? Issue { get; set; }
+
+    protected DeleteConfirmationDialogComponent DeleteConfirmation { get; set; }
+
+    private async Task HandleDelete(int issueId)
+    {
+        DeleteConfirmation.Show();
+    }
+
+    protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+    {
+        if (deleteConfirmed)
+        {
+            await DeleteIssueUseCase.ExecuteAsync(Issue.Id);
+            this.Issue = null;
+        }
+    }
+}

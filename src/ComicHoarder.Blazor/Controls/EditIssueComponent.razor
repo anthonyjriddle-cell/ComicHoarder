@@ -1,0 +1,107 @@
+﻿@inject IEditIssueUseCase EditIssueUseCase
+@inject NavigationManager NavigationManager
+
+<h3>Edit Issue</h3>
+<br />
+
+@if (this.Issue != null)
+{
+    <EditForm Model="Issue" OnValidSubmit="Update">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Issue Name</label>
+            <InputText id="name" @bind-Value="Issue.Name" class="form-control"></InputText>
+            <ValidationMessage For="() => Issue.Name"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="issueNumber">Issue Number</label>
+            <InputNumber id="issueNumber" @bind-Value="Issue.IssueNumber" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Issue.IssueNumber"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="suffix">Issue Number Suffix</label>
+            <InputText id="suffix" @bind-Value="Issue.IssueNumberSuffix" class="form-control"></InputText>
+            <ValidationMessage For="() => Issue.IssueNumberSuffix"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="publishMonth">Publish Month</label>
+            <InputNumber id="publishMonth" @bind-Value="Issue.PublishMonth" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Issue.PublishMonth"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="publishYear">Publish Year</label>
+            <InputNumber id="publishYear" @bind-Value="Issue.PublishYear" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Issue.PublishYear"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="collected">Collected</label>
+            <InputCheckbox id="collected" @bind-value="Issue.Collected" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <ValidationMessage For="() => Issue.Collected"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="enabled">Enabled</label>
+            <InputCheckbox id="enabled" @bind-value="Issue.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <ValidationMessage For="() => Issue.Enabled"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="formatId">Format ID</label>
+            <InputNumber id="formatId" @bind-Value="Issue.FormatId" class="form-control"></InputNumber>
+            <ValidationMessage For="() => Issue.FormatId"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="reprint">Reprint</label>
+            <InputCheckbox id="reprint" @bind-value="Issue.Reprint" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <ValidationMessage For="() => Issue.Reprint"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="coverDate">Cover Date</label>
+            <InputDate Type="InputDateType.DateTimeLocal" id="coverDate" @bind-Value="Issue.CoverDate" class="form-control"></InputDate>
+            <ValidationMessage For="() => Issue.CoverDate"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="dateAdded">Date Added</label>
+            <InputDate Type="InputDateType.DateTimeLocal" id="dateAdded" @bind-Value="Issue.DateAdded" class="form-control"></InputDate>
+            <ValidationMessage For="() => Issue.DateAdded"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="dateLastUpdated">Date Last Updated</label>
+            <InputDate Type="InputDateType.DateTimeLocal" id="dateLastUpdated" @bind-Value="Issue.DateLastUpdated" class="form-control"></InputDate>
+            <ValidationMessage For="() => Issue.DateLastUpdated"></ValidationMessage>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
+        &nbsp;
+        <a href="/Issues" class="btn btn-primary">Cancel</a>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public Issue? Issue { get; set; }
+
+    [SupplyParameterFromForm]
+    public Issue? outIssue { get; set; }
+
+    [Parameter]
+    public EventCallback<Issue?> OnUpdate { get; set; }
+
+    private void Update()
+    {
+        outIssue = Issue;
+        OnUpdate.InvokeAsync(outIssue);
+    }
+}

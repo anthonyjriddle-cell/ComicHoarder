@@ -1,0 +1,29 @@
+﻿@page "/EditIssue/{issueId:int}"
+
+@inject IViewIssueByIdUseCase ViewIssueByIdUseCase
+@inject IEditIssueUseCase EditIssueUseCase
+@inject NavigationManager NavigationManager
+
+<EditIssueComponent OnUpdate="Update" Issue="@Issue"></EditIssueComponent>
+
+@code {
+    private Issue? Issue { get; set; }
+
+    [Parameter]
+    public int issueId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        this.Issue = await ViewIssueByIdUseCase.ExecuteAsync(this.issueId);
+    }
+
+    private async Task Update(Issue? Issue)
+    {
+        this.Issue = Issue;
+        if (this.Issue != null)
+        {
+            await EditIssueUseCase.ExecuteAsync(this.Issue);
+            NavigationManager.NavigateTo("/Issues");
+        }
+    }
+}

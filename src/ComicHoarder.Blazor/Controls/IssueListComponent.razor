@@ -1,0 +1,52 @@
+﻿@inject IViewIssuesByVolumeAndNameUseCase ViewIssuesByVolumeAndNameUseCase
+
+@if (issues == null)
+{
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Issue #</th>
+                <th>Publish Date</th>
+                <th>Collected</th>
+                <th>Enabled</th>
+                <th>Date Last Updated</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (issues != null && issues.Count > 0)
+            {
+                foreach (var issue in issues)
+                {
+                    <IssueListItemComponent Issue="issue"></IssueListItemComponent>
+                }
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public string? SearchIssueFilter { get; set; }
+
+    [Parameter]
+    public int VolumeId { get; set; }
+
+    private List<Issue>? issues;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        issues = (await ViewIssuesByVolumeAndNameUseCase.ExecuteAsync(
+            VolumeId,
+            SearchIssueFilter ?? string.Empty
+        )).ToList();
+    }
+}
