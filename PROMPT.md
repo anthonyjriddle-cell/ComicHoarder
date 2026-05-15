@@ -1,49 +1,166 @@
-You are helping me build an enterprise-grade Blazor Server application called ComicHoarder using Clean/Onion Architecture. The solution has no API layer and no console jobs. The GitHub repository for this project is:
+﻿# ComicHoarder — Clean Architecture Project Context
 
-https://github.com/anthonyjriddle-cell/ComicHoarder
+You are helping me build an enterprise‑grade Blazor Server application called **ComicHoarder**.  
+The solution uses **Clean Architecture** with the following layers and conventions.
 
-The project structure is:
+---
 
-/ComicHoarder.sln
-/src
-   /ComicHoarder.Domain
-       (entities, value objects, domain events, pure business logic)
-   /ComicHoarder.Application
-       (CQRS, use cases, DTOs, validators, manual mapping classes, application interfaces)
-   /ComicHoarder.Infrastructure
-       (EF Core DbContext, EF entities, Fluent configs, repositories, file scanning, logging)
-   /ComicHoarder.Integrations.ComicVine
-       (ComicVine API client, DTOs, retry logic, rate limiting, external service integration)
-   /utilities
-       (shared helpers, extensions, cross-cutting utilities)
-   /Utility.DBScaffold
-       (EF Core scaffold-only project; not referenced, not built, used only to generate raw models)
-/tests
-   /ComicHoarder.Tests.Unit
-   /ComicHoarder.Tests.Integration
+## 🧩 1. Domain Layer
 
-Key architectural rules:
-- Use Clean/Onion Architecture.
-- Domain is pure and has no dependencies.
-- Application depends only on Domain and contains all use cases.
-- Infrastructure depends on Application and Domain and implements Application interfaces.
-- Integrations.ComicVine depends on Application and Domain and implements IComicVineClient.
-- Blazor references Application and Domain only; it never references Infrastructure or Integrations.
-- No AutoMapper; all mappings are manual.
-- No API layer.
-- The project targets .NET 7 for Blazor and .NET 8 for all class libraries.
-- utilities contains cross-cutting helpers that do not depend on Blazor.
+**Purpose:** Pure business logic.
 
-Database-first workflow rules:
-- Utility.DBScaffold is used ONLY for EF Core scaffolding.
-- Scaffolded DbContext and entity classes are copied into Infrastructure/Persistence.
-- Utility.DBScaffold is not built, not referenced, and not used at runtime.
-- Infrastructure contains the real DbContext, EF entities, Fluent configurations, and migrations.
+**Rules:**
+- Contains only **entities**, **value objects**, and **domain rules**
+- No EF Core, no Blazor, no Infrastructure dependencies
+- Domain models use **lowercase field names** (e.g., `id`, `name`, `description`)
+- Domain models represent business concepts:
+  - Publisher
+  - Volume
+  - Issue
+  - Event
+  - Settings
 
-EF Core package rules:
-- Infrastructure uses: Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer,
-  Microsoft.EntityFrameworkCore.Relational, and Microsoft.EntityFrameworkCore.Design (PrivateAssets=All).
-- Utility.DBScaffold uses: Microsoft.EntityFrameworkCore.Tools and Microsoft.EntityFrameworkCore.SqlServer.
-- No other project references EF Core.
+---
 
-When I ask questions, continue the project using this structure and these rules.
+## 🧩 2. Application Layer
+
+**Purpose:** Orchestrates use cases and defines system behavior.
+
+**Contains:**
+- Use case **interfaces**
+- Use case **implementations**
+- Repository **interfaces**
+- DTOs
+- Validators
+
+**Structure example:**
+
+ComicHoarder.Application
+└── UseCases
+└── Publishers
+├── Interfaces
+│     IAddPublisherUseCase.cs
+│     IEditPublisherUseCase.cs
+│     IDeletePublisherUseCase.cs
+│     IViewPublisherByIdUseCase.cs
+│     IViewPublishersByNameUseCase.cs
+├── AddPublisherUseCase.cs
+├── EditPublisherUseCase.cs
+├── DeletePublisherUseCase.cs
+├── ViewPublisherByIdUseCase.cs
+└── ViewPublishersByNameUseCase.cs
+
+
+**Rules:**
+- Use case interfaces **belong in the Application layer**
+- Use cases call repository interfaces
+- Use cases return **Domain models**, not EF models
+- No Infrastructure or Blazor references
+
+---
+
+## 🧩 3. Infrastructure Layer
+
+**Purpose:** Data access, EF Core, external services.
+
+**Contains:**
+- EF Core DbContext
+- EF Core models
+- Repository implementations
+- Mappers (Domain ↔ EF)
+
+**Naming conventions:**
+- Table‑backed EF models: `PublisherEntity`, `VolumeEntity`, etc.
+- View‑backed EF models: `PublisherDetailsViewEntity`, etc.
+
+**Mapping rules:**
+- Mappers are **static**, **pure**, and **synchronous**
+- Domain → Data maps lowercase → PascalCase
+- Data → Domain maps PascalCase → lowercase
+- Missing EF fields map to defaults
+
+**Repository rules:**
+- Repositories return **Domain models**
+- EF async only at query boundaries (`ToListAsync`, etc.)
+- No async inside LINQ
+- No async mappers
+
+---
+
+## 🧩 4. Blazor UI Layer
+
+**Purpose:** Presentation layer.
+
+**Rules:**
+- Blazor pages call **use cases**, not repositories
+- UI uses **Domain models only**
+- Feature‑based pages (e.g., `/publishers`, `/publishers/add`)
+
+**Example injection:**
+
+@inject IViewPublishersByNameUseCase ViewPublishersByName
+
+Example usage:
+
+publishers = await ViewPublishersByName.ExecuteAsync(searchText);
+
+5. Repository Pattern
+Correct pattern:
+
+var data = await _context.Publishers.ToListAsync();
+return data.Select(PublisherDataMapper.ToDomain).ToList();
+
+
+EF Query Rules:
+
+Use Contains() for case‑insensitive search (SQL Server default)
+
+No async inside LINQ
+
+No async mappers
+
+6. What I Want From You
+When I ask for code, generate:
+
+Use case implementations
+
+Repository implementations
+
+Mappers
+
+EF models
+
+Blazor pages
+
+DI configuration
+
+Folder structures
+
+Naming conventions
+
+UI components
+
+Navigation
+
+Validation
+
+Anything needed to continue building ComicHoarder
+
+Follow the architecture above exactly.
+
+7. Project Goal
+Build a complete comic‑collection management system with:
+
+Publisher list/search/edit/delete
+
+Volume list/search/edit/delete
+
+Issue list/search/edit/delete
+
+Event and reading‑order support
+
+Clean Architecture separation
+
+Blazor Server UI
+
+EF Core SQL Server backend

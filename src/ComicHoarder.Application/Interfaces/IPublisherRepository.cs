@@ -1,6 +1,6 @@
 ﻿using ComicHoarder.Domain.Models;
 
-namespace CH.UseCases.PluginInterfaces
+namespace ComicHoarder.Application.Interfaces
 {
     public interface IPublisherRepository
     {

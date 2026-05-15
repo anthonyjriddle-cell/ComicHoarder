@@ -1,5 +1,5 @@
 ﻿using ComicHoarder.Infrastructure.Models;
-using CH.UseCases.PluginInterfaces;
+using ComicHoarder.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
