@@ -1,0 +1,40 @@
+﻿@page "/AddPublisher"
+@inject ISearchComicVinePublisherUseCase SearchComicVinePublisherUseCase
+
+<h3>AddPublisher</h3>
+
+<br />
+<br />
+
+<br />
+<SearchComponent OnSearch="HandleSearch"></SearchComponent>
+<ComicVinePublisherListComponent @ref="component" SearchPublisherFilter="@SearchFilter" Publishers="@publishers" Searching="@searching"></ComicVinePublisherListComponent>
+
+<br />
+@code {
+    private string? SearchFilter { get; set; }
+
+    private List<Publisher>? publishers { get; set; }
+
+    private bool searching  { get; set; }
+
+    private ComicVinePublisherListComponent component;
+
+    private async void HandleSearch(string SearchFilter)
+    {
+        searching = true;
+        await component.Refresh(); //refresh not working
+        await InvokeAsync(StateHasChanged);
+
+        await Task.Delay(1);
+
+        this.SearchFilter = SearchFilter;
+
+        publishers = (await SearchComicVinePublisherUseCase.ExecuteAsync(SearchFilter ?? string.Empty)).ToList();
+
+        searching = false;
+        await component.Refresh();
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(1);
+    }
+}

@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using ComicHoarder.Application.Interfaces;
 using ComicHoarder.Infrastructure;
+using ComicHoarder.Infrastructure.ComicVine;
 using CH.UseCases.RepositoryUseCases.Volumes;
 using ComicHoarder.Application.UseCases.Volumes.Interfaces;
+using ComicHoarder.Application.UseCases.ComicVine.Interfaces;
+using ComicHoarder.Application.UseCases.ComicVine;
 
 namespace ComicHoarder.Blazor
 {
@@ -18,11 +21,26 @@ namespace ComicHoarder.Blazor
             builder.Services.AddInfrastructure(
                 builder.Configuration.GetConnectionString("DefaultConnection"));
 
+            #pragma warning disable ASP0000 //I know what I'm doing (I think)
+            using (var tempapp = builder.Services.BuildServiceProvider())
+            #pragma warning restore ASP0000
+            {
+                using (var scope = tempapp.CreateScope())
+                {
+                    var db = scope.ServiceProvider.GetRequiredService<CHContext>();
+
+                    var apiKey = db.Settings
+                        .Where(s => s.Name == "ComicVineKey")
+                        .Select(s => s.Value)
+                        .FirstOrDefault();
+
+                    builder.Services.AddInfrastructureComicVine(apiKey);
+                }
+            }
 
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
-
 
             // Add Publisher services to the container
             builder.Services.AddScoped<IViewPublishersByNameUseCase, ViewPublishersByNameUseCase>();
@@ -35,7 +53,7 @@ namespace ComicHoarder.Blazor
             builder.Services.AddTransient<IEditVolumeUseCase, EditVolumeUseCase>();
             builder.Services.AddTransient<IDeleteVolumeUseCase, DeleteVolumeUseCase>();
 
-
+            builder.Services.AddTransient<ISearchComicVinePublisherUseCase, SearchComicVinePublisherUseCase>();
 
             var app = builder.Build();
 

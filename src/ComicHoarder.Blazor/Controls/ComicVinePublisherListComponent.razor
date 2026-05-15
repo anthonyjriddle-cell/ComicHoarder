@@ -1,0 +1,50 @@
+﻿@inject ISearchComicVinePublisherUseCase SearchComicVinePublisherUseCase
+
+@if (Searching)
+{
+    <br />
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="">Loading from ComicVine...</div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Enabled</th>
+                <th>Date Last Updated</th>
+                <th></th>
+                <th style="text-align: left"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Publishers != null && Publishers.Count > 0)
+            {
+                foreach (var publisher in Publishers)
+                {
+                    <ComicVinePublisherListItemComponent Publisher="publisher"></ComicVinePublisherListItemComponent>
+                }
+            }
+        </tbody>
+    </table>
+}
+@code {
+    [Parameter]
+    public string? SearchPublisherFilter { get; set; }
+
+    [Parameter]
+    public List<Publisher>? Publishers { get; set; }
+
+    [Parameter]
+    public bool Searching { get; set; }
+
+    public async Task Refresh()
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+
+}

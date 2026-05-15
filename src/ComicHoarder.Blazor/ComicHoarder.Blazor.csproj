@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ComicHoarder.Application\ComicHoarder.Application.csproj" />
     <ProjectReference Include="..\ComicHoarder.Domain\ComicHoarder.Domain.csproj" />
+    <ProjectReference Include="..\ComicHoarder.Infrastructure.ComicVine\ComicHoarder.Infrastructure.ComicVine.csproj" />
     <ProjectReference Include="..\ComicHoarder.Infrastructure\ComicHoarder.Infrastructure.csproj" />
   </ItemGroup>
 
