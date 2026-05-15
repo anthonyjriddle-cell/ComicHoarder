@@ -1,0 +1,29 @@
+﻿@page "/EditVolume/{volId:int}"
+
+@inject IViewVolumeByIdUseCase ViewVolumeByIdUseCase
+@inject IEditVolumeUseCase EditVolumeUseCase
+@inject NavigationManager NavigationManager
+
+<EditVolumeComponent OnUpdate="Update" Volume="@Volume"></EditVolumeComponent>
+
+@code {
+    private Volume? Volume { get; set; }
+
+    [Parameter]
+    public int volId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        this.Volume = await ViewVolumeByIdUseCase.ExecuteAsync(this.volId);
+    }
+
+    private async Task Update(Volume? Volume)
+    {
+        this.Volume = Volume;
+        if (this.Volume != null)
+        {
+            await EditVolumeUseCase.ExecuteAsync(this.Volume);
+            NavigationManager.NavigateTo("/Volumes");
+        }
+    }
+}

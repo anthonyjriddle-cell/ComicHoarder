@@ -1,10 +1,11 @@
 using ComicHoarder.Application.UseCases.Publishers.Interfaces;
 using ComicHoarder.Application.UseCases.Publishers;
-using ComicHoarder.Blazor.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using ComicHoarder.Application.Interfaces;
 using ComicHoarder.Infrastructure;
+using CH.UseCases.RepositoryUseCases.Volumes;
+using ComicHoarder.Application.UseCases.Volumes.Interfaces;
 
 namespace ComicHoarder.Blazor
 {
@@ -21,7 +22,6 @@ namespace ComicHoarder.Blazor
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
-            builder.Services.AddSingleton<WeatherForecastService>();
 
 
             // Add Publisher services to the container
@@ -30,6 +30,10 @@ namespace ComicHoarder.Blazor
             builder.Services.AddScoped<IAddPublisherUseCase, AddPublisherUseCase>();
             builder.Services.AddScoped<IEditPublisherUseCase, EditPublisherUseCase>();
             builder.Services.AddScoped<IDeletePublisherUseCase, DeletePublisherUseCase>();
+            builder.Services.AddTransient<IViewVolumesByPublisherAndNameUseCase, ViewVolumesByPublisherAndNameUseCase>();
+            builder.Services.AddTransient<IViewVolumeByIdUseCase, ViewVolumeByIdUseCase>();
+            builder.Services.AddTransient<IEditVolumeUseCase, EditVolumeUseCase>();
+            builder.Services.AddTransient<IDeleteVolumeUseCase, DeleteVolumeUseCase>();
 
 
 

@@ -1,0 +1,30 @@
+﻿@page "/EditPublisher/{pubId:int}"
+
+@inject IViewPublisherByIdUseCase ViewPublisherByIdUseCase
+@inject IEditPublisherUseCase EditPublisherUseCase
+@inject NavigationManager NavigationManager
+
+<EditPublisherComponent OnUpdate="Update" publisher="@publisher"></EditPublisherComponent>
+
+@code {
+    private Publisher? publisher { get; set; }
+
+    [Parameter]
+    public int pubId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        this.publisher = await ViewPublisherByIdUseCase.ExecuteAsync(this.pubId);
+    }
+
+    private async Task Update(Publisher? publisher)
+    {
+        this.publisher = publisher;
+        if (this.publisher != null)
+        {
+            await EditPublisherUseCase.ExecuteAsync(this.publisher);
+            NavigationManager.NavigateTo("/publishers");
+        }
+    }
+
+}

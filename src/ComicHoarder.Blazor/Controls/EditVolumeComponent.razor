@@ -1,0 +1,60 @@
+﻿@inject IEditVolumeUseCase EditVolumeUseCase
+@inject NavigationManager NavigationManager
+
+<h3>Edit Volume</h3>
+<br />
+@if (this.Volume != null)
+{
+    <EditForm Model="Volume" OnValidSubmit="Update">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Volume Name</label>
+            <InputText id="name" @bind-Value="Volume.Name" class="form-control"></InputText>
+            <ValidationMessage For="() => Volume.Name"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputText id="description" @bind-Value="Volume.Description" class="form-control"></InputText>
+            <ValidationMessage For="() => Volume.Description"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="collectable">Collectable</label>
+            <InputCheckbox id="collectable" @bind-value="Volume.Collectable" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <validationmessage for="() => Volume.collectable"></validationmessage>
+        </div>
+        <div class="form-group">
+            <label for="enabled">Enabled</label>
+            <InputCheckbox id="enabled" @bind-value="Volume.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <validationmessage for="() => Volume.enabled"></validationmessage>
+        </div>
+        <div class="form-group">
+            <label for="datelastupdated">Date Last Updated</label>
+            <InputDate Type="InputDateType.DateTimeLocal" id="datelastupdated" @bind-Value="Volume.DateLastUpdated" class="form-control"></InputDate>
+            <ValidationMessage For="() => Volume.DateLastUpdated"></ValidationMessage>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
+        &nbsp;
+        <a href="/Volumes" class="btn btn-primary">Cancel</a>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public Volume? Volume { get; set; }
+
+    [SupplyParameterFromForm]
+    public Volume? outVolume { get; set; }
+
+    [Parameter]
+    public EventCallback<Volume?> OnUpdate { get; set; }
+
+    private void Update()
+    {
+        outVolume = Volume;
+        OnUpdate.InvokeAsync(outVolume);
+    }
+
+}

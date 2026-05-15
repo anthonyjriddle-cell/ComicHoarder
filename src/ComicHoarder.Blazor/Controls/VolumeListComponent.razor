@@ -1,0 +1,48 @@
+﻿@inject IViewVolumesByPublisherAndNameUseCase ViewVolumesByPublisherAndNameUseCase
+
+@if (volumes == null)
+{
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Collectable</th>
+                <th>Enabled</th>
+                <th>Date Last Updated</th>
+                <th></th>
+                <th></th>
+                <th style="text-align: left"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (volumes != null && volumes.Count > 0)
+            {
+                foreach (var volume in volumes)
+                {
+                    <VolumeListItemComponent Volume="volume"></VolumeListItemComponent>
+                }
+            }
+        </tbody>
+    </table>
+}
+@code {
+    [Parameter]
+    public string? SearchVolumeFilter { get; set; }
+
+    [Parameter]
+    public int PublisherId { get; set; }
+
+    private List<Volume>? volumes;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        volumes = (await ViewVolumesByPublisherAndNameUseCase.ExecuteAsync(PublisherId, SearchVolumeFilter ?? string.Empty)).ToList();
+    }
+}

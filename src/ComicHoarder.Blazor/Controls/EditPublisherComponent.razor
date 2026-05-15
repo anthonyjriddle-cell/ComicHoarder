@@ -1,0 +1,59 @@
+﻿@inject IEditPublisherUseCase EditPublisherUseCase
+@inject NavigationManager NavigationManager
+
+<h3>Edit Publisher</h3>
+<br />
+@if (this.publisher != null)
+{
+    <EditForm Model="publisher" OnValidSubmit="Update">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Publisher Name</label>
+            <InputText id="name" @bind-Value="publisher.Name" class="form-control"></InputText>
+            <ValidationMessage For="() => publisher.Name"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputText id="description" @bind-Value="publisher.Description" class="form-control"></InputText>
+            <ValidationMessage For="() => publisher.Description"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="enabled">Enabled</label>
+            <InputCheckbox id="enabled" @bind-value="publisher.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <validationmessage for="() => publisher.enabled"></validationmessage>
+        </div>
+        <div class="form-group">
+            <label for="datelastupdated">Date Last Updated</label>
+            <InputDate Type="InputDateType.DateTimeLocal" id="datelastupdated" @bind-Value="publisher.DateLastUpdated" class="form-control"></InputDate>
+            <ValidationMessage For="() => publisher.DateLastUpdated"></ValidationMessage>
+        </div>
+        @*         <div class="form-group">
+            <label for="price">Inventories</label>
+            <ProductInventoriesComponent Product="this.product"></ProductInventoriesComponent>
+        </div> *@
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
+        &nbsp;
+        <a href="/publishers" class="btn btn-primary">Cancel</a>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public Publisher? publisher { get; set; }
+
+    [SupplyParameterFromForm]
+    public Publisher? outPublisher { get; set; }
+
+    [Parameter]
+    public EventCallback<Publisher?> OnUpdate { get; set; }
+
+    private void Update()
+    {
+        outPublisher = publisher;
+        OnUpdate.InvokeAsync(outPublisher);
+    }
+
+}

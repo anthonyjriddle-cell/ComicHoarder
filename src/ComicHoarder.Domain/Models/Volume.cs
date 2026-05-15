@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ComicHoarder.Domain;
 
 namespace ComicHoarder.Domain.Models
 {
@@ -19,5 +21,10 @@ namespace ComicHoarder.Domain.Models
         public int StartYear { get; set; }
         public bool Enabled { get; set; }
         public bool Complete { get; set; }
+
+        public string DescriptionNoHtml
+        {
+            get { return Regex.Replace(Description ?? "", "<.*?>", string.Empty); }
+        }
     }
 }
