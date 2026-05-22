@@ -10,5 +10,6 @@ namespace ComicHoarder.Application.Interfaces
         Task<IEnumerable<Issue>> GetIssuesByVolumeIdAsync(int volumeId);
         Task<IEnumerable<Issue>> GetIssuesByVolumeAndNameAsync(int volumeId, string name);
         Task UpdateIssueAsync(Issue issue);
+        Task<List<int>> GetAllIssueIds();
     }
 }

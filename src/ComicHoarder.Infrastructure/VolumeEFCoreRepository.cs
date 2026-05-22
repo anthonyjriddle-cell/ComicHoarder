@@ -21,27 +21,35 @@ namespace ComicHoarder.Infrastructure
             this.contextFactory = contextFactory;
         }
 
-        //public async Task AddPublisherAsync(Core.Models.Publisher publisher)
-        //{
-        //    using var db = this.contextFactory.CreateDbContext();
-        //    var pub = await db.Publishers
-        //            .FirstOrDefaultAsync(x => x.Id == publisher.id);
+        public async Task AddVolumeAsync(ComicHoarder.Domain.Models.Volume volume)
+        {
+            using var db = this.contextFactory.CreateDbContext();
 
-        //    if (pub == null)
-        //    {
-        //        pub = new Publisher
-        //        {
-        //            Name = publisher.name,
-        //            Description = publisher.description,
-        //            DateLastUpdated = publisher.dateLastUpdated,
-        //            Enabled = publisher.enabled
-        //        };
+            var vol = await db.Volumes
+                .FirstOrDefaultAsync(x => x.Id == volume.Id);
 
-        //        db.Add(pub);
+            if (vol == null)
+            {
+                vol = new VolumeEntity
+                {
+                    Id = volume.Id,
+                    PublisherId = volume.PublisherId,
+                    Name = volume.Name,
+                    Description = volume.Description,
+                    DateAdded = volume.DateAdded,
+                    DateLastUpdated = volume.DateLastUpdated,
+                    Collectable = volume.Collectable,
+                    CountOfIssues = volume.CountOfIssues,
+                    StartYear = volume.StartYear,
+                    Enabled = volume.Enabled,
+                    Complete = volume.Complete
+                };
 
-        //        await db.SaveChangesAsync();
-        //    }
-        //}
+                db.Add(vol);
+
+                await db.SaveChangesAsync();
+            }
+        }
 
         public async Task DeleteVolumeAsync(int volumeId)
         {
@@ -70,7 +78,25 @@ namespace ComicHoarder.Infrastructure
         public async Task<IEnumerable<ComicHoarder.Domain.Models.Volume>> GetVolumesByPublisherAndNameAsync(int id, string name)
         {
             using var db = this.contextFactory.CreateDbContext();
-            var data = await db.Volumes.Where(x => x.PublisherId == id && x.Name.ToLower().Contains(name.ToLower())).OrderBy(x => x.Name).ToListAsync();
+            var data = await db.Volumes
+                .Where(x => x.PublisherId == id &&
+                            x.Name.Contains(name))
+                .OrderBy(x => x.Name)
+                .AsNoTracking()
+                .IgnoreAutoIncludes()
+                .ToListAsync();
+            return data.Select(VolumeDataMapper.ToDomain).ToList();
+        }
+
+        public async Task<IEnumerable<Volume>> GetVolumesByPublisherIdAsync(int publisherId)
+        {
+            using var db = this.contextFactory.CreateDbContext();
+            var data = await db.Volumes
+                .Where(x => x.PublisherId == publisherId)
+                .OrderBy(x => x.Name)
+                .AsNoTracking()
+                .IgnoreAutoIncludes()
+                .ToListAsync();
             return data.Select(VolumeDataMapper.ToDomain).ToList();
         }
 
@@ -89,6 +115,13 @@ namespace ComicHoarder.Infrastructure
 
                 await db.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<int>> GetAllVolumeId()
+        {
+            using var db = this.contextFactory.CreateDbContext();
+            var ids = await db.Volumes.Select(x => x.Id).ToListAsync();
+            return ids;
         }
     }
 }

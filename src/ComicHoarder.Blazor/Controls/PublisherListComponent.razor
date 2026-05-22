@@ -2,9 +2,11 @@
 
 @if (publishers == null)
 {
+    <br />
     <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only"></span>
     </div>
+    <div class="">Loading...</div>
 }
 else
 {
@@ -12,6 +14,7 @@ else
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Id</th>
                 <th>Description</th>
                 <th>Enabled</th>
                 <th>Date Last Updated</th>

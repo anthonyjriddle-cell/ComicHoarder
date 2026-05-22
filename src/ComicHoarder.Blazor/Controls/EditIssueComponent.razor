@@ -15,7 +15,10 @@
             <InputText id="name" @bind-Value="Issue.Name" class="form-control"></InputText>
             <ValidationMessage For="() => Issue.Name"></ValidationMessage>
         </div>
-
+        <div class="form-group">
+            <label for="id">Issue Id</label>
+            <input id="id" Value="@Issue.Id.ToString()" class="form-control" disabled>
+        </div>
         <div class="form-group">
             <label for="issueNumber">Issue Number</label>
             <InputNumber id="issueNumber" @bind-Value="Issue.IssueNumber" class="form-control"></InputNumber>

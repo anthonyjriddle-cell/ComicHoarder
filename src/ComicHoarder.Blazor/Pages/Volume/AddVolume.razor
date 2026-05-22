@@ -1,0 +1,14 @@
+﻿@page "/AddVolume/{pubId:int}"
+
+@inject NavigationManager NavigationManager
+@inject ISearchMissingComicVineVolumesByPublisherUseCase SearchMissingComicVineVolumesByPublisherUseCase
+
+<h3>Add Volume</h3>
+
+    <ComicVineVolumeListComponent PublisherId="pubId">
+    </ComicVineVolumeListComponent>
+
+@code {
+    [Parameter]
+    public int pubId { get; set; }
+}

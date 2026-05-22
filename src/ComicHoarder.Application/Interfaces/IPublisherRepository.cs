@@ -4,6 +4,7 @@ namespace ComicHoarder.Application.Interfaces
 {
     public interface IPublisherRepository
     {
+        Task<IEnumerable<Publisher>> GetAllPublishersAsync();
         Task<Publisher> GetPublisherByIdAsync(int publisherId);
         Task<IEnumerable<Publisher>> GetPublishersByNameAsync(string name);
         Task UpdatePublisherAsnc(Publisher publisher);

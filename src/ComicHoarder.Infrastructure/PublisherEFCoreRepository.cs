@@ -56,6 +56,19 @@ namespace ComicHoarder.Infrastructure
             }
         }
 
+        public async Task<IEnumerable<Publisher>> GetAllPublishersAsync()
+        {
+            using var db = contextFactory.CreateDbContext();
+
+            var data = await db.Publishers
+                .OrderBy(x => x.Name)
+                .ToListAsync();
+
+            return data
+                .Select(PublisherDataMapper.ToDomain)
+                .ToList();
+        }
+
         public async Task<Publisher> GetPublisherByIdAsync(int publisherId)
         {
             using var db = this.contextFactory.CreateDbContext();

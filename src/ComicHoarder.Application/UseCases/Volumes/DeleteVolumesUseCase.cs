@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ComicHoarder.Application.Interfaces;
 
-namespace CH.UseCases.RepositoryUseCases.Volumes
+namespace ComicHoarder.Application.UseCases.Volumes
 {
     public class DeleteVolumeUseCase : IDeleteVolumeUseCase
     {

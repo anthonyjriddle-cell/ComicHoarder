@@ -9,5 +9,8 @@ namespace ComicHoarder.Application.Interfaces
         Task UpdateVolumeAsnc(Volume volume);
         //Task AddPublisherAsync(Core.Models.Publisher publisher);
         Task DeleteVolumeAsync(int volumeId);
+        Task<IEnumerable<Volume>> GetVolumesByPublisherIdAsync(int publisherId);
+        Task AddVolumeAsync(Volume volume);
+        Task<List<int>> GetAllVolumeId();
     }
 }

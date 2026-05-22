@@ -2,9 +2,11 @@
 
 @if (volumes == null)
 {
+    <br />
     <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only"></span>
     </div>
+    <div class="">Loading...</div>
 }
 else
 {
@@ -12,7 +14,8 @@ else
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Description</th>
+                <th>Id</th>
+                <th class="wrap-long-text">Description</th>
                 <th>Collectable</th>
                 <th>Enabled</th>
                 <th>Date Last Updated</th>

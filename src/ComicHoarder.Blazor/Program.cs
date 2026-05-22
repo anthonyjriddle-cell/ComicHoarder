@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components.Web;
 using ComicHoarder.Application.Interfaces;
 using ComicHoarder.Infrastructure;
 using ComicHoarder.Infrastructure.ComicVine;
-using CH.UseCases.RepositoryUseCases.Volumes;
+using ComicHoarder.Application.UseCases.Volumes;
 using ComicHoarder.Application.UseCases.Volumes.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine;
@@ -52,14 +52,19 @@ namespace ComicHoarder.Blazor
             builder.Services.AddScoped<IDeletePublisherUseCase, DeletePublisherUseCase>();
             builder.Services.AddTransient<IViewVolumesByPublisherAndNameUseCase, ViewVolumesByPublisherAndNameUseCase>();
             builder.Services.AddTransient<IViewVolumeByIdUseCase, ViewVolumeByIdUseCase>();
+            builder.Services.AddTransient<IAddVolumeUseCase, AddVolumeUseCase>();
             builder.Services.AddTransient<IEditVolumeUseCase, EditVolumeUseCase>();
             builder.Services.AddTransient<IDeleteVolumeUseCase, DeleteVolumeUseCase>();
+            builder.Services.AddTransient<IAddIssueUseCase, AddIssueUseCase>();
             builder.Services.AddTransient<IViewIssuesByVolumeAndNameUseCase, ViewIssuesByVolumeAndNameUseCase>();
             builder.Services.AddTransient<IViewIssueByIdUseCase, ViewIssueByIdUseCase>();
             builder.Services.AddTransient<IEditIssueUseCase, EditIssueUseCase>();
             builder.Services.AddTransient<IDeleteIssueUseCase, DeleteIssueUseCase>();
 
+            builder.Services.AddTransient<ISearchMissingComicVineIssuesByVolumeUseCase, SearchMissingComicVineIssuesByVolumeUseCase>();
             builder.Services.AddTransient<ISearchComicVinePublisherUseCase, SearchComicVinePublisherUseCase>();
+            builder.Services.AddTransient<ISearchMissingComicVinePublishersUseCase, SearchMissingComicVinePublishersUseCase>();
+            builder.Services.AddTransient<ISearchMissingComicVineVolumesByPublisherUseCase, SearchMissingComicVineVolumesByPublisherUseCase>();
 
             var app = builder.Build();
 

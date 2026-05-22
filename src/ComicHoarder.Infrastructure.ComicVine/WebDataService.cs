@@ -46,7 +46,12 @@ namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
             string? url = urlBuilder.Publisher(publisherId, null);
             if (url is not null)
             {
-                var result = connection.Query(url).DeserializePublisher();
+                var jsonresult = connection.Query(url);
+                if (jsonresult is not null && jsonresult.StartsWith("Message "))
+                {
+                    return null;
+                }
+                var result = jsonresult.DeserializePublisher();
                 if (result is not null && result.results is not null)
                 {
                     return result.results.ToVolumes();

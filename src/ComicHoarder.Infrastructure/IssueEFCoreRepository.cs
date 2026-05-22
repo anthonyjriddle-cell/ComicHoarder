@@ -100,7 +100,6 @@ namespace ComicHoarder.Infrastructure
             return data.Select(IssueDataMapper.ToDomain).ToList();
         }
 
-
         public async Task UpdateIssueAsync(Issue issue)
         {
             using var db = this.contextFactory.CreateDbContext();
@@ -126,6 +125,13 @@ namespace ComicHoarder.Infrastructure
 
                 await db.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<int>> GetAllIssueIds()
+        {
+            using var db = this.contextFactory.CreateDbContext();
+            var ids = await db.Issues.Select(x => x.Id).ToListAsync();
+            return ids;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CH.UseCases.RepositoryUseCases.Volumes
+namespace ComicHoarder.Application.UseCases.Volumes
 {
     public class ViewVolumeByIdUseCase : IViewVolumeByIdUseCase
     {

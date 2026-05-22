@@ -11,7 +11,7 @@
         <td>@Publisher.Enabled</td>
         <td>@Publisher.DateLastUpdated</td>
         <td>
-            <button type="button" class="btn btn-primary" style="width:200px;" @onclick="async () => await HandleAddPublisher(Publisher.Id)">Add Publisher</button>
+            <button type="button" class="btn btn-primary" style="width:200px;" @onclick="async () => await HandleAddPublisher(Publisher)">Add Publisher</button>
         </td>
     </tr>
 }
@@ -22,10 +22,10 @@
 
 
 
-    private async Task HandleAddPublisher(int publisherId)
+    private async Task HandleAddPublisher(Publisher publisher)
     {
-        await AddPublisherUseCase.ExecuteAsync(Publisher);
-        this.Publisher = null;
-        NavigationManager.NavigateTo(@"\Publishers");
+        await AddPublisherUseCase.ExecuteAsync(publisher);
+        Publisher = null;
+        NavigationManager.NavigateTo("/Publishers");
     }
 }

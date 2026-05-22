@@ -30,6 +30,10 @@ namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
                 responseBody = "Message :{0} " + e.Message;
             }
 
+            if (responseBody.Contains("number_of_total_results\":0")) //TODO Move this check inside Query
+            {
+                responseBody = "Message :{0} Likely Id Moved";
+            }
             return responseBody;
         }
     }

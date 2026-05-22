@@ -1,0 +1,14 @@
+﻿@page "/AddIssue/{volumeId:int}"
+
+@inject NavigationManager NavigationManager
+@inject ISearchMissingComicVineIssuesByVolumeUseCase SearchMissingComicVineIssuesByVolumeUseCase
+
+<h3>Add Issue</h3>
+
+<ComicVineIssueListComponent VolumeId="volumeId">
+</ComicVineIssueListComponent>
+
+@code {
+    [Parameter]
+    public int volumeId { get; set; }
+}

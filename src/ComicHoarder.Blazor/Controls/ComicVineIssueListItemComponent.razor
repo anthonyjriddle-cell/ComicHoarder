@@ -1,0 +1,39 @@
+﻿@inject NavigationManager NavigationManager
+@inject IAddIssueUseCase AddIssueUseCase
+
+@if (Issue != null)
+{
+    <tr>
+        <td>@Issue.Id</td>
+        <td>@Issue.IssueNumber</td>
+        <td>@Issue.Name</td>
+        <td>@Issue.CoverDate</td>
+        <td>@Issue.Enabled</td>
+        <td>@Issue.DateLastUpdated</td>
+        <td>
+            <button type="button"
+                    class="btn btn-primary"
+                    style="width:200px;"
+                    @onclick="async () => await HandleAddIssue(Issue)">
+                Add Issue
+            </button>
+        </td>
+    </tr>
+}
+
+@code {
+    [Parameter]
+    public Issue? Issue { get; set; }
+
+    [Parameter]
+    public int VolumeId { get; set; }
+
+    private async Task HandleAddIssue(Issue issue)
+    {
+        await AddIssueUseCase.ExecuteAsync(issue);
+
+        Issue = null;
+
+        NavigationManager.NavigateTo($"/Issues/{VolumeId}");
+    }
+}
