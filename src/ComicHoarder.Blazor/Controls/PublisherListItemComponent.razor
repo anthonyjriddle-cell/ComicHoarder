@@ -4,11 +4,11 @@
 @if (Publisher != null)
 {
     <tr>
-        <td>@Publisher.Name</td>
         <td>@Publisher.Id</td>
+        <td>@Publisher.Name</td>
         <td>@Publisher.Description</td>
         <td>@Publisher.Enabled</td>
-        <td>@Publisher.DateLastUpdated</td>
+        <td><a href="https://comicvine.gamespot.com/publisher/4010-@(Publisher.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a></td>
         <td><a href="/volumes/@Publisher.Id" class="btn btn-success">Volumes</a></td>
         <td>
             <a href="/editpublisher/@Publisher.Id" class="btn btn-primary">Edit</a>

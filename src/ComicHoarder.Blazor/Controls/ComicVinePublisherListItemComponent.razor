@@ -10,6 +10,7 @@
         <td>@Publisher.Description</td>
         <td>@Publisher.Enabled</td>
         <td>@Publisher.DateLastUpdated</td>
+        <td><a href="https://comicvine.gamespot.com/publisher/4010-@(Publisher.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a></td>
         <td>
             <button type="button" class="btn btn-primary" style="width:200px;" @onclick="async () => await HandleAddPublisher(Publisher)">Add Publisher</button>
         </td>

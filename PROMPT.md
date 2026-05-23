@@ -1,168 +1,312 @@
-﻿# ComicHoarder — AI Project Bootstrap Prompt  
-You are assisting in the development of **ComicHoarder**, an enterprise‑grade Blazor application built using **Clean/Onion Architecture**.  
-Your job is to act as a senior architect + senior .NET engineer who understands the entire solution structure and helps generate consistent, correct, domain‑aligned code.
+﻿# ComicHoarder — Project Development Prompt  
+This prompt defines the full architecture, domain rules, naming conventions, workflows, and development expectations for the ComicHoarder application.  
+Paste this into any new Copilot/ChatGPT session to continue development seamlessly.
 
-## 🔷 Solution Architecture  
-The solution uses a strict Clean Architecture layout:
+---
 
-/ComicHoarder.sln
-/src
-/ComicHoarder.Domain
-- Entities (POCOs)
-- Value Objects
-- Domain Models
-- Domain Services (rare)
-- Interfaces (Repository interfaces live here)
+# 🎯 Project Summary  
+ComicHoarder is a **Clean Architecture / Onion Architecture** Blazor Server application for managing comic book collections.  
+It integrates with **ComicVine** to import missing Volumes and Issues.
 
-/ComicHoarder.Application
-/Interfaces
-- Repository interfaces (IPublisherRepository, IVolumeRepository, IIssueRepository, etc.)
-/UseCases
-/Publishers
-/Volumes
-/Issues
-- Each use case is a single class with a single ExecuteAsync() method
-- Use cases depend ONLY on Application.Interfaces
+The system consists of:
 
-/ComicHoarder.Infrastructure
-/EFCore
-- DbContext
-- EF entities
-- EF repositories implementing the interfaces
-- Data mappers (EF → Domain, Domain → EF)
+- **Domain Models** (Volume, Issue, Publisher, etc.)
+- **Application Layer** (Use Cases, Interfaces)
+- **Infrastructure Layer** (Repositories, EF Core)
+- **UI Layer** (Blazor Components + Pages)
+- **ComicVine Integration Layer** (WebDataService)
 
-/ComicHoarder.UI
-/Pages
-/Components
-- Blazor Server UI
-- Uses dependency injection to call UseCases
+All code generated must follow these conventions exactly.
 
+---
 
-## 🔷 Coding Rules  
-You must follow these rules for all generated code:
+# 🧱 Architecture Rules
 
-### 1. **Use Case Rules**
-- Every use case is a single class named `{Action}{Entity}UseCase`
-- It contains exactly one public method:
+## Clean Architecture Layers
+- **Domain**  
+  - Contains POCO models only  
+  - No dependencies on other layers  
 
-Task ExecuteAsync(...)
+- **Application**  
+  - Contains Use Cases  
+  - Contains Interfaces for repositories & services  
+  - No EF Core, no Blazor, no UI logic  
 
-- Use cases depend ONLY on repository interfaces from `Application.Interfaces`
-- No business logic inside UI or Infrastructure
+- **Infrastructure**  
+  - Contains EF Core repositories  
+  - Implements Application interfaces  
 
-### 2. **Repository Rules**
-- EF repositories live in Infrastructure
-- They use:
-using var db = contextFactory.CreateDbContext();
+- **UI (Blazor)**  
+  - Pages + Components  
+  - Injects Use Cases  
+  - No direct repository access  
 
-- They return **Domain Models**, not EF entities
-- All mapping must go through DataMapper classes
+- **Integrations**  
+  - ComicVine API access  
+  - WebDataService returns domain models  
 
-### 3. **UI Rules**
-- Blazor components follow this pattern:
-- Inject use cases at top
-- Use `<EditForm>` for editing
-- Use `EventCallback<T>` for child → parent communication
-- Use `OnParametersSetAsync()` for loading data
-- Use null‑conditional operators (`?.`) to avoid early renders crashing
+---
 
-### 4. **Naming Rules**
-- Pages: `EditVolumePage.razor`, `IssueListPage.razor`
-- Components: `EditVolumeComponent.razor`, `IssueListItemComponent.razor`
-- Use cases: `EditVolumeUseCase`, `ViewIssuesByVolumeAndNameUseCase`
-- Repositories: `VolumeEFCoreRepository`, `IssueEFCoreRepository`
+# 📦 Domain Models
 
-### 5. **DI Registration Rules**
-All use cases must be registered in Program.cs like:
-builder.Services.AddTransient<IEditVolumeUseCase, EditVolumeUseCase>();
+## Volume
+```
+public class Volume
+{
+    public int Id { get; set; }
+    public int PublisherId { get; set; }
+    public string? Name { get; set; }
+    public string? Description { get; set; }
+    public int StartYear { get; set; }
+    public int EndYear { get; set; }
+    public bool Collectable { get; set; }
+    public bool Enabled { get; set; }
+    public DateTime? DateLastUpdated { get; set; }
+}
+```
 
+## Issue
+```
+public class Issue
+{
+    public int Id { get; set; }
+    public int VolumeId { get; set; }
+    public string? Name { get; set; }
+    public float IssueNumber { get; set; }
+    public int PublishMonth { get; set; }
+    public int PublishYear { get; set; }
+    public bool Collected { get; set; }
+    public bool Enabled { get; set; }
+    public string? IssueNumberSuffix { get; set; }
+    public int FormatId { get; set; }
+    public bool Reprint { get; set; }
+    public DateTime? DateAdded { get; set; }
+    public string? Summary { get; set; }
+    public DateTime? DateLastUpdated { get; set; }
+    public DateTime? CoverDate { get; set; }
+}
+```
 
-## 🔷 Your Responsibilities  
-When I paste code, you will:
+---
 
-- Analyze it for correctness and architectural alignment  
-- Generate parallel versions (e.g., Publisher → Volume → Issue)  
-- Generate UI components that match my existing patterns  
-- Generate EF repository methods using my mapper pattern  
-- Generate DI registrations  
-- Fix bugs and null‑reference issues in Blazor pages  
-- Keep everything consistent with the domain model  
+# 🔌 Repository Interfaces
 
-## 🔷 Domain Model Summary  
-### Publisher  
-- Id  
-- Name  
-- Description  
-- Enabled  
-- DateLastUpdated  
+## Volume Repository
+```
+public interface IVolumeRepository
+{
+    Task AddVolumeAsync(Volume volume);
+    Task<List<int>> GetAllVolumeId();
+}
+```
 
-### Volume  
-- Id  
-- PublisherId  
-- Name  
-- Description  
-- Collectable  
-- Enabled  
-- DateLastUpdated  
+## Issue Repository
+```
+public interface IIssueRepository
+{
+    Task AddIssueAsync(Issue issue);
+    Task<List<int>> GetAllIssueIds();
+}
+```
 
-### Issue  
-- Id  
-- VolumeId  
-- Name  
-- IssueNumber  
-- IssueNumberSuffix  
-- PublishMonth  
-- PublishYear  
-- Collected  
-- Enabled  
-- FormatId  
-- Reprint  
-- CoverDate  
-- DateAdded  
-- DateLastUpdated  
+---
 
-## 🔷 Data Mapper Pattern  
-All EF repositories must use:
-return data.Select(IssueDataMapper.ToDomain).ToList();
+# 🌐 ComicVine Integration
 
+## WebDataService must expose:
+```
+IEnumerable<Volume> GetVolumesFromPublisher(int publisherId);
+IEnumerable<Issue> GetIssuesFromVolume(int volumeId);
+```
 
-## 🔷 When generating code  
-- Match my formatting exactly  
-- Match my naming conventions exactly  
-- Match my async patterns exactly  
-- Never invent new architecture  
-- Never add extra layers  
-- Keep everything clean, minimal, and consistent  
+Returned models must match the Domain Models exactly.
 
-## 🔷 When generating UI  
-- Use `<EditForm>`  
-- Use `<ValidationMessage>`  
-- Use `EventCallback<T>`  
-- Use null‑safe rendering (`@Model?.Name`)  
-- Use the same Bootstrap classes I already use  
+---
 
-## 🔷 When generating pages  
-- Use route parameters like:
-@page "/Issues/{volId:int}"
+# 🧠 Use Case Rules
 
-- Load data in `OnParametersSetAsync()`
-- Navigate using `NavigationManager.NavigateTo("/Issues")`
+## Naming
+- Volume use cases live in `Application.UseCases.Volumes`
+- Issue use cases live in `Application.UseCases.Issues`
+- ComicVine use cases live in `Application.UseCases.ComicVine`
 
-## 🔷 When generating repository methods  
-- Use EF Core async LINQ  
-- Use `.ToLower().Contains()` for name filtering  
-- Use `.OrderBy()` consistently  
-- Always map EF → Domain  
-- Never return EF entities  
+## Examples
 
-## 🔷 When generating Issue equivalents  
-If I give you a Publisher or Volume class/component/use case,  
-you will generate the Issue version with perfect 1:1 structural parity.
+### AddVolumeUseCase
+```
+public class AddVolumeUseCase : IAddVolumeUseCase
+{
+    private readonly IVolumeRepository volumeRepository;
 
-## 🔷 When I ask for help  
-You will respond with:
-- Clean, correct code  
-- No extra commentary unless needed  
-- No invented architecture  
-- No deviations from the patterns above  
+    public AddVolumeUseCase(IVolumeRepository volumeRepository)
+    {
+        this.volumeRepository = volumeRepository;
+    }
 
+    public async Task ExecuteAsync(Volume volume)
+    {
+        await volumeRepository.AddVolumeAsync(volume);
+    }
+}
+```
+
+### AddIssueUseCase
+```
+public class AddIssueUseCase : IAddIssueUseCase
+{
+    private readonly IIssueRepository issueRepository;
+
+    public AddIssueUseCase(IIssueRepository issueRepository)
+    {
+        this.issueRepository = issueRepository;
+    }
+
+    public async Task ExecuteAsync(Issue issue)
+    {
+        await issueRepository.AddIssueAsync(issue);
+    }
+}
+```
+
+### SearchMissingComicVineVolumesByPublisherUseCase
+```
+public class SearchMissingComicVineVolumesByPublisherUseCase : ISearchMissingComicVineVolumesByPublisherUseCase
+{
+    private readonly IWebDataService webDataService;
+    private readonly IVolumeRepository volumeRepository;
+
+    public async Task<IEnumerable<Volume>> ExecuteAsync(int publisherId)
+    {
+        var comicVineVolumes = webDataService.GetVolumesFromPublisher(publisherId)
+            ?? new List<Volume>();
+
+        var localIds = await volumeRepository.GetAllVolumeId();
+
+        return comicVineVolumes.Where(v => !localIds.Contains(v.Id));
+    }
+}
+```
+
+### SearchMissingComicVineIssuesByVolumeUseCase
+```
+public class SearchMissingComicVineIssuesByVolumeUseCase : ISearchMissingComicVineIssuesByVolumeUseCase
+{
+    private readonly IWebDataService webDataService;
+    private readonly IIssueRepository issueRepository;
+
+    public async Task<IEnumerable<Issue>> ExecuteAsync(int volumeId)
+    {
+        var comicVineIssues = webDataService.GetIssuesFromVolume(volumeId)
+            ?? new List<Issue>();
+
+        var localIds = await issueRepository.GetAllIssueIds();
+
+        return comicVineIssues.Where(i => !localIds.Contains(i.Id));
+    }
+}
+```
+
+---
+
+# 🖥️ UI Layer (Blazor)
+
+## AddVolume Page
+```
+@page "/AddVolume/{pubId:int}"
+<ComicVineVolumeListComponent PublisherId="pubId" />
+```
+
+## AddIssue Page
+```
+@page "/AddIssue/{volumeId:int}"
+<ComicVineIssueListComponent VolumeId="volumeId" />
+```
+
+## ComicVineVolumeListComponent  
+- Injects `ISearchMissingComicVineVolumesByPublisherUseCase`
+- Displays table of missing volumes
+- Renders `<ComicVineVolumeListItemComponent>`
+
+## ComicVineIssueListComponent  
+- Injects `ISearchMissingComicVineIssuesByVolumeUseCase`
+- Displays table of missing issues
+- Renders `<ComicVineIssueListItemComponent>`
+
+## ComicVineVolumeListItemComponent  
+- Injects `IAddVolumeUseCase`
+- Button: “Add Volume”
+- Navigates to `/Volumes/{PublisherId}`
+
+## ComicVineIssueListItemComponent  
+- Injects `IAddIssueUseCase`
+- Button: “Add Issue”
+- Navigates to `/Issues/{VolumeId}`
+
+---
+
+# 🎨 CSS Utilities
+
+## Wrap long text in description columns
+```
+.wrap-long-text {
+    white-space: normal;
+    word-break: break-word;
+}
+```
+
+## Narrow button columns
+```
+.narrow-col {
+    width: 1%;
+    white-space: nowrap;
+}
+```
+
+---
+
+# 🔗 ComicVine Links
+
+## Publisher link
+```
+<a href="https://comicvine.gamespot.com/publisher/4010-@(Publisher.Id)/"
+   target="_blank"
+   rel="noopener noreferrer">
+```
+
+## Volume link
+```
+https://comicvine.gamespot.com/volume/4050-{Volume.Id}/
+```
+
+## Issue link
+```
+https://comicvine.gamespot.com/issue/4000-{Issue.Id}/
+```
+
+---
+
+# 🧭 Navigation Rules
+
+- After adding a Volume → navigate to `/Volumes/{PublisherId}`
+- After adding an Issue → navigate to `/Issues/{VolumeId}`
+- Add pages always follow pattern:  
+  `/AddVolume/{pubId}`  
+  `/AddIssue/{volumeId}`
+
+---
+
+# 🛠️ Development Rules
+
+- All new code must follow the patterns defined above  
+- All Issue functionality must mirror Volume functionality 1:1  
+- No repository or EF Core logic in UI or Use Cases  
+- No UI logic in Use Cases  
+- No ComicVine logic in UI or Repositories  
+- All new components must follow existing naming conventions  
+- All new use cases must follow existing async patterns  
+- All new pages must follow existing routing patterns  
+
+---
+
+# ✔️ End of Prompt  
+Paste this entire block into `prompt.md` to bootstrap any new session.

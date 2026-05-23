@@ -4,13 +4,14 @@
 @if (Issue != null)
 {
     <tr>
-        <td>@Issue.Name</td>
         <td>@Issue.Id</td>
+        <td>@Issue.Name</td>
         <td>@Issue.IssueNumber@Issue.IssueNumberSuffix</td>
         <td>@Issue.PublishMonth/@Issue.PublishYear</td>
         <td>@Issue.Collected</td>
         <td>@Issue.Enabled</td>
         <td>@Issue.DateLastUpdated</td>
+        <td><a href="https://comicvine.gamespot.com/volume/4000-@(Issue.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a></td>
         <td>
             <a href="/editissue/@Issue.Id" class="btn btn-primary">Edit</a>
         </td>
