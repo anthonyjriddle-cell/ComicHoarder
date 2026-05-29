@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using ComicHoarder.Infrastructure.ComicVine.Models;
 using ComicHoarder.Domain.Models;
-using ComicHoarder.Application;
 
 namespace ComicHoarder.Infrastructure.ComicVine
 {

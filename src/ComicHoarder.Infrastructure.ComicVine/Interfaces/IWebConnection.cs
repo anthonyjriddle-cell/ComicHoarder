@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ComicHoarder.Application.Interfaces
+namespace ComicHoarder.Infrastructure.ComicVine.Interfaces
 {
     public interface IWebConnection
     {

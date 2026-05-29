@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ComicHoarder.Domain.Models;
 using System.IO;
 using System.Net;
-using ComicHoarder.Application.Interfaces;
+using ComicHoarder.Infrastructure.ComicVine.Interfaces;
 
 namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
 {
