@@ -11,6 +11,10 @@ using ComicHoarder.Application.UseCases.ComicVine.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine;
 using ComicHoarder.Application.UseCases.Issues.Interfaces;
 using ComicHoarder.Application.UseCases.Issues;
+using ComicHoarder.Application.UseCases.Statistics.Interfaces;
+using ComicHoarder.Application.UseCases.Statistics;
+using Radzen;
+using Radzen.Blazor;
 
 namespace ComicHoarder.Blazor
 {
@@ -65,6 +69,10 @@ namespace ComicHoarder.Blazor
             builder.Services.AddTransient<ISearchComicVinePublisherUseCase, SearchComicVinePublisherUseCase>();
             builder.Services.AddTransient<ISearchMissingComicVinePublishersUseCase, SearchMissingComicVinePublishersUseCase>();
             builder.Services.AddTransient<ISearchMissingComicVineVolumesByPublisherUseCase, SearchMissingComicVineVolumesByPublisherUseCase>();
+
+            builder.Services.AddTransient<IGetComicIssuesToCollectCountByPublisherUseCase, GetComicIssuesToCollectCountByPublisherUseCase>();
+
+            builder.Services.AddRadzenComponents();
 
             var app = builder.Build();
 

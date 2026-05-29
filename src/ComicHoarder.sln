@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.DBScaffold", "Utili
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicHoarder.Infrastructure.ComicVine", "ComicHoarder.Infrastructure.ComicVine\ComicHoarder.Infrastructure.ComicVine.csproj", "{4C09C0BD-9E7A-45B9-AD46-FDEFC816461F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetComicsDownloader", "GetComicsDownloader\GetComicsDownloader.csproj", "{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +49,16 @@ Global
 		{4C09C0BD-9E7A-45B9-AD46-FDEFC816461F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C09C0BD-9E7A-45B9-AD46-FDEFC816461F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C09C0BD-9E7A-45B9-AD46-FDEFC816461F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0525ABCF-A2AB-48FE-A70A-C967EB89ECF4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBB47A81-C6E5-4ABD-BB0B-1598F1536EC2}

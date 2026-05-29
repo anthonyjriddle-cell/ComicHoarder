@@ -1,4 +1,5 @@
 ﻿using ComicHoarder.Application.Interfaces;
+using ComicHoarder.Infrastructure.Repositories.Statistics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +17,7 @@ public static class DependencyInjection
         services.AddScoped<IPublisherRepository, PublisherEFCoreRepository>();
         services.AddScoped<IVolumeRepository, VolumeEFCoreRepository>();
         services.AddScoped<IIssueRepository, IssueEFCoreRepository>();
+        services.AddScoped<IComicIssuesToCollectCountByPublisherEFCoreRepository, ComicIssuesToCollectCountByPublisherEFCoreRepository>();
         //services.AddScoped<IIssueRepository, IssueRepository>();
         // Add more repositories here...
 

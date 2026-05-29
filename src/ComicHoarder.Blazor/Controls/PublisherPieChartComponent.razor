@@ -1,0 +1,52 @@
+﻿@using Radzen
+@using Radzen.Blazor
+@using ComicHoarder.Domain.Models
+
+<div class="publisher-chart-container">
+    <RadzenStack Style="height:300px;width:300px;">
+        <RadzenChart>
+            <RadzenPieSeries Data="@ChartData"
+                             CategoryProperty="Category"
+                             ValueProperty="Value"
+                             Title="@Data.Publisher" />
+            <RadzenSeriesDataLabels Visible="true" />
+
+        </RadzenChart>
+    </RadzenStack>
+
+    <div class="publisher-label">
+        <a href="/Publishers/@Data.Id">@Data.Publisher</a>
+    </div>
+</div>
+
+@code {
+    [Parameter] public ComicIssuesToCollectCountByPublisher Data { get; set; }
+
+    public List<ChartSlice> ChartData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var collected = Data.CollectedCount ?? 0;
+        var uncollected = Data.UncollectedCount ?? 0;
+
+        // Radzen will NOT render if both are zero
+        if (collected == 0 && uncollected == 0)
+        {
+            // Add a placeholder slice so the chart renders
+            ChartData = new()
+            {
+                new ChartSlice("No Data", 1)
+            };
+        }
+        else
+        {
+            ChartData = new()
+            {
+                new ChartSlice("Collected", collected),
+                new ChartSlice("Uncollected", uncollected)
+            };
+        }
+    }
+
+    public record ChartSlice(string Category, int Value);
+}

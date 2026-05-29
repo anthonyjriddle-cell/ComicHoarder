@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ComicHoarder.Infrastructure.Models;
+namespace ComicHoarder.Domain.Models;
 
 public partial class ComicIssuesToCollectCountByPublisher
 {

@@ -1,7 +1,7 @@
 ﻿using ComicHoarder.Domain.Models;
 using ComicHoarder.Infrastructure.Models;
 
-namespace ComicHoarder.Infrastructure
+namespace ComicHoarder.Infrastructure.Mappers
 {
     public static class IssueDataMapper
     {

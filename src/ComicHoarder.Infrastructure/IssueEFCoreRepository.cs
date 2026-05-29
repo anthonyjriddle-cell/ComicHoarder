@@ -1,4 +1,5 @@
 ﻿using ComicHoarder.Domain.Models;
+using ComicHoarder.Infrastructure.Mappers;
 using ComicHoarder.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using ComicHoarder.Application.Interfaces;

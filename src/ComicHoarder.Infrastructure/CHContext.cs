@@ -26,7 +26,7 @@ public partial class CHContext : DbContext
 
     public virtual DbSet<ComicIssuesToCollect> ComicIssuesToCollects { get; set; }
 
-    public virtual DbSet<ComicIssuesToCollectCountByPublisher> ComicIssuesToCollectCountByPublishers { get; set; }
+    public virtual DbSet<ComicIssuesToCollectCountByPublisherEntity> ComicIssuesToCollectCountByPublisher { get; set; }
 
     public virtual DbSet<ComicIssuesToCollectWithLink> ComicIssuesToCollectWithLinks { get; set; }
 
@@ -123,7 +123,7 @@ public partial class CHContext : DbContext
             entity.Property(e => e.Volume).HasMaxLength(100);
         });
 
-        modelBuilder.Entity<ComicIssuesToCollectCountByPublisher>(entity =>
+        modelBuilder.Entity<ComicIssuesToCollectCountByPublisherEntity>(entity =>
         {
             entity
                 .HasNoKey()

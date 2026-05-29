@@ -71,3 +71,38 @@ a, .btn-link {
     white-space: normal;
     word-break: break-word;
 }
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.dashboard-cell {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.publisher-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publisher-label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.publisher-label a {
+    text-decoration: none;
+    color: #0078d4;
+}
+
+.publisher-label a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+﻿@page "/Dashboard"
+
+@using ComicHoarder.Domain.Models
+@using ComicHoarder.Application.UseCases.Statistics.Interfaces
+@inject IGetComicIssuesToCollectCountByPublisherUseCase StatsUseCase
+
+<h3>Publisher Collection Dashboard</h3>
+
+@if (stats == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="dashboard-grid">
+        @foreach (var item in stats)
+        {
+            <div class="dashboard-cell">
+                <PublisherPieChartComponent Data="item" />
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private IEnumerable<ComicIssuesToCollectCountByPublisher> stats;
+
+    protected override async Task OnInitializedAsync()
+    {
+        stats = await StatsUseCase.ExecuteAsync();
+    }
+}
