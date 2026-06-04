@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using ComicHoarder.Application.Interfaces;
 using ComicHoarder.Infrastructure;
-using ComicHoarder.Infrastructure.ComicVine;
 using ComicHoarder.Application.UseCases.Volumes;
 using ComicHoarder.Application.UseCases.Volumes.Interfaces;
 using ComicHoarder.Application.UseCases.ComicVine.Interfaces;
@@ -15,6 +14,7 @@ using ComicHoarder.Application.UseCases.Statistics.Interfaces;
 using ComicHoarder.Application.UseCases.Statistics;
 using Radzen;
 using Radzen.Blazor;
+using ComicHoarder.Infrastructure.ComicVine;
 
 namespace ComicHoarder.Blazor
 {
