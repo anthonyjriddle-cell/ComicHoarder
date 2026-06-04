@@ -24,22 +24,18 @@ namespace GetComicsDownloader.Services
         }
         public async Task<string> DownloadFileFromUrl(string url, string downloadPath)
         {
-            var response = await _client.GetAsync(url);
-            using (var ms = new MemoryStream())
-            {
-                var filename = System.Net.WebUtility.UrlDecode(response.RequestMessage.RequestUri.ToString().Split('/').Last());
-                filename = Path.Combine(downloadPath, filename);
+            var response = await _client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
+            response.EnsureSuccessStatusCode();
 
-                await response.Content.CopyToAsync(ms);
-                byte[] data;
-                data = ms.ToArray();
+            var filename = System.Net.WebUtility.UrlDecode(
+                response.RequestMessage.RequestUri.ToString().Split('/').Last());
+            var fullPath = Path.Combine(downloadPath, filename);
 
-                using (var fs = new FileStream(filename, FileMode.Create, FileAccess.Write))
-                {
-                    fs.Write(data, 0, data.Length);
-                }
-                return filename;
-            }
+            using var contentStream = await response.Content.ReadAsStreamAsync();
+            using var fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true);
+            await contentStream.CopyToAsync(fileStream);
+
+            return fullPath;
         }
     }
 }

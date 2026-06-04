@@ -12,46 +12,45 @@ namespace GetComicsDownloader.Services
     {
         public static List<string> GetPageUrlsFromHtml(string pageContents)
         {
-            HtmlDocument pageDocument = new HtmlDocument();
+            var pageDocument = new HtmlDocument();
             pageDocument.LoadHtml(pageContents);
 
-            List<string> comicLinks = new List<string>();
-            var dlNodes = pageDocument.DocumentNode.SelectNodes("//span").Where(x => x.InnerText.StartsWith("MARVEL COMICS")).FirstOrDefault().ParentNode.NextSibling.Descendants("a").ToList();
+            var marvelSpan = pageDocument.DocumentNode
+                .SelectNodes("//span")
+                ?.FirstOrDefault(x => x.InnerText.StartsWith("MARVEL COMICS"));
 
-            foreach (var dlNode in dlNodes)
-            {
-                if (dlNode.Attributes["href"] is not null)
-                {
-                    if (dlNode.Attributes["href"].Value.Contains("https://getcomics.org/marvel/"))
-                    {
-                        comicLinks.Add(dlNode.Attributes["href"].Value);
-                    }
-                }
-            }
-            return comicLinks;
+            if (marvelSpan == null)
+                return new List<string>();
+
+            var links = marvelSpan.ParentNode.NextSibling
+                .Descendants("a")
+                .Where(a => a.Attributes["href"]?.Value.Contains("https://getcomics.org/marvel/") == true)
+                .Select(a => a.Attributes["href"].Value)
+                .ToList();
+
+            return links;
         }
 
         public static DownloadLink GetDownloadLinkFromHtml(string pageContents)
         {
             var result = new DownloadLink();
-
-            HtmlDocument comicDocument = new HtmlDocument();
+            var comicDocument = new HtmlDocument();
             comicDocument.LoadHtml(pageContents);
 
-            result.ComicName = System.Web.HttpUtility.HtmlDecode(comicDocument.DocumentNode.SelectSingleNode("//h1[@class='post-title']").InnerText);
+            var titleNode = comicDocument.DocumentNode.SelectSingleNode("//h1[@class='post-title']");
+            result.ComicName = titleNode != null
+                ? System.Web.HttpUtility.HtmlDecode(titleNode.InnerText)
+                : string.Empty;
 
-            var allLinks = comicDocument.DocumentNode.SelectNodes("//a");
+            var downloadLink = comicDocument.DocumentNode
+                .SelectNodes("//a")
+                ?.FirstOrDefault(a => string.Equals(
+                    a.Attributes["Title"]?.Value,
+                    "Download Now",
+                    StringComparison.OrdinalIgnoreCase));
 
-            foreach (var allLink in allLinks)
-            {
-                if (allLink.Attributes["Title"] != null)
-                {
-                    if (allLink.Attributes["Title"].Value.ToUpper() == "Download Now".ToUpper())
-                    {
-                        result.Link = allLink.Attributes["href"].Value;
-                    }
-                }
-            }
+            if (downloadLink != null)
+                result.Link = downloadLink.Attributes["href"].Value;
 
             return result;
         }
