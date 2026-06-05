@@ -1,4 +1,5 @@
 ﻿using GetComicsDownloader.Services;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,13 @@ namespace GetComicsDownloader
     public class GetComicsJob
     {
         private readonly GetComicsHttpService _httpService;
+        private readonly ILogger<GetComicsJob> _logger;
         private readonly string _downloadPath;
 
-        public GetComicsJob(GetComicsHttpService httpService, string downloadPath)
+        public GetComicsJob(GetComicsHttpService httpService, ILogger<GetComicsJob> logger, string downloadPath)
         {
             _httpService = httpService;
+            _logger = logger;
             _downloadPath = downloadPath;
         }
 
@@ -25,13 +28,17 @@ namespace GetComicsDownloader
 
             if (!dates.Any())
             {
-                // log: no comics to get
+                _logger.LogInformation("No comics to get, all caught up!");
                 return;
             }
 
+            _logger.LogInformation("Getting comics from {BeginDate} to {EndDate}",
+                dates.First().ToShortDateString(), dates.Last().ToShortDateString());
+
             foreach (var date in dates)
             {
-                // log: getting comics for date
+                _logger.LogInformation("Getting comics for {Date}", date.ToShortDateString());
+
                 var weeklyUrl = GetComicsUrlBuilder.GenerateUrlFromDate(date);
                 var weeklyHtml = await _httpService.GetHtmlFromUrl(weeklyUrl);
                 var comicPageLinks = GetComicsHtmlParser.GetPageUrlsFromHtml(weeklyHtml);
@@ -41,15 +48,15 @@ namespace GetComicsDownloader
                     var comicHtml = await _httpService.GetHtmlFromUrl(link);
                     var comicDownload = GetComicsHtmlParser.GetDownloadLinkFromHtml(comicHtml);
 
-                    // log: downloading comicDownload.ComicName
+                    _logger.LogInformation("Downloading {ComicName}", comicDownload.ComicName);
                     try
                     {
                         var result = await _httpService.DownloadFileFromUrl(comicDownload.Link, _downloadPath);
-                        // log: file result is complete
+                        _logger.LogInformation("File {FileName} is complete", result);
                     }
                     catch (Exception ex)
                     {
-                        // log: error downloading comicDownload.Link
+                        _logger.LogError("Could not download {Link}, Error: {Error}", comicDownload.Link, ex.Message);
                     }
                 }
 

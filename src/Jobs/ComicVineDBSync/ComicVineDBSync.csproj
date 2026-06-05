@@ -8,21 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ComicHoarder.Infrastructure.ComicVine\ComicHoarder.Infrastructure.ComicVine.csproj" />
+    <ProjectReference Include="..\..\ComicHoarder.Infrastructure\ComicHoarder.Infrastructure.csproj" />
     <ProjectReference Include="..\..\ComicHoarder.Shared\ComicHoarder.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="LastDate.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
