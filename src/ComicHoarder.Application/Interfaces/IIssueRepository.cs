@@ -11,5 +11,7 @@ namespace ComicHoarder.Application.Interfaces
         Task<IEnumerable<Issue>> GetIssuesByVolumeAndNameAsync(int volumeId, string name);
         Task UpdateIssueAsync(Issue issue);
         Task<List<int>> GetAllIssueIds();
+        Task<bool> AnyIssuesAsync();
+        Task<DateTime?> GetMostRecentIssueDateAsync(DateTime? lastDate);
     }
 }

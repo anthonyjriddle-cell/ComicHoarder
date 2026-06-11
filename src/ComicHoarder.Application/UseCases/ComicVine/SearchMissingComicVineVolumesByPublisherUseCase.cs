@@ -22,7 +22,7 @@ namespace ComicHoarder.Application.UseCases.ComicVine
             var comicVineVolumes = webDataService.GetVolumesFromPublisher(publisherId)
                 ?? new List<Volume>();
 
-            var localVolumeIds = await volumeRepository.GetAllVolumeId();
+            var localVolumeIds = await volumeRepository.GetAllVolumeIdAsync();
 
             var volumesNotInDatabase =  comicVineVolumes
                 .Where(v => !localVolumeIds.Contains(v.Id))

@@ -10,5 +10,6 @@ namespace ComicHoarder.Application.Interfaces
         Task UpdatePublisherAsnc(Publisher publisher);
         Task AddPublisherAsync(Publisher publisher);
         Task DeletePublisherAsync(int publisherId);
+        Task<List<int>> GetAllEnabledPublisherIdsAsync();
     }
 }

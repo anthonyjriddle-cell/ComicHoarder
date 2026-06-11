@@ -103,5 +103,12 @@ namespace ComicHoarder.Infrastructure
                 await db.SaveChangesAsync();
             }
         }
+
+        public async Task<List<int>> GetAllEnabledPublisherIdsAsync()
+        {
+            using var db = this.contextFactory.CreateDbContext();
+            var ids = await db.Publishers.Where(x => x.Enabled == true).Select(x => x.Id).ToListAsync();
+            return ids;
+        }
     }
 }

@@ -117,7 +117,7 @@ namespace ComicHoarder.Infrastructure
             }
         }
 
-        public async Task<List<int>> GetAllVolumeId()
+        public async Task<List<int>> GetAllVolumeIdAsync()
         {
             using var db = this.contextFactory.CreateDbContext();
             var ids = await db.Volumes.Select(x => x.Id).ToListAsync();

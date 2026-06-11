@@ -127,12 +127,27 @@ namespace ComicHoarder.Infrastructure
                 await db.SaveChangesAsync();
             }
         }
-
         public async Task<List<int>> GetAllIssueIds()
         {
             using var db = this.contextFactory.CreateDbContext();
             var ids = await db.Issues.Select(x => x.Id).ToListAsync();
             return ids;
+        }
+        public async Task<bool> AnyIssuesAsync()
+        {
+            using var db = this.contextFactory.CreateDbContext();
+            return await db.Issues.AnyAsync();
+        }
+        public async Task<DateTime?> GetMostRecentIssueDateAsync(DateTime? lastDate)
+        {
+            using var db = this.contextFactory.CreateDbContext();
+
+            var mostRecent = await db.Issues
+                .Where(x => x.DateAdded != null)
+                .OrderByDescending(x => x.DateAdded)
+                .FirstOrDefaultAsync();
+
+            return mostRecent?.DateAdded;
         }
     }
 }

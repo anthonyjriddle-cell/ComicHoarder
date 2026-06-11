@@ -11,6 +11,6 @@ namespace ComicHoarder.Application.Interfaces
         Task DeleteVolumeAsync(int volumeId);
         Task<IEnumerable<Volume>> GetVolumesByPublisherIdAsync(int publisherId);
         Task AddVolumeAsync(Volume volume);
-        Task<List<int>> GetAllVolumeId();
+        Task<List<int>> GetAllVolumeIdAsync();
     }
 }
