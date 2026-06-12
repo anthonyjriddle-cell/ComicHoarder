@@ -1,11 +1,11 @@
-﻿# ComicHoarder — Project Development Prompt  
-This prompt defines the full architecture, domain rules, naming conventions, workflows, and development expectations for the ComicHoarder application.  
+# ComicHoarder — Project Development Prompt
+This prompt defines the full architecture, domain rules, naming conventions, workflows, and development expectations for the ComicHoarder application.
 Paste this into any new Copilot/ChatGPT session to continue development seamlessly.
 
 ---
 
-# 🎯 Project Summary  
-ComicHoarder is a **Clean Architecture / Onion Architecture** Blazor Server application for managing comic book collections.  
+# 🎯 Project Summary
+ComicHoarder is a **Clean Architecture / Onion Architecture** Blazor Server application for managing comic book collections.
 It integrates with **ComicVine** to import missing Volumes and Issues.
 
 The system consists of:
@@ -15,6 +15,7 @@ The system consists of:
 - **Infrastructure Layer** (Repositories, EF Core)
 - **UI Layer** (Blazor Components + Pages)
 - **ComicVine Integration Layer** (WebDataService)
+- **Background Jobs** (standalone console apps for automation tasks)
 
 All code generated must follow these conventions exactly.
 
@@ -23,27 +24,27 @@ All code generated must follow these conventions exactly.
 # 🧱 Architecture Rules
 
 ## Clean Architecture Layers
-- **Domain**  
-  - Contains POCO models only  
-  - No dependencies on other layers  
+- **Domain**
+  - Contains POCO models only
+  - No dependencies on other layers
 
-- **Application**  
-  - Contains Use Cases  
-  - Contains Interfaces for repositories & services  
-  - No EF Core, no Blazor, no UI logic  
+- **Application**
+  - Contains Use Cases
+  - Contains Interfaces for repositories & services
+  - No EF Core, no Blazor, no UI logic
 
-- **Infrastructure**  
-  - Contains EF Core repositories  
-  - Implements Application interfaces  
+- **Infrastructure**
+  - Contains EF Core repositories
+  - Implements Application interfaces
 
-- **UI (Blazor)**  
-  - Pages + Components  
-  - Injects Use Cases  
-  - No direct repository access  
+- **UI (Blazor)**
+  - Pages + Components
+  - Injects Use Cases
+  - No direct repository access
 
-- **Integrations**  
-  - ComicVine API access  
-  - WebDataService returns domain models  
+- **Integrations**
+  - ComicVine API access
+  - WebDataService returns domain models
 
 ---
 
@@ -222,24 +223,24 @@ public class SearchMissingComicVineIssuesByVolumeUseCase : ISearchMissingComicVi
 <ComicVineIssueListComponent VolumeId="volumeId" />
 ```
 
-## ComicVineVolumeListComponent  
+## ComicVineVolumeListComponent
 - Injects `ISearchMissingComicVineVolumesByPublisherUseCase`
 - Displays table of missing volumes
 - Renders `<ComicVineVolumeListItemComponent>`
 
-## ComicVineIssueListComponent  
+## ComicVineIssueListComponent
 - Injects `ISearchMissingComicVineIssuesByVolumeUseCase`
 - Displays table of missing issues
 - Renders `<ComicVineIssueListItemComponent>`
 
-## ComicVineVolumeListItemComponent  
+## ComicVineVolumeListItemComponent
 - Injects `IAddVolumeUseCase`
-- Button: “Add Volume”
+- Button: "Add Volume"
 - Navigates to `/Volumes/{PublisherId}`
 
-## ComicVineIssueListItemComponent  
+## ComicVineIssueListItemComponent
 - Injects `IAddIssueUseCase`
-- Button: “Add Issue”
+- Button: "Add Issue"
 - Navigates to `/Issues/{VolumeId}`
 
 ---
@@ -285,28 +286,48 @@ https://comicvine.gamespot.com/issue/4000-{Issue.Id}/
 
 ---
 
+# 🗂️ Background Jobs
+
+All jobs are standalone console applications. Each follows the same pattern:
+- `Program.cs` — wires up configuration, `LoggingSetup.CreateLoggerFactory`, services, and a job class
+- `{JobName}Job.cs` — contains all business logic in a `RunAsync()` method
+- Services are injected via constructor, not instantiated inside the job
+- Structured logging (`{Placeholder}` syntax) is used throughout — no `String.Format`
+
+## ComicVineDBSync
+Syncs data from the ComicVine API into the local database. Uses `IssueService` and `VolumeService` to fetch data from ComicVine and persist it via the Infrastructure layer.
+
+## GetComicsDownloader
+Downloads comic files from GetComics.org. Reads a `LastDate.txt` file to determine the starting date, fetches weekly comic listings, parses download links from HTML, and downloads each file to a configured path. Updates `LastDate.txt` after each successful week.
+
+## PDFToCBZ
+Converts PDF comic files into CBZ format. Reads PDFs from a configured input folder, extracts pages as images via `PDFToImagesService`, converts them to JPGs, writes them to a work folder, then zips them into a `.cbz` file via `ZipService` and writes the result to a configured output folder.
+
+---
+
 # 🧭 Navigation Rules
 
 - After adding a Volume → navigate to `/Volumes/{PublisherId}`
 - After adding an Issue → navigate to `/Issues/{VolumeId}`
-- Add pages always follow pattern:  
-  `/AddVolume/{pubId}`  
+- Add pages always follow pattern:
+  `/AddVolume/{pubId}`
   `/AddIssue/{volumeId}`
 
 ---
 
 # 🛠️ Development Rules
 
-- All new code must follow the patterns defined above  
-- All Issue functionality must mirror Volume functionality 1:1  
-- No repository or EF Core logic in UI or Use Cases  
-- No UI logic in Use Cases  
-- No ComicVine logic in UI or Repositories  
-- All new components must follow existing naming conventions  
-- All new use cases must follow existing async patterns  
-- All new pages must follow existing routing patterns  
+- All new code must follow the patterns defined above
+- All Issue functionality must mirror Volume functionality 1:1
+- No repository or EF Core logic in UI or Use Cases
+- No UI logic in Use Cases
+- No ComicVine logic in UI or Repositories
+- All new components must follow existing naming conventions
+- All new use cases must follow existing async patterns
+- All new pages must follow existing routing patterns
+- All new jobs must follow the Background Jobs pattern above
 
 ---
 
-# ✔️ End of Prompt  
+# ✔️ End of Prompt
 Paste this entire block into `prompt.md` to bootstrap any new session.
