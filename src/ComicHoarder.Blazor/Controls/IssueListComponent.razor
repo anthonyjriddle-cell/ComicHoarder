@@ -1,4 +1,5 @@
 ﻿@inject IViewIssuesByVolumeAndNameUseCase ViewIssuesByVolumeAndNameUseCase
+@inject IDeleteIssueUseCase DeleteIssueUseCase
 
 @if (issues == null)
 {
@@ -10,41 +11,46 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Issue #</th>
-                <th>Publish Date</th>
-                <th>Collected</th>
-                <th>Enabled</th>
-                <th>Date Last Updated</th>
-                <th>ComicVine Link</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (issues != null && issues.Count > 0)
-            {
-                foreach (var issue in issues)
-                {
-                    <IssueListItemComponent Issue="issue"></IssueListItemComponent>
-                }
-            }
-        </tbody>
-    </table>
+    <QuickGrid Items="issues.AsQueryable()" Pagination="pagination" class="table">
+        <PropertyColumn Property="i => i.Id" Sortable="true" />
+        <PropertyColumn Property="i => i.Name" Sortable="true" />
+        <TemplateColumn Title="Issue #" SortBy="GridSort<Issue>.ByAscending(i => i.IssueNumber)">
+            @context.IssueNumber@context.IssueNumberSuffix
+        </TemplateColumn>
+        <TemplateColumn Title="Publish Date" SortBy="GridSort<Issue>.ByAscending(i => i.PublishYear).ThenAscending(i => i.PublishMonth)">
+            @context.PublishMonth/@context.PublishYear
+        </TemplateColumn>
+        <PropertyColumn Property="i => i.Collected" Sortable="true" />
+        <PropertyColumn Property="i => i.Enabled" Sortable="true" />
+        <PropertyColumn Property="i => i.DateLastUpdated" Title="Date Last Updated" Sortable="true" />
+        <TemplateColumn Title="ComicVine" Sortable="false">
+            <a href="https://comicvine.gamespot.com/volume/4000-@(context.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <a href="/editissue/@context.Id" class="btn btn-primary">Edit</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <button type="button" class="btn btn-danger" @onclick="async () => await HandleDelete(context)">Delete</button>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
+}
+
+@if (ShowConfirmation)
+{
+    <DeleteConfirmationDialogComponent ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></DeleteConfirmationDialogComponent>
 }
 
 @code {
     [Parameter]
     public string? SearchIssueFilter { get; set; }
-
     [Parameter]
     public int VolumeId { get; set; }
-
     private List<Issue>? issues;
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 25 };
+    protected DeleteConfirmationDialogComponent DeleteConfirmation { get; set; }
+    private bool ShowConfirmation = false;
+    private Issue? issueToDelete;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -52,5 +58,23 @@ else
             VolumeId,
             SearchIssueFilter ?? string.Empty
         )).ToList();
+    }
+
+    private async Task HandleDelete(Issue issue)
+    {
+        issueToDelete = issue;
+        ShowConfirmation = true;
+        DeleteConfirmation.Show();
+    }
+
+    protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+    {
+        if (deleteConfirmed && issueToDelete != null)
+        {
+            await DeleteIssueUseCase.ExecuteAsync(issueToDelete.Id);
+            issues?.Remove(issueToDelete);
+        }
+        ShowConfirmation = false;
+        issueToDelete = null;
     }
 }

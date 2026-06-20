@@ -23,7 +23,7 @@
     private async void HandleSearch(string SearchFilter)
     {
         searching = true;
-        await component.Refresh(); //refresh not working
+        //await component.Refresh(); //refresh not working
         await InvokeAsync(StateHasChanged);
 
         await Task.Delay(1);
@@ -33,7 +33,7 @@
         publishers = (await SearchMissingComicVinePublishersUseCase.ExecuteAsync(SearchFilter ?? string.Empty)).ToList();
 
         searching = false;
-        await component.Refresh();
+        //await component.Refresh();
         await InvokeAsync(StateHasChanged);
         await Task.Delay(1);
     }

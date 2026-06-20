@@ -1,4 +1,5 @@
 ﻿@inject IViewPublishersByNameUseCase ViewPublishersByNameUseCase
+@inject IDeletePublisherUseCase DeletePublisherUseCase
 
 @if (publishers == null)
 {
@@ -10,39 +11,62 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Enabled</th>
-                <th>Date Last Updated</th>
-                <th>ComicVine Link</th>
-                <th></th>
-                <th></th>
-                <th style="text-align: left"></th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (publishers != null && publishers.Count > 0)
-            {
-                foreach (var publisher in publishers)
-                {
-                    <PublisherListItemComponent Publisher="publisher"></PublisherListItemComponent>
-                }
-            }
-        </tbody>
-    </table>
+    <QuickGrid Items="publishers.AsQueryable()" Pagination="pagination" class="table">
+        <PropertyColumn Property="p => p.Name" Sortable="true" />
+        <PropertyColumn Property="p => p.Id" Sortable="true" />
+        <PropertyColumn Property="p => p.Description" Sortable="true" Class="wrap-long-text" />
+        <PropertyColumn Property="p => p.Enabled" Sortable="true" />
+        <PropertyColumn Property="p => p.DateLastUpdated" Title="Date Last Updated" Sortable="true" />
+        <TemplateColumn Title="ComicVine" Sortable="false">
+            <a href="https://comicvine.gamespot.com/publisher/4010-@(context.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <a href="/volumes/@context.Id" class="btn btn-success">Volumes</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <a href="/editpublisher/@context.Id" class="btn btn-primary">Edit</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <button type="button" class="btn btn-danger" @onclick="async () => await HandleDelete(context)">Delete</button>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
 }
+
+@if (ShowConfirmation)
+{
+    <DeleteConfirmationDialogComponent ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></DeleteConfirmationDialogComponent>
+}
+
 @code {
     [Parameter]
     public string? SearchPublisherFilter { get; set; }
-
     private List<Publisher>? publishers;
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 25 };
+    protected DeleteConfirmationDialogComponent DeleteConfirmation { get; set; }
+    private bool ShowConfirmation = false;
+    private Publisher? publisherToDelete;
 
     protected override async Task OnParametersSetAsync()
     {
         publishers = (await ViewPublishersByNameUseCase.ExecuteAsync(SearchPublisherFilter ?? string.Empty)).ToList();
+    }
+
+    private async Task HandleDelete(Publisher publisher)
+    {
+        publisherToDelete = publisher;
+        ShowConfirmation = true;
+        DeleteConfirmation.Show();
+    }
+
+    protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+    {
+        if (deleteConfirmed && publisherToDelete != null)
+        {
+            await DeletePublisherUseCase.ExecuteAsync(publisherToDelete.Id);
+            publishers?.Remove(publisherToDelete);
+        }
+        ShowConfirmation = false;
+        publisherToDelete = null;
     }
 }
