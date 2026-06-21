@@ -45,13 +45,13 @@
 
         <div class="form-group">
             <label for="collected">Collected</label>
-            <InputCheckbox id="collected" @bind-value="Issue.Collected" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <InputCheckbox id="collected" @bind-Value="Issue.Collected" class="darker-border-checkbox form-check-input"></InputCheckbox>
             <ValidationMessage For="() => Issue.Collected"></ValidationMessage>
         </div>
 
         <div class="form-group">
             <label for="enabled">Enabled</label>
-            <InputCheckbox id="enabled" @bind-value="Issue.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <InputCheckbox id="enabled" @bind-Value="Issue.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
             <ValidationMessage For="() => Issue.Enabled"></ValidationMessage>
         </div>
 
@@ -63,7 +63,7 @@
 
         <div class="form-group">
             <label for="reprint">Reprint</label>
-            <InputCheckbox id="reprint" @bind-value="Issue.Reprint" class="darker-border-checkbox form-check-input"></InputCheckbox>
+            <InputCheckbox id="reprint" @bind-Value="Issue.Reprint" class="darker-border-checkbox form-check-input"></InputCheckbox>
             <ValidationMessage For="() => Issue.Reprint"></ValidationMessage>
         </div>
 

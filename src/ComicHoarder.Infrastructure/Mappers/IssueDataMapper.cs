@@ -21,7 +21,7 @@ namespace ComicHoarder.Infrastructure.Mappers
                 Collected = entity.Collected,
                 Enabled = entity.Enabled,
                 IssueNumberSuffix = entity.IssueNumberSuffix ?? string.Empty,
-                FormatId = entity.FormatId ?? 0,
+                FormatId = entity.FormatId,
                 Reprint = entity.Reprint ?? false,
                 DateAdded = entity.DateAdded,
                 CoverDate = entity.CoverDate,
