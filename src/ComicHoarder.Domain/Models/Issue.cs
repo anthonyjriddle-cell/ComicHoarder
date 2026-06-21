@@ -17,7 +17,7 @@ namespace ComicHoarder.Domain.Models
         public bool Collected { get; set; }
         public bool Enabled { get; set; }
         public string? IssueNumberSuffix { get; set; }
-        public int FormatId { get; set; }
+        public int? FormatId { get; set; }
         public bool Reprint { get; set; }
         public DateTime? DateAdded { get; set; }
         public string? Summary { get; set; }

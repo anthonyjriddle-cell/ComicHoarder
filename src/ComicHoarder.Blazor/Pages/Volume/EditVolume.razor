@@ -23,7 +23,7 @@
         if (this.Volume != null)
         {
             await EditVolumeUseCase.ExecuteAsync(this.Volume);
-            NavigationManager.NavigateTo("/Volumes");
+            NavigationManager.NavigateTo($"/Volumes/{this.Volume.PublisherId}");
         }
     }
 }

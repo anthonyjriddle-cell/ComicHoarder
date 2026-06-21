@@ -1,4 +1,6 @@
 ﻿@inject ISearchMissingComicVineIssuesByVolumeUseCase SearchMissingComicVineIssuesByVolumeUseCase
+@inject IAddIssueUseCase AddIssueUseCase
+@inject NavigationManager NavigationManager
 
 @if (Searching)
 {
@@ -10,55 +12,51 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Issue Number</th>
-                <th>Name</th>
-                <th>Summary</th>
-                <th>Enabled</th>
-                <th>ComicVine Link</th>
-                <th style="text-align: left"></th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Issues != null && Issues.Count > 0)
-            {
-                foreach (var issue in Issues)
-                {
-                    <ComicVineIssueListItemComponent Issue="issue"
-                                                     VolumeId="VolumeId">
-                    </ComicVineIssueListItemComponent>
-                }
-            }
-        </tbody>
-    </table>
+    <QuickGrid Items="Issues.AsQueryable()" Pagination="pagination" class="table">
+        <PropertyColumn Property="i => i.Id" Sortable="true" />
+        <PropertyColumn Property="i => i.IssueNumber" Title="Issue Number" Sortable="true" />
+        <PropertyColumn Property="i => i.Name" Sortable="true" />
+        <PropertyColumn Property="i => i.Summary" Sortable="true" Class="wrap-long-text" />
+        <PropertyColumn Property="i => i.Enabled" Sortable="true" />
+        <TemplateColumn Title="ComicVine" Sortable="false">
+            <a href="https://comicvine.gamespot.com/volume/4000-@(context.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <button type="button" class="btn btn-primary" style="width:200px;" @onclick="async () => await HandleAddIssue(context)">
+                Add Issue
+            </button>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
 }
 
 @code {
     [Parameter]
     public int VolumeId { get; set; }
-
     public bool Searching { get; set; }
-
     public List<Issue>? Issues { get; set; }
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 25 };
 
     protected override async Task OnInitializedAsync()
     {
         Searching = true;
         await InvokeAsync(StateHasChanged);
-
         Issues = (await SearchMissingComicVineIssuesByVolumeUseCase
             .ExecuteAsync(VolumeId))
             .ToList();
-
         Searching = false;
         await InvokeAsync(StateHasChanged);
     }
 
     public async Task Refresh()
     {
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task HandleAddIssue(Issue issue)
+    {
+        await AddIssueUseCase.ExecuteAsync(issue);
+        Issues?.Remove(issue);
         await InvokeAsync(StateHasChanged);
     }
 }

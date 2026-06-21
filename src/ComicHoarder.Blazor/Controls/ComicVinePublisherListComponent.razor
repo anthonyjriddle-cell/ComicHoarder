@@ -1,4 +1,4 @@
-﻿@inject ISearchComicVinePublisherUseCase SearchComicVinePublisherUseCase
+﻿@inject IAddPublisherUseCase AddPublisherUseCase
 
 @if (Searching)
 {
@@ -10,42 +10,51 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Enabled</th>
-                <th>Date Last Updated</th>
-                <th>ComicVine Link</th>
-                <th style="text-align: left"></th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Publishers != null && Publishers.Count > 0)
-            {
-                foreach (var publisher in Publishers)
-                {
-                    <ComicVinePublisherListItemComponent Publisher="publisher"></ComicVinePublisherListItemComponent>
-                }
-            }
-        </tbody>
-    </table>
+    <QuickGrid Items="displayedPublishers.AsQueryable()" Pagination="pagination" class="table">
+        <PropertyColumn Property="p => p.Id" Sortable="true" />
+        <PropertyColumn Property="p => p.Name" Sortable="true" />
+        <PropertyColumn Property="p => p.Description" Sortable="true" Class="wrap-long-text" />
+        <PropertyColumn Property="p => p.Enabled" Sortable="true" />
+        <PropertyColumn Property="p => p.DateLastUpdated" Title="Date Last Updated" Sortable="true" />
+        <TemplateColumn Title="ComicVine" Sortable="false">
+            <a href="https://comicvine.gamespot.com/publisher/4010-@(context.Id)/" target="_blank" rel="noopener noreferrer">ComicVine</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <button type="button" class="btn btn-primary" style="width:200px;" @onclick="async () => await HandleAddPublisher(context)">
+                Add Publisher
+            </button>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
 }
+
 @code {
     [Parameter]
     public string? SearchPublisherFilter { get; set; }
-
     [Parameter]
     public List<Publisher>? Publishers { get; set; }
-
     [Parameter]
     public bool Searching { get; set; }
 
-    public async Task Refresh()
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 25 };
+    private List<Publisher> displayedPublishers = new();
+    private List<Publisher>? lastSeenPublishers;
+
+    protected override void OnParametersSet()
     {
-        await InvokeAsync(StateHasChanged);
+        // Only resync from the parameter when the parent hands us a genuinely new list
+        // (i.e. a fresh search happened) — not on every render.
+        if (!ReferenceEquals(Publishers, lastSeenPublishers))
+        {
+            displayedPublishers = Publishers != null ? new List<Publisher>(Publishers) : new List<Publisher>();
+            lastSeenPublishers = Publishers;
+        }
     }
 
+    private async Task HandleAddPublisher(Publisher publisher)
+    {
+        await AddPublisherUseCase.ExecuteAsync(publisher);
+        displayedPublishers.Remove(publisher);
+        await InvokeAsync(StateHasChanged);
+    }
 }

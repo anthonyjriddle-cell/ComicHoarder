@@ -23,7 +23,7 @@
         if (this.Issue != null)
         {
             await EditIssueUseCase.ExecuteAsync(this.Issue);
-            NavigationManager.NavigateTo("/Issues");
+            NavigationManager.NavigateTo($"/Issues/{this.Issue.VolumeId}");
         }
     }
 }
