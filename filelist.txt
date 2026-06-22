@@ -3,8 +3,8 @@
 
  Directory of D:\Projects\ComicHoarder\src
 
-06/21/2026  11:56 PM    <DIR>          .
-06/21/2026  11:57 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          .
+06/22/2026  12:05 AM    <DIR>          ..
 05/29/2026  03:55 PM    <DIR>          ComicHoarder.Application
 06/21/2026  11:43 PM    <DIR>          ComicHoarder.Blazor
 05/14/2026  11:02 PM    <DIR>          ComicHoarder.Domain
@@ -12,7 +12,7 @@
 05/29/2026  04:02 PM    <DIR>          ComicHoarder.Infrastructure.ComicVine
 06/05/2026  12:51 AM    <DIR>          ComicHoarder.Shared
 06/12/2026  05:37 PM             6,994 ComicHoarder.sln
-06/22/2026  12:05 AM                 0 filelist.txt
+06/22/2026  12:08 AM                 0 filelist.txt
 06/11/2026  01:18 PM    <DIR>          Jobs
 06/04/2026  06:38 PM    <DIR>          TestResults
 06/04/2026  04:21 PM    <DIR>          Tests
@@ -21,11 +21,12 @@
 
  Directory of D:\Projects\ComicHoarder\src\.vs
 
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  09:45 PM    <DIR>          ComicHoarder
 06/12/2026  05:40 PM    <DIR>          ProjectEvaluation
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder
 
 05/13/2026  09:45 PM    <DIR>          .
 05/13/2026  09:45 PM    <DIR>          config
@@ -34,18 +35,21 @@
 06/21/2026  11:51 PM    <DIR>          v17
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\config
 
 05/13/2026  09:45 PM    <DIR>          .
 05/13/2026  09:45 PM    <DIR>          ..
 12/08/2023  08:08 PM            85,548 applicationhost.config
                1 File(s)         85,548 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\DesignTimeBuild
 
 05/13/2026  08:50 PM    <DIR>          .
 05/13/2026  09:45 PM    <DIR>          ..
 06/21/2026  11:40 PM           380,788 .dtbcache.v2
                1 File(s)        380,788 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\FileContentIndex
 
 06/21/2026  11:51 PM    <DIR>          .
 05/13/2026  09:45 PM    <DIR>          ..
@@ -56,6 +60,7 @@
 06/21/2026  11:47 PM           232,280 ea51847f-0063-4dee-a913-09d8f335b5cb.vsidx
                5 File(s)        946,244 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\v17
 
 06/21/2026  11:51 PM    <DIR>          .
 05/13/2026  09:45 PM    <DIR>          ..
@@ -65,12 +70,14 @@
 05/16/2026  11:31 PM    <DIR>          TestStore
                3 File(s)          7,174 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\v17\TestStore
 
 05/16/2026  11:31 PM    <DIR>          .
 06/21/2026  11:51 PM    <DIR>          ..
 06/04/2026  07:51 PM    <DIR>          0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ComicHoarder\v17\TestStore\0
 
 06/04/2026  07:51 PM    <DIR>          .
 05/16/2026  11:31 PM    <DIR>          ..
@@ -78,6 +85,7 @@
 06/04/2026  07:51 PM                24 testlog.manifest
                2 File(s)        337,147 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\.vs\ProjectEvaluation
 
 06/12/2026  05:40 PM    <DIR>          .
 06/12/2026  05:40 PM             5,248 comichoarder.metadata.v9.bin
@@ -88,7 +96,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application
 
 05/29/2026  03:55 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  11:08 PM    <DIR>          bin
 05/23/2026  08:59 PM               337 ComicHoarder.Application.csproj
 06/21/2026  11:24 PM    <DIR>          Interfaces
@@ -104,12 +112,14 @@
 05/13/2026  11:08 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Debug
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
@@ -120,12 +130,14 @@
 06/21/2026  11:47 PM            14,312 ComicHoarder.Domain.pdb
                5 File(s)         75,523 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Release
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
 05/13/2026  11:08 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\bin\Release\net8.0
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
@@ -156,12 +168,14 @@
 05/13/2026  11:08 PM    <DIR>          Release
                5 File(s)         10,131 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug
 
 05/13/2026  11:08 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
@@ -183,24 +197,28 @@
 06/21/2026  02:11 PM    <DIR>          refint
               14 File(s)         54,219 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            17,408 ComicHoarder.Application.dll
                1 File(s)         17,408 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            17,408 ComicHoarder.Application.dll
                1 File(s)         17,408 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release
 
 05/13/2026  11:08 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/13/2026  11:08 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
@@ -214,11 +232,13 @@
 05/13/2026  11:08 PM    <DIR>          refint
                6 File(s)          2,584 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0\ref
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Application\obj\Release\net8.0\refint
 
 05/13/2026  11:08 PM    <DIR>          .
 05/13/2026  11:08 PM    <DIR>          ..
@@ -345,7 +365,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor
 
 06/21/2026  11:43 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  09:03 PM               477 App.razor
 06/21/2026  12:46 PM               594 appsettings.Development.json
 05/13/2026  09:03 PM               151 appsettings.json
@@ -373,12 +393,14 @@
 05/29/2026  04:33 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug
 
 05/29/2026  04:32 PM    <DIR>          .
 05/13/2026  09:28 PM    <DIR>          ..
 06/21/2026  11:51 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0
 
 06/21/2026  11:51 PM    <DIR>          .
 05/29/2026  04:32 PM    <DIR>          ..
@@ -451,6 +473,7 @@
 10/22/2021  07:49 PM            25,712 System.Windows.Extensions.dll
               66 File(s)     15,868,149 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes
 
 05/23/2026  09:31 PM    <DIR>          .
 06/21/2026  11:51 PM    <DIR>          ..
@@ -464,47 +487,55 @@
 05/14/2026  09:32 PM    <DIR>          win-x86
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\browser
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 05/14/2026  09:32 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\browser\lib
 
 05/14/2026  09:32 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\browser\lib\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 04/29/2026  07:37 PM            70,440 System.Text.Encodings.Web.dll
                1 File(s)         70,440 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\osx
 
 05/23/2026  09:31 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 05/23/2026  10:01 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\osx\native
 
 05/23/2026  10:01 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\unix
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 05/14/2026  09:32 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\unix\lib
 
 05/14/2026  09:32 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\unix\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
@@ -512,18 +543,21 @@
 10/22/2021  07:51 PM           427,112 System.Drawing.Common.dll
                2 File(s)      1,986,296 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 05/14/2026  09:32 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win\lib
 
 05/14/2026  09:32 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
@@ -535,60 +569,70 @@
 10/22/2021  07:49 PM            43,112 System.Windows.Extensions.dll
                6 File(s)      2,319,024 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-arm
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 08/11/2023  02:56 PM           381,984 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        381,984 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-arm64
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 08/11/2023  02:56 PM           491,552 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        491,552 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-x64
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 08/11/2023  02:56 PM           504,872 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        504,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-x86
 
 05/14/2026  09:32 PM    <DIR>          .
 05/23/2026  09:31 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Debug\net8.0\runtimes\win-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  09:32 PM    <DIR>          ..
 08/11/2023  02:56 PM           414,248 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        414,248 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Release
 
 05/29/2026  04:33 PM    <DIR>          .
 05/13/2026  09:28 PM    <DIR>          ..
 05/13/2026  11:20 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\bin\Release\net8.0
 
 05/13/2026  11:20 PM    <DIR>          .
 05/29/2026  04:33 PM    <DIR>          ..
@@ -642,12 +686,14 @@
 05/29/2026  04:32 PM    <DIR>          Release
                5 File(s)        169,839 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug
 
 05/29/2026  04:32 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/29/2026  04:32 PM    <DIR>          ..
@@ -684,18 +730,21 @@
 06/21/2026  02:11 PM               565 staticwebassets.upToDateCheck.txt
               27 File(s)        778,176 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            40,448 ComicHoarder.Blazor.dll
                1 File(s)         40,448 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:51 PM            40,448 ComicHoarder.Blazor.dll
                1 File(s)         40,448 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss
 
 05/14/2026  10:07 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
@@ -705,12 +754,14 @@
 05/14/2026  10:07 PM    <DIR>          Shared
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\bundle
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  10:07 PM    <DIR>          ..
 06/21/2026  02:11 PM             3,151 ComicHoarder.Blazor.styles.css
                1 File(s)          3,151 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\Layout
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  10:07 PM    <DIR>          ..
@@ -718,17 +769,20 @@
 06/21/2026  02:11 PM             1,415 NavMenu.razor.rz.scp.css
                2 File(s)          2,890 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\projectbundle
 
 06/21/2026  02:11 PM    <DIR>          .
 05/14/2026  10:07 PM    <DIR>          ..
 06/21/2026  02:11 PM             3,029 ComicHoarder.Blazor.bundle.scp.css
                1 File(s)          3,029 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\scopedcss\Shared
 
 05/14/2026  10:07 PM    <DIR>          .
 05/14/2026  10:07 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Debug\net8.0\staticwebassets
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
@@ -739,12 +793,14 @@
 06/21/2026  02:11 PM            15,607 msbuild.ComicHoarder.Blazor.Microsoft.AspNetCore.StaticWebAssets.props
                5 File(s)         42,522 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release
 
 05/29/2026  04:32 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/23/2026  10:01 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0
 
 05/23/2026  10:01 PM    <DIR>          .
 05/29/2026  04:32 PM    <DIR>          ..
@@ -761,11 +817,13 @@
 05/13/2026  11:20 PM    <DIR>          refint
                9 File(s)         71,493 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0\ref
 
 05/13/2026  11:20 PM    <DIR>          .
 05/23/2026  10:01 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Blazor\obj\Release\net8.0\refint
 
 05/13/2026  11:20 PM    <DIR>          .
 05/23/2026  10:01 PM    <DIR>          ..
@@ -904,7 +962,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain
 
 05/14/2026  11:02 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  11:04 PM    <DIR>          bin
 05/14/2026  10:52 AM               218 ComicHoarder.Domain.csproj
 06/21/2026  11:30 PM    <DIR>          Models
@@ -919,12 +977,14 @@
 05/13/2026  11:04 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\bin\Debug
 
 05/13/2026  11:04 PM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\bin\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
@@ -933,12 +993,14 @@
 06/21/2026  11:47 PM            14,312 ComicHoarder.Domain.pdb
                3 File(s)         26,025 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\bin\Release
 
 05/13/2026  11:04 PM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
 05/13/2026  11:04 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\bin\Release\net8.0
 
 05/13/2026  11:04 PM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
@@ -970,12 +1032,14 @@
 05/13/2026  11:04 PM    <DIR>          Release
                5 File(s)          6,631 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Debug
 
 05/13/2026  11:04 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
@@ -995,24 +1059,28 @@
 06/21/2026  02:11 PM    <DIR>          refint
               12 File(s)         29,577 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM             9,216 ComicHoarder.Domain.dll
                1 File(s)          9,216 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM             9,216 ComicHoarder.Domain.dll
                1 File(s)          9,216 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Release
 
 05/13/2026  11:04 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/14/2026  10:52 AM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Release\net8.0
 
 05/14/2026  10:52 AM    <DIR>          .
 05/13/2026  11:04 PM    <DIR>          ..
@@ -1026,11 +1094,13 @@
 05/13/2026  11:04 PM    <DIR>          refint
                6 File(s)          2,559 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Release\net8.0\ref
 
 05/13/2026  11:04 PM    <DIR>          .
 05/14/2026  10:52 AM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Domain\obj\Release\net8.0\refint
 
 05/13/2026  11:04 PM    <DIR>          .
 05/14/2026  10:52 AM    <DIR>          ..
@@ -1039,7 +1109,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure
 
 06/21/2026  11:26 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  11:07 PM    <DIR>          bin
 06/21/2026  12:46 PM            10,394 CHContext.cs
 05/14/2026  05:32 PM               642 ComicHoarder.Infrastructure.csproj
@@ -1062,12 +1132,14 @@
 05/13/2026  11:07 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\bin\Debug
 
 05/13/2026  11:07 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\bin\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
@@ -1080,12 +1152,14 @@
 06/21/2026  11:47 PM            32,100 ComicHoarder.Infrastructure.pdb
                7 File(s)        228,363 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\bin\Release
 
 05/13/2026  11:07 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
 05/13/2026  11:07 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\bin\Release\net8.0
 
 05/13/2026  11:07 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
@@ -1137,12 +1211,14 @@
 05/13/2026  11:07 PM    <DIR>          Release
                5 File(s)        144,712 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Debug
 
 05/13/2026  11:07 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
@@ -1164,24 +1240,28 @@
 06/21/2026  02:11 PM    <DIR>          refint
               14 File(s)        172,568 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            31,744 ComicHoarder.Infrastructure.dll
                1 File(s)         31,744 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            31,744 ComicHoarder.Infrastructure.dll
                1 File(s)         31,744 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Release
 
 05/13/2026  11:07 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/13/2026  11:38 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Release\net8.0
 
 05/13/2026  11:38 PM    <DIR>          .
 05/13/2026  11:07 PM    <DIR>          ..
@@ -1196,11 +1276,13 @@
 05/13/2026  11:07 PM    <DIR>          refint
                7 File(s)         57,499 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Release\net8.0\ref
 
 05/13/2026  11:07 PM    <DIR>          .
 05/13/2026  11:38 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure\obj\Release\net8.0\refint
 
 05/13/2026  11:07 PM    <DIR>          .
 05/13/2026  11:38 PM    <DIR>          ..
@@ -1209,7 +1291,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine
 
 05/29/2026  04:02 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/14/2026  11:42 AM    <DIR>          bin
 05/15/2026  01:01 PM               560 ComicHoarder.Infrastructure.ComicVine.csproj
 05/29/2026  03:56 PM            11,237 ComicVineMapper.cs
@@ -1234,12 +1316,14 @@
 05/14/2026  11:42 AM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\bin\Debug
 
 05/14/2026  11:42 AM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\bin\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
@@ -1252,12 +1336,14 @@
 06/21/2026  11:47 PM            34,592 ComicHoarder.Infrastructure.ComicVine.pdb
                7 File(s)        170,054 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\bin\Release
 
 05/14/2026  11:42 AM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
 05/14/2026  11:42 AM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\bin\Release\net8.0
 
 05/14/2026  11:42 AM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
@@ -1324,12 +1410,14 @@
 05/14/2026  11:42 AM    <DIR>          Release
                5 File(s)         19,454 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Debug
 
 05/14/2026  11:42 AM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:47 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Debug\net8.0
 
 06/21/2026  11:47 PM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
@@ -1351,24 +1439,28 @@
 06/21/2026  02:11 PM    <DIR>          refint
               14 File(s)        102,323 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  02:11 PM            34,816 ComicHoarder.Infrastructure.ComicVine.dll
                1 File(s)         34,816 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:47 PM    <DIR>          ..
 06/21/2026  11:47 PM            34,816 ComicHoarder.Infrastructure.ComicVine.dll
                1 File(s)         34,816 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Release
 
 05/14/2026  11:42 AM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/15/2026  01:01 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Release\net8.0
 
 05/15/2026  01:01 PM    <DIR>          .
 05/14/2026  11:42 AM    <DIR>          ..
@@ -1383,11 +1475,13 @@
 05/14/2026  11:42 AM    <DIR>          refint
                7 File(s)          5,956 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Release\net8.0\ref
 
 05/14/2026  11:42 AM    <DIR>          .
 05/15/2026  01:01 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Infrastructure.ComicVine\obj\Release\net8.0\refint
 
 05/14/2026  11:42 AM    <DIR>          .
 05/15/2026  01:01 PM    <DIR>          ..
@@ -1396,7 +1490,7 @@
  Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared
 
 06/05/2026  12:51 AM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 06/04/2026  10:22 PM    <DIR>          bin
 06/04/2026  10:54 PM               623 ComicHoarder.Shared.csproj
 06/05/2026  12:51 AM             2,160 LoggingSetup.cs
@@ -1410,12 +1504,14 @@
 06/04/2026  10:22 PM    <DIR>          Debug
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\bin\Debug
 
 06/04/2026  10:22 PM    <DIR>          .
 06/04/2026  10:22 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\bin\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  10:22 PM    <DIR>          ..
@@ -1436,12 +1532,14 @@
 06/21/2026  02:11 PM             7,695 project.nuget.cache
                5 File(s)        134,117 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\obj\Debug
 
 06/04/2026  10:22 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  10:22 PM    <DIR>          ..
@@ -1462,12 +1560,14 @@
 06/21/2026  02:11 PM    <DIR>          refint
               13 File(s)         84,041 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM             5,632 ComicHoarder.Shared.dll
                1 File(s)          5,632 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\ComicHoarder.Shared\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -1477,7 +1577,7 @@
  Directory of D:\Projects\ComicHoarder\src\Jobs
 
 06/11/2026  01:18 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 06/21/2026  12:48 PM    <DIR>          ComicVineDBSync
 06/21/2026  12:48 PM    <DIR>          GetComicsDownloader
 06/21/2026  12:48 PM    <DIR>          PDFToCBZ
@@ -1503,12 +1603,14 @@
 06/04/2026  07:56 PM    <DIR>          Debug
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug
 
 06/04/2026  07:56 PM    <DIR>          .
 06/04/2026  07:56 PM    <DIR>          ..
 06/21/2026  11:24 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0
 
 06/21/2026  11:24 PM    <DIR>          .
 06/04/2026  07:56 PM    <DIR>          ..
@@ -1587,6 +1689,7 @@
 10/22/2021  07:49 PM            25,712 System.Windows.Extensions.dll
               72 File(s)     12,691,103 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes
 
 06/04/2026  08:12 PM    <DIR>          .
 06/21/2026  11:24 PM    <DIR>          ..
@@ -1599,36 +1702,42 @@
 06/04/2026  08:12 PM    <DIR>          win-x86
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\browser
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/04/2026  08:12 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\browser\lib
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\browser\lib\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 04/29/2026  07:37 PM            70,440 System.Text.Encodings.Web.dll
                1 File(s)         70,440 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\unix
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/04/2026  08:12 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\unix\lib
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\unix\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
@@ -1636,18 +1745,21 @@
 10/22/2021  07:51 PM           427,112 System.Drawing.Common.dll
                2 File(s)      1,986,296 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/04/2026  08:12 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win\lib
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
@@ -1659,48 +1771,56 @@
 10/22/2021  07:49 PM            43,112 System.Windows.Extensions.dll
                6 File(s)      2,319,024 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-arm
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 08/11/2023  02:56 PM           381,984 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        381,984 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-arm64
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 08/11/2023  02:56 PM           491,552 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        491,552 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-x64
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 08/11/2023  02:56 PM           504,872 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        504,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-x86
 
 06/04/2026  08:12 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\bin\Debug\net8.0\runtimes\win-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  08:12 PM    <DIR>          ..
@@ -1719,12 +1839,14 @@
 06/21/2026  02:11 PM             9,984 project.nuget.cache
                5 File(s)        193,599 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\obj\Debug
 
 06/04/2026  07:56 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  11:24 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\obj\Debug\net8.0
 
 06/21/2026  11:24 PM    <DIR>          .
 06/04/2026  07:56 PM    <DIR>          ..
@@ -1747,12 +1869,14 @@
 06/21/2026  02:11 PM    <DIR>          refint
               15 File(s)        277,759 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:24 PM    <DIR>          ..
 06/21/2026  02:11 PM             8,192 ComicVineDBSync.dll
                1 File(s)          8,192 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\ComicVineDBSync\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  11:24 PM    <DIR>          ..
@@ -1790,12 +1914,14 @@
 05/28/2026  05:05 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug
 
 05/28/2026  05:05 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
@@ -1857,6 +1983,7 @@
 10/22/2021  07:49 PM            25,712 System.Windows.Extensions.dll
               55 File(s)      5,946,343 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes
 
 06/05/2026  12:52 AM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -1868,18 +1995,21 @@
 06/05/2026  12:52 AM    <DIR>          win-x86
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\unix
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/05/2026  12:52 AM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\unix\lib
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\unix\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
@@ -1887,18 +2017,21 @@
 10/22/2021  07:51 PM           427,112 System.Drawing.Common.dll
                2 File(s)      1,986,296 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/05/2026  12:52 AM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win\lib
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
@@ -1910,60 +2043,70 @@
 10/22/2021  07:49 PM            43,112 System.Windows.Extensions.dll
                6 File(s)      2,319,024 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-arm
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 08/11/2023  02:56 PM           381,984 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        381,984 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-arm64
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 08/11/2023  02:56 PM           491,552 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        491,552 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-x64
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 08/11/2023  02:56 PM           504,872 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        504,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-x86
 
 06/05/2026  12:52 AM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Debug\net8.0\runtimes\win-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/05/2026  12:52 AM    <DIR>          ..
 08/11/2023  02:56 PM           414,248 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        414,248 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Release
 
 05/28/2026  05:05 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
 05/28/2026  05:05 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\bin\Release\net8.0
 
 05/28/2026  05:05 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
@@ -1989,12 +2132,14 @@
 05/28/2026  05:05 PM    <DIR>          Release
                5 File(s)        163,388 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Debug
 
 05/28/2026  05:05 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
@@ -2018,24 +2163,28 @@
 06/21/2026  02:11 PM    <DIR>          refint
               16 File(s)        263,093 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM             8,704 GetComicsDownloader.dll
                1 File(s)          8,704 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM             8,704 GetComicsDownloader.dll
                1 File(s)          8,704 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Release
 
 05/28/2026  05:05 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/28/2026  05:38 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Release\net8.0
 
 05/28/2026  05:38 PM    <DIR>          .
 05/28/2026  05:05 PM    <DIR>          ..
@@ -2049,11 +2198,13 @@
 05/28/2026  05:05 PM    <DIR>          refint
                6 File(s)          2,559 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Release\net8.0\ref
 
 05/28/2026  05:05 PM    <DIR>          .
 05/28/2026  05:38 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\GetComicsDownloader\obj\Release\net8.0\refint
 
 05/28/2026  05:05 PM    <DIR>          .
 05/28/2026  05:38 PM    <DIR>          ..
@@ -2091,12 +2242,14 @@
 06/11/2026  01:19 PM    <DIR>          Debug
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug
 
 06/11/2026  01:19 PM    <DIR>          .
 06/11/2026  01:19 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  01:19 PM    <DIR>          ..
@@ -2172,6 +2325,7 @@
 10/22/2021  07:49 PM            25,712 System.Windows.Extensions.dll
               69 File(s)      6,694,097 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes
 
 06/11/2026  03:41 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2193,12 +2347,14 @@
 06/11/2026  02:47 PM    <DIR>          win-x86
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-arm
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2206,12 +2362,14 @@
 01/10/2024  06:20 PM         5,434,148 libSkiaSharp.so
                2 File(s)      9,966,008 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-arm64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2219,24 +2377,28 @@
 01/10/2024  06:20 PM         7,904,824 libSkiaSharp.so
                2 File(s)     13,806,256 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-arm64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/29/2024  03:09 AM        15,232,544 libpdfium.so
                1 File(s)     15,232,544 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-x64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2244,24 +2406,28 @@
 01/10/2024  06:20 PM        11,248,224 libSkiaSharp.so
                2 File(s)     26,435,888 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-x86
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-musl-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/29/2024  03:09 AM        14,029,180 libpdfium.so
                1 File(s)     14,029,180 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-x64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2269,66 +2435,77 @@
 01/10/2024  06:20 PM         9,068,512 libSkiaSharp.so
                2 File(s)     14,775,832 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-x86
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\linux-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/29/2024  03:09 AM         5,637,896 libpdfium.so
                1 File(s)      5,637,896 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/10/2024  06:20 PM        15,084,640 libSkiaSharp.dylib
                1 File(s)     15,084,640 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx-arm64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/29/2024  03:09 AM         5,669,168 libpdfium.dylib
                1 File(s)      5,669,168 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx-x64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\osx-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
 01/29/2024  03:09 AM         5,969,240 libpdfium.dylib
                1 File(s)      5,969,240 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\unix
 
 06/11/2026  03:41 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/11/2026  03:41 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\unix\lib
 
 06/11/2026  03:41 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\unix\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
@@ -2336,12 +2513,14 @@
 10/22/2021  07:51 PM           427,112 System.Drawing.Common.dll
                2 File(s)      1,986,296 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/11/2026  03:41 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win\lib
 
 06/11/2026  03:41 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2349,6 +2528,7 @@
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
@@ -2360,6 +2540,7 @@
 10/22/2021  07:49 PM            43,112 System.Windows.Extensions.dll
                6 File(s)      2,319,024 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win\lib\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
@@ -2367,24 +2548,28 @@
 09/16/2024  07:10 PM           801,080 System.Diagnostics.EventLog.Messages.dll
                2 File(s)        973,784 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-arm
 
 06/11/2026  03:41 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 08/11/2023  02:56 PM           381,984 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        381,984 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-arm64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2393,12 +2578,14 @@
 01/29/2024  03:09 AM         4,645,376 pdfium.dll
                3 File(s)     13,085,136 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-x64
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2407,12 +2594,14 @@
 01/29/2024  03:09 AM         4,942,848 pdfium.dll
                3 File(s)     14,861,784 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-x86
 
 06/11/2026  02:47 PM    <DIR>          .
 06/11/2026  03:41 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\bin\Debug\net8.0\runtimes\win-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  02:47 PM    <DIR>          ..
@@ -2433,12 +2622,14 @@
 06/21/2026  02:11 PM            13,730 project.nuget.cache
                5 File(s)        275,395 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\obj\Debug
 
 06/11/2026  01:19 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/11/2026  01:19 PM    <DIR>          ..
@@ -2462,12 +2653,14 @@
 06/21/2026  02:11 PM    <DIR>          refint
               16 File(s)        280,354 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM             7,168 PDFToCBZ.dll
                1 File(s)          7,168 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Jobs\PDFToCBZ\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2485,7 +2678,7 @@
  Directory of D:\Projects\ComicHoarder\src\TestResults
 
 06/04/2026  06:38 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 06/04/2026  05:13 PM    <DIR>          Deploy_antho 20260604T171312_56596
 06/04/2026  06:21 PM    <DIR>          Deploy_antho 20260604T182131_74272
 06/04/2026  06:22 PM    <DIR>          Deploy_antho 20260604T182216_77580
@@ -2631,7 +2824,7 @@
  Directory of D:\Projects\ComicHoarder\src\Tests
 
 06/04/2026  04:21 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 06/04/2026  06:26 PM    <DIR>          ComicHoarder.Jobs.Tests
                0 File(s)              0 bytes
 
@@ -2655,12 +2848,14 @@
 06/04/2026  04:21 PM    <DIR>          Debug
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug
 
 06/04/2026  04:21 PM    <DIR>          .
 06/04/2026  04:21 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  04:21 PM    <DIR>          ..
@@ -2764,6 +2959,7 @@
 06/21/2026  02:11 PM    <DIR>          zh-Hant
               83 File(s)     10,678,736 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\cs
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2779,6 +2975,7 @@
 12/03/2024  11:18 AM            22,560 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        209,392 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\de
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2794,6 +2991,7 @@
 12/03/2024  11:18 AM            23,072 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        211,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\es
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2809,6 +3007,7 @@
 12/03/2024  11:18 AM            22,584 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        211,376 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\fr
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2824,6 +3023,7 @@
 12/03/2024  11:18 AM            22,584 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        212,896 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\it
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2839,6 +3039,7 @@
 12/03/2024  11:18 AM            22,600 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        210,848 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\ja
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2854,6 +3055,7 @@
 12/03/2024  11:18 AM            24,096 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        218,032 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\ko
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2869,6 +3071,7 @@
 12/03/2024  11:18 AM            23,072 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        212,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\pl
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2884,6 +3087,7 @@
 12/03/2024  11:18 AM            22,560 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        212,480 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\pt-BR
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2899,6 +3103,7 @@
 12/03/2024  11:18 AM            22,560 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        210,368 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\ru
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2914,6 +3119,7 @@
 12/03/2024  11:18 AM            25,120 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        228,256 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes
 
 06/07/2026  05:55 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -2925,18 +3131,21 @@
 06/07/2026  05:55 PM    <DIR>          win-x86
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\unix
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/07/2026  05:55 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\unix\lib
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\unix\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
@@ -2944,18 +3153,21 @@
 10/22/2021  07:51 PM           427,112 System.Drawing.Common.dll
                2 File(s)      1,986,296 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/07/2026  05:55 PM    <DIR>          lib
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win\lib
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net6.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
@@ -2967,54 +3179,63 @@
 10/22/2021  07:49 PM            43,112 System.Windows.Extensions.dll
                6 File(s)      2,319,024 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-arm
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-arm\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 08/11/2023  02:56 PM           381,984 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        381,984 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-arm64
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-arm64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 08/11/2023  02:56 PM           491,552 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        491,552 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-x64
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-x64\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 08/11/2023  02:56 PM           504,872 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        504,872 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-x86
 
 06/07/2026  05:55 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          native
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\runtimes\win-x86\native
 
 06/21/2026  02:11 PM    <DIR>          .
 06/07/2026  05:55 PM    <DIR>          ..
 08/11/2023  02:56 PM           414,248 Microsoft.Data.SqlClient.SNI.dll
                1 File(s)        414,248 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\TestFiles
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -3024,6 +3245,7 @@
 06/04/2026  06:14 PM            85,650 The Sentry 3 (2026).html
                4 File(s)        403,796 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\tr
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -3039,6 +3261,7 @@
 12/03/2024  11:18 AM            22,560 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        209,824 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\zh-Hans
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -3054,6 +3277,7 @@
 12/03/2024  11:18 AM            22,048 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
               10 File(s)        204,224 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\bin\Debug\net8.0\zh-Hant
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -3081,12 +3305,14 @@
 06/21/2026  02:11 PM            10,962 project.nuget.cache
                5 File(s)        264,515 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\obj\Debug
 
 06/04/2026  04:21 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 06/04/2026  04:21 PM    <DIR>          ..
@@ -3109,12 +3335,14 @@
 06/21/2026  02:11 PM    <DIR>          refint
               15 File(s)        202,429 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM             7,168 ComicHoarder.Jobs.Tests.dll
                1 File(s)          7,168 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Tests\ComicHoarder.Jobs.Tests\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
@@ -3141,7 +3369,7 @@
  Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold
 
 05/13/2026  11:40 PM    <DIR>          .
-06/21/2026  11:56 PM    <DIR>          ..
+06/22/2026  12:08 AM    <DIR>          ..
 05/13/2026  11:15 PM    <DIR>          bin
 06/21/2026  12:48 PM    <DIR>          Context
 05/13/2026  11:34 PM    <DIR>          Models
@@ -3158,12 +3386,14 @@
 05/13/2026  11:15 PM    <DIR>          Release
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\bin\Debug
 
 05/13/2026  11:15 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\bin\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
@@ -3173,12 +3403,14 @@
 06/21/2026  02:11 PM               337 Utility.DBScaffold.runtimeconfig.json
                4 File(s)        129,160 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\bin\Release
 
 05/13/2026  11:15 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
 05/13/2026  11:15 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\bin\Release\net8.0
 
 05/13/2026  11:15 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
@@ -3226,12 +3458,14 @@
 05/13/2026  11:19 PM             1,595 Utility.DBScaffold.csproj.nuget.g.targets
                5 File(s)        261,161 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Debug
 
 05/13/2026  11:15 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Debug\net8.0
 
 06/21/2026  02:11 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
@@ -3253,24 +3487,28 @@
 06/21/2026  02:11 PM               159 Utility.DBScaffold.sourcelink.json
               14 File(s)        153,040 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Debug\net8.0\ref
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM            19,968 Utility.DBScaffold.dll
                1 File(s)         19,968 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Debug\net8.0\refint
 
 06/21/2026  02:11 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 06/21/2026  02:11 PM            19,968 Utility.DBScaffold.dll
                1 File(s)         19,968 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Release
 
 05/13/2026  11:15 PM    <DIR>          .
 06/21/2026  02:11 PM    <DIR>          ..
 05/13/2026  11:20 PM    <DIR>          net8.0
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Release\net8.0
 
 05/13/2026  11:20 PM    <DIR>          .
 05/13/2026  11:15 PM    <DIR>          ..
@@ -3285,11 +3523,13 @@
 05/13/2026  11:15 PM               295 Utility.DBScaffold.GlobalUsings.g.cs
                7 File(s)         87,612 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Release\net8.0\ref
 
 05/13/2026  11:15 PM    <DIR>          .
 05/13/2026  11:20 PM    <DIR>          ..
                0 File(s)              0 bytes
 
+ Directory of D:\Projects\ComicHoarder\src\Utility.DBScaffold\obj\Release\net8.0\refint
 
 05/13/2026  11:15 PM    <DIR>          .
 05/13/2026  11:20 PM    <DIR>          ..
@@ -3297,4 +3537,4 @@
 
      Total Files Listed:
             1152 File(s)    262,198,730 bytes
-            1018 Dir(s)  409,926,336,512 bytes free
+            1018 Dir(s)  409,926,045,696 bytes free
