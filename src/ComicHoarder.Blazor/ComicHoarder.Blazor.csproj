@@ -11,6 +11,7 @@
     <ProjectReference Include="..\ComicHoarder.Domain\ComicHoarder.Domain.csproj" />
     <ProjectReference Include="..\ComicHoarder.Infrastructure.ComicVine\ComicHoarder.Infrastructure.ComicVine.csproj" />
     <ProjectReference Include="..\ComicHoarder.Infrastructure\ComicHoarder.Infrastructure.csproj" />
+    <ProjectReference Include="..\ComicHoarder.Shared\ComicHoarder.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

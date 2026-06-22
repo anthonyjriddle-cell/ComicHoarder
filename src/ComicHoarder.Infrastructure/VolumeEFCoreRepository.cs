@@ -9,16 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using ComicHoarder.Domain.Models;
 using ComicHoarder.Infrastructure.Mappers;
+using Microsoft.Extensions.Logging;
+using ComicHoarder.Infrastructure.Logging;
 
 namespace ComicHoarder.Infrastructure
 {
     public class VolumeEFCoreRepository : IVolumeRepository
     {
         private readonly IDbContextFactory<CHContext> contextFactory;
+        private readonly ILogger<IssueEFCoreRepository> logger;
 
-        public VolumeEFCoreRepository(IDbContextFactory<CHContext> contextFactory)
+        public VolumeEFCoreRepository(IDbContextFactory<CHContext> contextFactory, ILogger<IssueEFCoreRepository> logger)
         {
             this.contextFactory = contextFactory;
+            this.logger = logger;
         }
 
         public async Task AddVolumeAsync(ComicHoarder.Domain.Models.Volume volume)
@@ -112,6 +116,8 @@ namespace ComicHoarder.Infrastructure
                 vol.Description = volume.Description;
                 vol.DateLastUpdated = volume.DateLastUpdated;
                 vol.Enabled = volume.Enabled;
+
+                EntityChangeLogger.LogChanges(db.Entry(vol), "Volume", logger);
 
                 await db.SaveChangesAsync();
             }

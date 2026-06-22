@@ -9,16 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using ComicHoarder.Domain.Models;
 using ComicHoarder.Infrastructure.Mappers;
+using ComicHoarder.Infrastructure.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace ComicHoarder.Infrastructure
 {
     public class PublisherEFCoreRepository : IPublisherRepository
     {
         private readonly IDbContextFactory<CHContext> contextFactory;
+        private readonly ILogger<IssueEFCoreRepository> logger;
 
-        public PublisherEFCoreRepository(IDbContextFactory<CHContext> contextFactory)
+        public PublisherEFCoreRepository(IDbContextFactory<CHContext> contextFactory, ILogger<IssueEFCoreRepository> logger)
         {
             this.contextFactory = contextFactory;
+            this.logger = logger;
         }
 
         public async Task AddPublisherAsync(ComicHoarder.Domain.Models.Publisher publisher)
@@ -99,6 +103,8 @@ namespace ComicHoarder.Infrastructure
                 pub.Description = publisher.Description;
                 pub.DateLastUpdated = publisher.DateLastUpdated;
                 pub.Enabled = publisher.Enabled;
+
+                EntityChangeLogger.LogChanges(db.Entry(pub), "Publisher", logger);
 
                 await db.SaveChangesAsync();
             }

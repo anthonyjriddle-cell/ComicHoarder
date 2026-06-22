@@ -3,16 +3,22 @@ using ComicHoarder.Infrastructure.Mappers;
 using ComicHoarder.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using ComicHoarder.Application.Interfaces;
+using Microsoft.Extensions.Logging;
+using ComicHoarder.Infrastructure.Logging;
 
 namespace ComicHoarder.Infrastructure
 {
     public class IssueEFCoreRepository : IIssueRepository
     {
         private readonly IDbContextFactory<CHContext> contextFactory;
+        private readonly ILogger<IssueEFCoreRepository> logger;
 
-        public IssueEFCoreRepository(IDbContextFactory<CHContext> contextFactory)
+        public IssueEFCoreRepository(
+            IDbContextFactory<CHContext> contextFactory,
+            ILogger<IssueEFCoreRepository> logger)
         {
             this.contextFactory = contextFactory;
+            this.logger = logger;
         }
 
         public async Task AddIssueAsync(Issue issue)
@@ -123,6 +129,8 @@ namespace ComicHoarder.Infrastructure
                 entity.DateAdded = issue.DateAdded;
                 entity.CoverDate = issue.CoverDate;
                 entity.DateLastUpdated = issue.DateLastUpdated;
+
+                EntityChangeLogger.LogChanges(db.Entry(entity), "Issue", logger);
 
                 await db.SaveChangesAsync();
             }

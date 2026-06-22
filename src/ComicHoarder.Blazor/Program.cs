@@ -15,6 +15,9 @@ using ComicHoarder.Application.UseCases.Statistics;
 using Radzen;
 using Radzen.Blazor;
 using ComicHoarder.Infrastructure.ComicVine;
+using ComicHoarder.Shared;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace ComicHoarder.Blazor
 {
@@ -23,6 +26,14 @@ namespace ComicHoarder.Blazor
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Logging.ClearProviders();
+            var loggerFactory = LoggingSetup.CreateLoggerFactory(
+                builder.Configuration,
+                "ComicHoarder.Blazor"
+            );
+
+            builder.Services.AddSingleton<ILoggerFactory>(loggerFactory);
 
             builder.Services.AddInfrastructure(
                 builder.Configuration.GetConnectionString("DefaultConnection"));

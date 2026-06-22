@@ -11,7 +11,7 @@ namespace ComicHoarder.Shared
     {
         public static ILoggerFactory CreateLoggerFactory(IConfiguration configuration, string appName)
         {
-            var connectionString = configuration["Logging:ConnectionString"] ?? string.Empty;
+            var connectionString = configuration["ConnectionStrings:ComicHoarderConnectionString"] ?? string.Empty;
             var tableName = configuration["Logging:TableName"] ?? "Logs";
             var schemaName = configuration["Logging:SchemaName"] ?? "logs";
 
@@ -31,6 +31,9 @@ namespace ComicHoarder.Shared
 
             var serilogLogger = new LoggerConfiguration()
                 .MinimumLevel.Verbose()
+                .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft.AspNetCore", Serilog.Events.LogEventLevel.Warning)
+                .MinimumLevel.Override("System", Serilog.Events.LogEventLevel.Warning)
                 .Enrich.WithProperty("Logger", appName)
                 .WriteTo.Console(outputTemplate: "{Timestamp:HH:mm:ss.ff} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
                 .WriteTo.MSSqlServer(
