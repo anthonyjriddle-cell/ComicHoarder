@@ -64,6 +64,7 @@ namespace ComicHoarder.Blazor
             builder.Services.AddTransient<IViewIssueByIdUseCase, ViewIssueByIdUseCase>();
             builder.Services.AddTransient<IEditIssueUseCase, EditIssueUseCase>();
             builder.Services.AddTransient<IDeleteIssueUseCase, DeleteIssueUseCase>();
+            builder.Services.AddTransient<IGetAllIssueFormatsUseCase, GetAllIssueFormatsUseCase>();
 
             builder.Services.AddTransient<ISearchMissingComicVineIssuesByVolumeUseCase, SearchMissingComicVineIssuesByVolumeUseCase>();
             builder.Services.AddTransient<ISearchComicVinePublisherUseCase, SearchComicVinePublisherUseCase>();

@@ -18,6 +18,7 @@ public static class DependencyInjection
         services.AddScoped<IVolumeRepository, VolumeEFCoreRepository>();
         services.AddScoped<IIssueRepository, IssueEFCoreRepository>();
         services.AddScoped<IComicIssuesToCollectCountByPublisherEFCoreRepository, ComicIssuesToCollectCountByPublisherEFCoreRepository>();
+        services.AddScoped<IIssueFormatRepository, IssueFormatEFCoreRepository>();
         //services.AddScoped<IIssueRepository, IssueRepository>();
         // Add more repositories here...
 

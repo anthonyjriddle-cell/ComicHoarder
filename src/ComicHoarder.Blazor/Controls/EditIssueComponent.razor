@@ -1,5 +1,5 @@
-﻿@inject IEditIssueUseCase EditIssueUseCase
-@inject NavigationManager NavigationManager
+﻿@inject NavigationManager NavigationManager
+
 
 <h3>Edit Issue</h3>
 <br />
@@ -55,10 +55,15 @@
             <ValidationMessage For="() => Issue.Enabled"></ValidationMessage>
         </div>
 
-        <div class="form-group">
+@*         <div class="form-group">
             <label for="formatId">Format ID</label>
             <InputNumber id="formatId" @bind-Value="Issue.FormatId" class="form-control"></InputNumber>
             <ValidationMessage For="() => Issue.FormatId"></ValidationMessage>
+        </div> *@
+
+        <div class="form-group">
+            <label for="formatId">Format</label>
+            <IssueFormatDropdownComponent @bind-SelectedFormatId="Issue.FormatId" />
         </div>
 
         <div class="form-group">
@@ -96,15 +101,11 @@
     [Parameter]
     public Issue? Issue { get; set; }
 
-    [SupplyParameterFromForm]
-    public Issue? outIssue { get; set; }
-
     [Parameter]
     public EventCallback<Issue?> OnUpdate { get; set; }
 
     private void Update()
     {
-        outIssue = Issue;
-        OnUpdate.InvokeAsync(outIssue);
+        OnUpdate.InvokeAsync(Issue);
     }
 }

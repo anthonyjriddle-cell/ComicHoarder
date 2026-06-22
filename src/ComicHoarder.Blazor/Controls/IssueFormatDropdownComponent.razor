@@ -1,0 +1,47 @@
+﻿@inject IGetAllIssueFormatsUseCase GetAllIssueFormatsUseCase
+
+@if (IssueFormats != null)
+{
+    <select id="@Id" class="@CssClass" value="@SelectedFormatId" @onchange="HandleChange">
+        <option value=""></option>
+        @foreach (var format in VisibleFormats)
+        {
+            <option value="@format.Id" selected="@(format.Id == SelectedFormatId)">@format.Name</option>
+        }
+    </select>
+}
+
+@code {
+    [Parameter]
+    public int? SelectedFormatId { get; set; }
+
+    [Parameter]
+    public EventCallback<int?> SelectedFormatIdChanged { get; set; }
+
+    [Parameter]
+    public string? Id { get; set; } = "formatId";
+
+    [Parameter]
+    public string? CssClass { get; set; } = "form-select";
+
+    private IEnumerable<IssueFormat>? IssueFormats { get; set; }
+
+    private IEnumerable<IssueFormat> VisibleFormats =>
+        IssueFormats!.Where(f => f.Enabled || f.Id == SelectedFormatId);
+
+    protected override async Task OnInitializedAsync()
+    {
+        IssueFormats = await GetAllIssueFormatsUseCase.ExecuteAsync();
+    }
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        var value = e.Value?.ToString();
+
+        SelectedFormatId = string.IsNullOrEmpty(value)
+            ? null
+            : int.Parse(value);
+
+        await SelectedFormatIdChanged.InvokeAsync(SelectedFormatId);
+    }
+}

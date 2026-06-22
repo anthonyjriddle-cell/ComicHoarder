@@ -9,7 +9,7 @@ public partial class IssueFormatEntity
 
     public string? Name { get; set; }
 
-    public bool? Enabled { get; set; }
+    public bool Enabled { get; set; }
 
     public virtual ICollection<IssueEntity> Issues { get; set; } = new List<IssueEntity>();
 }
