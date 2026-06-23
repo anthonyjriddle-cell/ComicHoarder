@@ -1,100 +1,217 @@
 ﻿@inject NavigationManager NavigationManager
 
-
-<h3>Edit Issue</h3>
-<br />
-
-@if (this.Issue != null)
+@if (Issue != null)
 {
-    <EditForm Model="Issue" OnValidSubmit="Update">
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-        <ValidationSummary></ValidationSummary>
-
-        <div class="form-group">
-            <label for="name">Issue Name</label>
-            <InputText id="name" @bind-Value="Issue.Name" class="form-control"></InputText>
-            <ValidationMessage For="() => Issue.Name"></ValidationMessage>
-        </div>
-        <div class="form-group">
-            <label for="id">Issue Id</label>
-            <input id="id" Value="@Issue.Id.ToString()" class="form-control" disabled>
-        </div>
-        <div class="form-group">
-            <label for="issueNumber">Issue Number</label>
-            <InputNumber id="issueNumber" @bind-Value="Issue.IssueNumber" class="form-control"></InputNumber>
-            <ValidationMessage For="() => Issue.IssueNumber"></ValidationMessage>
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h3 class="mb-0">Edit Issue</h3>
         </div>
 
-        <div class="form-group">
-            <label for="suffix">Issue Number Suffix</label>
-            <InputText id="suffix" @bind-Value="Issue.IssueNumberSuffix" class="form-control"></InputText>
-            <ValidationMessage For="() => Issue.IssueNumberSuffix"></ValidationMessage>
+        <div class="card-body">
+
+            <EditForm Model="Issue" OnValidSubmit="Update">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="mb-3" />
+
+                <div class="row g-3">
+
+                    <!-- ================= LEFT: COMIC COVER ================= -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex justify-content-center">
+                            <div class="border rounded d-flex align-items-center justify-content-center text-muted"
+                                 style="width:210px; height:320px;">
+                                Comic Cover
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= RIGHT: FORM ================= -->
+                    <div class="col-md-9">
+
+                        <div class="row g-3">
+
+                            <!-- Issue Name -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Issue Name</label>
+
+                                <InputText @bind-Value="Issue.Name"
+                                           class="form-control" />
+
+                                <ValidationMessage For="() => Issue.Name" />
+                            </div>
+
+                            <!-- Issue Id -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Issue Id</label>
+
+                                <input value="@Issue.Id"
+                                       class="form-control"
+                                       disabled />
+                            </div>
+
+                            <!-- Issue Number -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Issue Number</label>
+
+                                <InputNumber @bind-Value="Issue.IssueNumber"
+                                             class="form-control" />
+
+                                <ValidationMessage For="() => Issue.IssueNumber" />
+                            </div>
+
+                            <!-- Issue Number Suffix -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Issue Number Suffix</label>
+
+                                <InputText @bind-Value="Issue.IssueNumberSuffix"
+                                           class="form-control" />
+
+                                <ValidationMessage For="() => Issue.IssueNumberSuffix" />
+                            </div>
+
+                            <!-- Format -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Format</label>
+
+                                <IssueFormatDropdownComponent @bind-SelectedFormatId="Issue.FormatId" />
+                            </div>
+
+                            <!-- Publish Month -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Publish Month</label>
+
+                                <InputNumber @bind-Value="Issue.PublishMonth"
+                                             class="form-control" />
+
+                                <ValidationMessage For="() => Issue.PublishMonth" />
+                            </div>
+
+                            <!-- Publish Year -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Publish Year</label>
+
+                                <InputNumber @bind-Value="Issue.PublishYear"
+                                             class="form-control" />
+
+                                <ValidationMessage For="() => Issue.PublishYear" />
+                            </div>
+
+                            <!-- Cover Date -->
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">Cover Date</label>
+
+                                <InputDate Type="InputDateType.DateTimeLocal"
+                                           @bind-Value="Issue.CoverDate"
+                                           class="form-control" />
+
+                                <ValidationMessage For="() => Issue.CoverDate" />
+                            </div>
+
+                            <!-- Date Added -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Date Added</label>
+
+                                <input value="@Issue.DateAdded?.ToString("g")" class="form-control" disabled />
+
+                                <ValidationMessage For="() => Issue.DateAdded" />
+                            </div>
+
+                            <!-- Date Last Updated -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Date Last Updated</label>
+
+                                <input value="@Issue.DateLastUpdated?.ToString("g")" class="form-control" disabled />
+
+                                <ValidationMessage For="() => Issue.DateLastUpdated" />
+                            </div>
+
+                            <!-- Collected, Enabled, Reprint -->
+                            <div class="col-12 d-flex gap-4">
+
+                                <div class="form-check">
+                                    <InputCheckbox id="collected"
+                                                   @bind-Value="Issue.Collected"
+                                                   class="form-check-input" />
+
+                                    <label class="form-check-label" for="collected">
+                                        Collected
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <InputCheckbox id="enabled"
+                                                   @bind-Value="Issue.Enabled"
+                                                   class="form-check-input" />
+
+                                    <label class="form-check-label" for="enabled">
+                                        Enabled
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <InputCheckbox id="reprint"
+                                                   @bind-Value="Issue.Reprint"
+                                                   class="form-check-input" />
+
+                                    <label class="form-check-label" for="reprint">
+                                        Reprint
+                                    </label>
+                                </div>
+
+                            </div>
+                            <ValidationMessage For="() => Issue.Collected" />
+                            <ValidationMessage For="() => Issue.Enabled" />
+                            <ValidationMessage For="() => Issue.Reprint" />
+
+                        </div>
+                    </div>
+
+                    <!-- ================= ACTION BUTTONS (FULL WIDTH ROW) ================= -->
+                    <div class="col-12 mt-3">
+                        <div class="d-flex gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Update
+                            </button>
+
+                            <a href="/Issues/@Issue.VolumeId"
+                               class="btn btn-primary">
+                                Cancel
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ================= COMICVINE CARD ================= -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                ComicVine
+                            </div>
+
+                            <div class="card-body">
+
+                                <p class="text-muted mb-3">
+                                    ComicVine metadata integration and synchronization.
+                                </p>
+
+                                <button type="button"
+                                        class="btn btn-success">
+                                    Fetch ComicVine Data
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </EditForm>
+
         </div>
-
-        <div class="form-group">
-            <label for="publishMonth">Publish Month</label>
-            <InputNumber id="publishMonth" @bind-Value="Issue.PublishMonth" class="form-control"></InputNumber>
-            <ValidationMessage For="() => Issue.PublishMonth"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="publishYear">Publish Year</label>
-            <InputNumber id="publishYear" @bind-Value="Issue.PublishYear" class="form-control"></InputNumber>
-            <ValidationMessage For="() => Issue.PublishYear"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="collected">Collected</label>
-            <InputCheckbox id="collected" @bind-Value="Issue.Collected" class="darker-border-checkbox form-check-input"></InputCheckbox>
-            <ValidationMessage For="() => Issue.Collected"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="enabled">Enabled</label>
-            <InputCheckbox id="enabled" @bind-Value="Issue.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
-            <ValidationMessage For="() => Issue.Enabled"></ValidationMessage>
-        </div>
-
-@*         <div class="form-group">
-            <label for="formatId">Format ID</label>
-            <InputNumber id="formatId" @bind-Value="Issue.FormatId" class="form-control"></InputNumber>
-            <ValidationMessage For="() => Issue.FormatId"></ValidationMessage>
-        </div> *@
-
-        <div class="form-group">
-            <label for="formatId">Format</label>
-            <IssueFormatDropdownComponent @bind-SelectedFormatId="Issue.FormatId" />
-        </div>
-
-        <div class="form-group">
-            <label for="reprint">Reprint</label>
-            <InputCheckbox id="reprint" @bind-Value="Issue.Reprint" class="darker-border-checkbox form-check-input"></InputCheckbox>
-            <ValidationMessage For="() => Issue.Reprint"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="coverDate">Cover Date</label>
-            <InputDate Type="InputDateType.DateTimeLocal" id="coverDate" @bind-Value="Issue.CoverDate" class="form-control"></InputDate>
-            <ValidationMessage For="() => Issue.CoverDate"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="dateAdded">Date Added</label>
-            <InputDate Type="InputDateType.DateTimeLocal" id="dateAdded" @bind-Value="Issue.DateAdded" class="form-control"></InputDate>
-            <ValidationMessage For="() => Issue.DateAdded"></ValidationMessage>
-        </div>
-
-        <div class="form-group">
-            <label for="dateLastUpdated">Date Last Updated</label>
-            <InputDate Type="InputDateType.DateTimeLocal" id="dateLastUpdated" @bind-Value="Issue.DateLastUpdated" class="form-control"></InputDate>
-            <ValidationMessage For="() => Issue.DateLastUpdated"></ValidationMessage>
-        </div>
-
-        <br />
-        <button type="submit" class="btn btn-primary">Update</button>
-        &nbsp;
-        <a href="/Issues/@Issue.VolumeId" class="btn btn-primary">Cancel</a>
-    </EditForm>
+    </div>
 }
 
 @code {

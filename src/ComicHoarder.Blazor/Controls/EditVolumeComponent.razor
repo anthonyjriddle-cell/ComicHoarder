@@ -1,64 +1,162 @@
 ﻿@inject IEditVolumeUseCase EditVolumeUseCase
 @inject NavigationManager NavigationManager
 
-<h3>Edit Volume</h3>
-<br />
-@if (this.Volume != null)
+@if (Volume != null)
 {
-    <EditForm Model="Volume" OnValidSubmit="Update">
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-        <ValidationSummary></ValidationSummary>
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h3 class="mb-0">Edit Volume</h3>
+        </div>
 
-        <div class="form-group">
-            <label for="name">Volume Name</label>
-            <InputText id="name" @bind-Value="Volume.Name" class="form-control"></InputText>
-            <ValidationMessage For="() => Volume.Name"></ValidationMessage>
+        <div class="card-body">
+
+            <EditForm Model="Volume" OnValidSubmit="Update">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="mb-3" />
+
+                <div class="row g-3">
+
+                    <!-- ================= LEFT: COMIC COVER ================= -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex justify-content-center">
+                            <div class="border rounded d-flex align-items-center justify-content-center text-muted"
+                                 style="width:210px; height:320px;">
+                                Comic Cover
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= RIGHT: FORM ================= -->
+                    <div class="col-md-9">
+
+                        <div class="row g-3">
+
+                            <!-- Volume Name -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Volume Name</label>
+
+                                <InputText @bind-Value="Volume.Name"
+                                           class="form-control" />
+
+                                <ValidationMessage For="() => Volume.Name" />
+                            </div>
+
+                            <!-- Date Last Updated -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Date Last Updated</label>
+
+                                <input value="@Volume.DateLastUpdated?.ToString("g")" class="form-control" disabled />
+
+                                <ValidationMessage For="() => Volume.DateLastUpdated" />
+                            </div>
+
+                            <!-- Volume Id -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Volume Id</label>
+
+                                <input value="@Volume.Id"
+                                       class="form-control"
+                                       disabled />
+                            </div>
+
+                            <!-- Collectable + Enabled -->
+                            <div class="col-md-6 d-flex align-items-end gap-4">
+
+                                <div class="form-check">
+                                    <InputCheckbox id="collectable"
+                                                   @bind-Value="Volume.Collectable"
+                                                   class="form-check-input" />
+
+                                    <label class="form-check-label" for="collectable">
+                                        Collectable
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <InputCheckbox id="enabled"
+                                                   @bind-Value="Volume.Enabled"
+                                                   class="form-check-input" />
+
+                                    <label class="form-check-label" for="enabled">
+                                        Enabled
+                                    </label>
+                                </div>
+
+                            </div>
+                            <ValidationMessage For="() => Volume.Collectable" />
+                            <ValidationMessage For="() => Volume.Enabled" />
+
+                            <!-- Description -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Description</label>
+
+                                <InputTextArea @bind-Value="Volume.Description"
+                                               rows="6"
+                                               class="form-control" />
+
+                                <ValidationMessage For="() => Volume.Description" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ================= ACTION BUTTONS (FULL WIDTH ROW) ================= -->
+                    <div class="col-12 mt-3">
+                        <div class="d-flex gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Update
+                            </button>
+
+                            <a href="/Volumes/@Volume.PublisherId"
+                               class="btn btn-primary">
+                                Cancel
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ================= COMICVINE CARD ================= -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                ComicVine
+                            </div>
+
+                            <div class="card-body">
+
+                                <p class="text-muted mb-3">
+                                    ComicVine metadata integration and synchronization.
+                                </p>
+
+                                <button type="button"
+                                        class="btn btn-success">
+                                    Fetch ComicVine Data
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </EditForm>
+
         </div>
-        <div class="form-group">
-            <label for="id">Volume Id</label>
-            <input id="id" Value="@Volume.Id.ToString()" class="form-control" disabled>
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <InputText id="description" @bind-Value="Volume.Description" class="form-control"></InputText>
-            <ValidationMessage For="() => Volume.Description"></ValidationMessage>
-        </div>
-        <div class="form-group">
-            <label for="collectable">Collectable</label>
-            <InputCheckbox id="collectable" @bind-Value="Volume.Collectable" class="darker-border-checkbox form-check-input"></InputCheckbox>
-            <validationmessage for="() => Volume.collectable"></validationmessage>
-        </div>
-        <div class="form-group">
-            <label for="enabled">Enabled</label>
-            <InputCheckbox id="enabled" @bind-Value="Volume.Enabled" class="darker-border-checkbox form-check-input"></InputCheckbox>
-            <validationmessage for="() => Volume.enabled"></validationmessage>
-        </div>
-        <div class="form-group">
-            <label for="datelastupdated">Date Last Updated</label>
-            <InputDate Type="InputDateType.DateTimeLocal" id="datelastupdated" @bind-Value="Volume.DateLastUpdated" class="form-control"></InputDate>
-            <ValidationMessage For="() => Volume.DateLastUpdated"></ValidationMessage>
-        </div>
-        <br />
-        <button type="submit" class="btn btn-primary">Update</button>
-        &nbsp;
-        <a href="/Volumes/@Volume.PublisherId" class="btn btn-primary">Cancel</a>
-    </EditForm>
+    </div>
 }
 
 @code {
     [Parameter]
     public Volume? Volume { get; set; }
 
-    [SupplyParameterFromForm]
-    public Volume? outVolume { get; set; }
-
     [Parameter]
     public EventCallback<Volume?> OnUpdate { get; set; }
 
     private void Update()
     {
-        outVolume = Volume;
-        OnUpdate.InvokeAsync(outVolume);
+        OnUpdate.InvokeAsync(Volume);
     }
-
 }

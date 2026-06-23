@@ -20,7 +20,7 @@ namespace ComicHoarder.Infrastructure.Logging
                 var newValue = prop.CurrentValue;
 
                 logger.LogInformation(
-                    $"{entityName}.{field} changed from {Format(oldValue)} to {Format(newValue)}"
+                    $"{entityName}.{field} changed | {Format(oldValue)} | {Format(newValue)}"
                 );
             }
         }
