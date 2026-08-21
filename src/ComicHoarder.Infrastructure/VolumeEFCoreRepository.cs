@@ -115,6 +115,7 @@ namespace ComicHoarder.Infrastructure
                 vol.Name = volume.Name;
                 vol.Description = volume.Description;
                 vol.DateLastUpdated = volume.DateLastUpdated;
+                vol.Collectable = volume.Collectable;
                 vol.Enabled = volume.Enabled;
 
                 EntityChangeLogger.LogChanges(db.Entry(vol), "Volume", logger);

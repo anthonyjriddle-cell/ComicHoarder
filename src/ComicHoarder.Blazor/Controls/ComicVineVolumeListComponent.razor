@@ -55,6 +55,10 @@ else
 
     private async Task HandleAddVolume(Volume volume)
     {
+        volume.PublisherId = PublisherId;
+        volume.DateAdded = DateTime.Now;
+        volume.Enabled = true;
+        volume.Collectable = true;
         await AddVolumeUseCase.ExecuteAsync(volume);
         Volumes?.Remove(volume);
         await InvokeAsync(StateHasChanged);

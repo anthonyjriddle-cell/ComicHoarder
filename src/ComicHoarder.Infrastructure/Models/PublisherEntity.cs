@@ -14,6 +14,7 @@ public partial class PublisherEntity
     public bool Enabled { get; set; }
 
     public DateTime? DateLastUpdated { get; set; }
+    public string? ImageLink { get; set; }
 
     public virtual ICollection<EventEntity> Events { get; set; } = new List<EventEntity>();
 

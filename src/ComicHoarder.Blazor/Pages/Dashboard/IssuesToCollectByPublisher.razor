@@ -1,0 +1,30 @@
+﻿@page "/IssuesToCollectByPublisher/{publisherId:int}"
+
+@using ComicHoarder.Domain.Models
+@using ComicHoarder.Application.UseCases.Dashboard.Interfaces
+@inject IGetComicIssuesToCollectWithLinkUseCase IssuesToCollectUseCase
+
+<h3>Publisher Collection Dashboard</h3>
+
+@if (issues == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="dashboard-cell">
+        <IssueToCollectListComponent Issues="issues.ToList()" />
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int publisherId { get; set; }
+
+    private IEnumerable<ComicIssuesToCollectWithLink> issues;
+
+    protected override async Task OnInitializedAsync()
+    {
+        issues = await IssuesToCollectUseCase.ExecuteAsync(publisherId);
+    }
+}

@@ -13,5 +13,6 @@ namespace ComicHoarder.Domain.Models
         public string? Description { get; set; }
         public bool Enabled { get; set; }
         public DateTime? DateLastUpdated { get; set; }
+        public string? ImageLink { get; set; }
     }
 }

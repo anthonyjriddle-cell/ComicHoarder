@@ -21,7 +21,8 @@ namespace ComicHoarder.Infrastructure.Mappers
                 Name = data.Name,
                 Description = data.Description,
                 Enabled = data.Enabled,
-                DateLastUpdated = data.DateLastUpdated
+                DateLastUpdated = data.DateLastUpdated,
+                ImageLink = data.ImageLink
             };
         }
 
@@ -36,7 +37,8 @@ namespace ComicHoarder.Infrastructure.Mappers
                 Name = domain.Name,
                 Description = domain.Description,
                 Enabled = domain.Enabled,
-                DateLastUpdated = domain.DateLastUpdated
+                DateLastUpdated = domain.DateLastUpdated,
+                ImageLink = domain.ImageLink
             };
         }
     }

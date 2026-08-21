@@ -1,8 +1,8 @@
 ﻿using ComicHoarder.Application.Interfaces;
-using ComicHoarder.Application.UseCases.Statistics.Interfaces;
+using ComicHoarder.Application.UseCases.Dashboard.Interfaces;
 using ComicHoarder.Domain.Models;
 
-namespace ComicHoarder.Application.UseCases.Statistics
+namespace ComicHoarder.Application.UseCases.Dashboard
 {
     public class GetComicIssuesToCollectCountByPublisherUseCase
         : IGetComicIssuesToCollectCountByPublisherUseCase

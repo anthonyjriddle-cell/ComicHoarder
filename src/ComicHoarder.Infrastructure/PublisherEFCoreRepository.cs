@@ -35,6 +35,7 @@ namespace ComicHoarder.Infrastructure
             {
                 pub = new PublisherEntity
                 {
+                    Id = publisher.Id,
                     Name = publisher.Name,
                     Description = publisher.Description,
                     DateLastUpdated = publisher.DateLastUpdated,

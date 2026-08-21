@@ -1,0 +1,45 @@
+﻿
+@if (issues == null)
+{
+    <br />
+    <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+    </div>
+    <div class="">Loading...</div>
+}
+else
+{
+    <QuickGrid Items="issues.AsQueryable()" Pagination="pagination" class="table">
+        <PropertyColumn Property="i => i.IssueId" Sortable="true" />
+        <PropertyColumn Property="i => i.Volume" Sortable="true" />
+        <TemplateColumn Title="Issue #" SortBy="GridSort<ComicIssuesToCollectWithLink>.ByAscending(i => i.IssueNumber)">
+            @context.IssueNumber@context.IssueNumberSuffix
+        </TemplateColumn>
+        <TemplateColumn Title="Publish Date" SortBy="GridSort<ComicIssuesToCollectWithLink>.ByAscending(i => i.PublishYear).ThenAscending(i => i.PublishMonth)">
+            @context.PublishMonth/@context.PublishYear
+        </TemplateColumn>
+        <TemplateColumn Title="Volume" Sortable="true">
+            <a href="/editvolume/@context.VolumeId" target="_blank" rel="noopener noreferrer">Volume</a>
+        </TemplateColumn>
+        <TemplateColumn Title="ComicVine" Sortable="false">
+            <a href="https://comicvine.gamespot.com/issue/4000-@(context.IssueId)/" target="_blank" rel="noopener noreferrer">ComicVine</a>
+        </TemplateColumn>
+        <TemplateColumn Sortable="false" Class="narrow-col">
+            <a href="/editissue/@context.IssueId" class="btn btn-primary">Edit</a>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
+}
+
+
+@code {
+    [Parameter]
+    public string? SearchIssueFilter { get; set; }
+    [Parameter]
+    public int PublisherId { get; set; }
+    [Parameter]
+    public List<ComicIssuesToCollectWithLink>? issues { get; set; }
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 25 };
+
+}

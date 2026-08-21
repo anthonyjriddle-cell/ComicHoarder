@@ -32,8 +32,9 @@ namespace ComicHoarder.Infrastructure
             {
                 var entity = new IssueEntity
                 {
+                    Id = issue.Id,
                     VolumeId = issue.VolumeId,
-                    Name = issue.Name,
+                    Name = issue.Name ?? "",
                     IssueNumber = issue.IssueNumber,
                     PublishMonth = issue.PublishMonth,
                     PublishYear = issue.PublishYear,

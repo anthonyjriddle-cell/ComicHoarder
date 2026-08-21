@@ -4,7 +4,7 @@ using ComicHoarder.Infrastructure.Mappers;
 using ComicHoarder.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ComicHoarder.Infrastructure.Repositories.Statistics
+namespace ComicHoarder.Infrastructure.Repositories.Dashboard
 {
     public class ComicIssuesToCollectCountByPublisherEFCoreRepository : IComicIssuesToCollectCountByPublisherEFCoreRepository
 

@@ -55,6 +55,10 @@ else
 
     private async Task HandleAddIssue(Issue issue)
     {
+        issue.VolumeId = VolumeId;
+        issue.Collected = false;
+        issue.Enabled = true;
+        issue.DateLastUpdated = DateTime.Now;
         await AddIssueUseCase.ExecuteAsync(issue);
         Issues?.Remove(issue);
         await InvokeAsync(StateHasChanged);

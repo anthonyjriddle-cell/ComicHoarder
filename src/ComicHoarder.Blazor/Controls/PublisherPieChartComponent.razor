@@ -2,15 +2,16 @@
 @using Radzen.Blazor
 @using ComicHoarder.Domain.Models
 
+@inject NavigationManager NavigationManager
+
 <div class="publisher-chart-container">
     <RadzenStack Style="height:300px;width:300px;">
-        <RadzenChart>
+        <RadzenChart SeriesClick="@OnSeriesClick">
             <RadzenPieSeries Data="@ChartData"
-                             CategoryProperty="Category"
-                             ValueProperty="Value"
-                             Title="@Data.Publisher" />
+            CategoryProperty="Category"
+            ValueProperty="Value"
+            Title="@Data.Publisher"/>
             <RadzenSeriesDataLabels Visible="true" />
-
         </RadzenChart>
     </RadzenStack>
 
@@ -20,7 +21,8 @@
 </div>
 
 @code {
-    [Parameter] public ComicIssuesToCollectCountByPublisher Data { get; set; }
+    [Parameter] 
+    public ComicIssuesToCollectCountByPublisher Data { get; set; }
 
     public List<ChartSlice> ChartData { get; set; }
 
@@ -49,4 +51,9 @@
     }
 
     public record ChartSlice(string Category, int Value);
+
+    private void OnSeriesClick(SeriesClickEventArgs args)
+    {
+        NavigationManager.NavigateTo($"/IssuesToCollectByPublisher/{Data.Id}");
+    }
 }

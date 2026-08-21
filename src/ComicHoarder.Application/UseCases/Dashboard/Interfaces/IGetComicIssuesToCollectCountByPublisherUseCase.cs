@@ -1,6 +1,6 @@
 ﻿using ComicHoarder.Domain.Models;
 
-namespace ComicHoarder.Application.UseCases.Statistics.Interfaces
+namespace ComicHoarder.Application.UseCases.Dashboard.Interfaces
 {
     public interface IGetComicIssuesToCollectCountByPublisherUseCase
     {
