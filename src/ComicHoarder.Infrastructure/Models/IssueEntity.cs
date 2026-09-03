@@ -32,7 +32,7 @@ public partial class IssueEntity
     public DateTime? CoverDate { get; set; }
 
     public DateTime? DateLastUpdated { get; set; }
-
+    public string? ImageLink { get; set; }
     public virtual ICollection<CollectedIssueEntity> CollectedIssueChildren { get; set; } = new List<CollectedIssueEntity>();
 
     public virtual ICollection<CollectedIssueEntity> CollectedIssueParents { get; set; } = new List<CollectedIssueEntity>();

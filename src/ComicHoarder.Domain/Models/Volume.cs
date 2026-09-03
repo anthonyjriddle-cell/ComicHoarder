@@ -21,6 +21,7 @@ namespace ComicHoarder.Domain.Models
         public int StartYear { get; set; }
         public bool Enabled { get; set; }
         public bool Complete { get; set; }
+        public string? ImageLink { get; set; }
 
         public string DescriptionNoHtml
         {

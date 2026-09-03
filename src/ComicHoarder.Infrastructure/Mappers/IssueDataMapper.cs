@@ -26,7 +26,7 @@ namespace ComicHoarder.Infrastructure.Mappers
                 DateAdded = entity.DateAdded,
                 CoverDate = entity.CoverDate,
                 DateLastUpdated = entity.DateLastUpdated,
-
+                ImageLink = entity.ImageLink,
                 Summary = null
             };
         }
@@ -51,7 +51,8 @@ namespace ComicHoarder.Infrastructure.Mappers
                 Reprint = domain.Reprint,
                 DateAdded = domain.DateAdded,
                 CoverDate = domain.CoverDate,
-                DateLastUpdated = domain.DateLastUpdated
+                DateLastUpdated = domain.DateLastUpdated,
+                ImageLink = domain.ImageLink
             };
         }
     }

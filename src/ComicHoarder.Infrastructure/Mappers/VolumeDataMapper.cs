@@ -27,7 +27,8 @@ namespace ComicHoarder.Infrastructure.Mappers
                 DateAdded = data.DateAdded,
                 Collectable = data.Collectable,
                 Complete = data.Complete,
-                CountOfIssues = data.CountOfIssues
+                CountOfIssues = data.CountOfIssues,
+                ImageLink = data.ImageLink
             };
         }
 
@@ -48,7 +49,8 @@ namespace ComicHoarder.Infrastructure.Mappers
                 DateAdded = domain.DateAdded,
                 Collectable = domain.Collectable,
                 Complete = domain.Complete,
-                CountOfIssues = domain.CountOfIssues
+                CountOfIssues = domain.CountOfIssues,
+                ImageLink = domain.ImageLink
             };
         }
     }

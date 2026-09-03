@@ -17,6 +17,7 @@ public partial class VolumeEntity
     public bool Enabled { get; set; }
     public bool Complete { get; set; }
     public bool Digital { get; set; }
+    public string? ImageLink { get; set; }
     public virtual ICollection<IssueEntity> Issues { get; set; } = new List<IssueEntity>();
     public virtual PublisherEntity? Publisher { get; set; }
 }
