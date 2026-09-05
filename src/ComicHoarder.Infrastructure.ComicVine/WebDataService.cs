@@ -105,7 +105,7 @@ namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
 
         public List<Issue>? GetNewIssues(int offset = 0)
         {
-            var fieldList = new List<Enums.IssuesFields>() { Enums.IssuesFields.id, Enums.IssuesFields.name,Enums.IssuesFields.issue_number,Enums.IssuesFields.store_date, Enums.IssuesFields.name, Enums.IssuesFields.description, Enums.IssuesFields.deck, Enums.IssuesFields.date_added, Enums.IssuesFields.date_last_updated, Enums.IssuesFields.volume, Enums.IssuesFields.cover_date };
+            var fieldList = new List<Enums.IssuesFields>() { Enums.IssuesFields.id, Enums.IssuesFields.name,Enums.IssuesFields.issue_number,Enums.IssuesFields.store_date, Enums.IssuesFields.name, Enums.IssuesFields.description, Enums.IssuesFields.deck, Enums.IssuesFields.date_added, Enums.IssuesFields.date_last_updated, Enums.IssuesFields.volume, Enums.IssuesFields.cover_date, Enums.IssuesFields.image };
             var sort = new KeyValuePair<Enums.IssuesFields, Enums.SortDirection>(Enums.IssuesFields.date_added, Enums.SortDirection.desc);
             //TODO need filter and sort
             string ? url = urlBuilder.Issues(fieldList, null, offset, sort, null);
@@ -123,7 +123,7 @@ namespace ComicHoarder.Infrastructure.ComicVine.ComicVine
         public List<Publisher>? SearchPublishers(string PartialPublisherName)
         {
             
-            var fieldList = new List<Enums.PublishersFields>() { Enums.PublishersFields.id, Enums.PublishersFields.name, Enums.PublishersFields.description, Enums.PublishersFields.date_added, Enums.PublishersFields.date_last_updated, Enums.PublishersFields.deck };
+            var fieldList = new List<Enums.PublishersFields>() { Enums.PublishersFields.id, Enums.PublishersFields.name, Enums.PublishersFields.description, Enums.PublishersFields.date_added, Enums.PublishersFields.date_last_updated, Enums.PublishersFields.deck, Enums.PublishersFields.image };
 
             var filterList = new Dictionary<Enums.PublishersFields, string>();
             filterList.Add(Enums.PublishersFields.name, PartialPublisherName);

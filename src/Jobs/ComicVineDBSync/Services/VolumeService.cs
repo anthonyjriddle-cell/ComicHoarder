@@ -33,7 +33,7 @@ namespace ComicVineDBSync.Services
                 if (publisherId != 31)
                     continue;
 
-                var publisherName = _publisherRepository.GetPublisherByIdAsync(publisherId);
+                var publisherName = _publisherRepository.GetPublisherByIdAsync(publisherId).Result.Name;
                 _logger.LogInformation("Checking publisher {PublisherName} for updates", publisherName);
 
                 var volumes = _webDataService.GetVolumesFromPublisher(publisherId);

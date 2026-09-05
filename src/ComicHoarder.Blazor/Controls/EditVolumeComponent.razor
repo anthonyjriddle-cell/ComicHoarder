@@ -1,5 +1,6 @@
 ﻿@inject IEditVolumeUseCase EditVolumeUseCase
 @inject NavigationManager NavigationManager
+@inject IGetComicVineVolumeByIdUseCase GetComicVineVolumeByIdUseCase
 
 @if (Volume != null)
 {
@@ -20,7 +21,7 @@
                     <div class="col-md-3">
                         <div class="d-flex justify-content-center">
                             <div class="border rounded d-flex align-items-center justify-content-center text-muted"
-                                 style="width:210px; height:320px;">
+                            style="width:210px; height:320px;">
                                 <img src="@Volume.ImageLink" width="208" />
                             </div>
                         </div>
@@ -36,7 +37,7 @@
                                 <label class="form-label fw-semibold">Volume Name</label>
 
                                 <InputText @bind-Value="Volume.Name"
-                                           class="form-control" />
+                                class="form-control" />
 
                                 <ValidationMessage For="() => Volume.Name" />
                             </div>
@@ -55,8 +56,8 @@
                                 <label class="form-label fw-semibold">Volume Id</label>
 
                                 <input value="@Volume.Id"
-                                       class="form-control"
-                                       disabled />
+                                class="form-control"
+                                disabled />
                             </div>
 
                             <!-- Collectable + Enabled -->
@@ -64,8 +65,8 @@
 
                                 <div class="form-check">
                                     <InputCheckbox id="collectable"
-                                                   @bind-Value="Volume.Collectable"
-                                                   class="form-check-input" />
+                                    @bind-Value="Volume.Collectable"
+                                    class="form-check-input" />
 
                                     <label class="form-check-label" for="collectable">
                                         Collectable
@@ -74,8 +75,8 @@
 
                                 <div class="form-check">
                                     <InputCheckbox id="enabled"
-                                                   @bind-Value="Volume.Enabled"
-                                                   class="form-check-input" />
+                                    @bind-Value="Volume.Enabled"
+                                    class="form-check-input" />
 
                                     <label class="form-check-label" for="enabled">
                                         Enabled
@@ -83,6 +84,27 @@
                                 </div>
 
                             </div>
+
+                            <!-- Count of Issues -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Count of Issues</label>
+
+                                <InputNumber @bind-Value="Volume.CountOfIssues"
+                                           class="form-control" />
+
+                                <ValidationMessage For="() => Volume.CountOfIssues" />
+                            </div>
+
+                            <!-- Start Year -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Start Year</label>
+
+                                <InputNumber @bind-Value="Volume.StartYear"
+                                             class="form-control" />
+
+                                <ValidationMessage For="() => Volume.StartYear" />
+                            </div>
+
                             <ValidationMessage For="() => Volume.Collectable" />
                             <ValidationMessage For="() => Volume.Enabled" />
 
@@ -91,8 +113,8 @@
                                 <label class="form-label fw-semibold">Description</label>
 
                                 <InputTextArea @bind-Value="Volume.Description"
-                                               rows="6"
-                                               class="form-control" />
+                                rows="6"
+                                class="form-control" />
 
                                 <ValidationMessage For="() => Volume.Description" />
                             </div>
@@ -105,12 +127,12 @@
                         <div class="d-flex gap-2">
 
                             <button type="submit"
-                                    class="btn btn-primary">
+                            class="btn btn-primary">
                                 Update
                             </button>
 
                             <a href="/Volumes/@Volume.PublisherId"
-                               class="btn btn-primary">
+                            class="btn btn-primary">
                                 Cancel
                             </a>
 
@@ -131,9 +153,145 @@
                                 </p>
 
                                 <button type="button"
-                                        class="btn btn-success">
+                                @onclick="() => FetchComicVineData(Volume.Id)"
+                                class="btn btn-success">
                                     Fetch ComicVine Data
                                 </button>
+
+                                @if (isFetchingComicVineData)
+                                {
+                                    <br />
+                                    <br />
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                    <div class="">Loading from ComicVine...</div>
+                                }
+
+
+                                @if (showComicVineResults)
+                                {
+                                    <div class="card mt-3">
+                                        <div class="card-header">
+                                            ComicVine Data
+                                        </div>
+
+                                        <div class="card-body">
+
+                                            <div class="row g-3">
+
+                                                <!-- ================= LEFT: COMICVINE IMAGE ================= -->
+                                                <div class="col-md-3">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="border rounded d-flex align-items-center justify-content-center text-muted"
+                                                             style="width:210px; height:320px;">
+                                                            <img src="@ComicVineVolume.ImageLink" width="208" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ================= RIGHT: COMICVINE FORM ================= -->
+                                                <div class="col-md-9">
+
+                                                    <div class="row g-3">
+
+                                                        <!-- Name -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Volume Name</label>
+                                                            <div class="input-group">
+                                                                <input @bind="ComicVineVolume.Name" class="form-control" />
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.Name), ComicVineVolume.Name)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Date Last Updated -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Date Last Updated</label>
+                                                            <div class="input-group">
+                                                                <input type="datetime-local"
+                                                                       @bind="ComicVineVolume.DateLastUpdated"
+                                                                       class="form-control" disabled />
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.DateLastUpdated), ComicVineVolume.DateLastUpdated)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Image Link -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Image Link</label>
+                                                            <div class="input-group">
+                                                                <input @bind="ComicVineVolume.ImageLink" class="form-control" />
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.ImageLink), ComicVineVolume.ImageLink)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Volume Id (disabled, no copy) -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Volume Id</label>
+                                                            <input value="@ComicVineVolume.Id" class="form-control" disabled />
+                                                        </div>
+
+                                                        <!-- Count of Issues -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Count of Issues</label>
+                                                            <div class="input-group">
+                                                                <input type="number"
+                                                                       @bind="ComicVineVolume.CountOfIssues"
+                                                                       class="form-control" />
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.CountOfIssues), ComicVineVolume.CountOfIssues)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Start Year -->
+                                                        <div class="col-md-6">
+                                                            <label class="form-label fw-semibold">Start Year</label>
+                                                            <div class="input-group">
+                                                                <input type="number"
+                                                                       @bind="ComicVineVolume.StartYear"
+                                                                       class="form-control" />
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.StartYear), ComicVineVolume.StartYear)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Description -->
+                                                        <div class="col-12">
+                                                            <label class="form-label fw-semibold">Description</label>
+                                                            <div class="input-group">
+                                                                <textarea @bind="ComicVineVolume.Description" rows="6" class="form-control"></textarea>
+                                                                <button type="button"
+                                                                        class="btn btn-primary btn-sm"
+                                                                        @onclick="() => CopyField(nameof(Volume.Description), ComicVineVolume.Description)">
+                                                                    Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
 
                             </div>
                         </div>
@@ -150,11 +308,49 @@
     [Parameter]
     public Volume? Volume { get; set; }
 
+    public Volume? ComicVineVolume { get; set; }
+
+    private bool showComicVineResults = false;
+    private bool isFetchingComicVineData = false;
+
     [Parameter]
     public EventCallback<Volume?> OnUpdate { get; set; }
 
     private void Update()
     {
         OnUpdate.InvokeAsync(Volume);
+    }
+
+    private async Task FetchComicVineData(int volumeId)
+    {
+        isFetchingComicVineData = true;
+        showComicVineResults = false;
+
+        await InvokeAsync(StateHasChanged);
+
+        await Task.Delay(5000);
+        ComicVineVolume = await GetComicVineVolumeByIdUseCase.ExecuteAsync(volumeId);
+        isFetchingComicVineData = false;
+        showComicVineResults = true;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void CopyField(string fieldName, object? value)
+    {
+        if (Volume is null) return;
+
+        var property = typeof(Volume).GetProperty(fieldName);
+        if (property is null || !property.CanWrite) return;
+
+        // Handle nullable types (e.g. DateTime?) so the underlying type is used for conversion
+        var targetType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+
+        object? convertedValue = value is null
+            ? null
+            : Convert.ChangeType(value, targetType);
+
+        property.SetValue(Volume, convertedValue);
+
+        StateHasChanged();
     }
 }

@@ -1,5 +1,6 @@
 ﻿@inject ISearchMissingComicVineIssuesByVolumeUseCase SearchMissingComicVineIssuesByVolumeUseCase
 @inject IAddIssueUseCase AddIssueUseCase
+@inject IGetComicVineIssueByIdUseCase GetComicVineIssueByIdUseCase
 @inject NavigationManager NavigationManager
 
 @if (Searching)
@@ -53,14 +54,15 @@ else
         await InvokeAsync(StateHasChanged);
     }
 
-    private async Task HandleAddIssue(Issue issue)
+    private async Task HandleAddIssue(Issue issueLite)
     {
-        issue.VolumeId = VolumeId;
-        issue.Collected = false;
-        issue.Enabled = true;
-        issue.DateLastUpdated = DateTime.Now;
-        await AddIssueUseCase.ExecuteAsync(issue);
-        Issues?.Remove(issue);
-        await InvokeAsync(StateHasChanged);
+        //get issue from comicvine so we collect all fields
+        var issue = GetComicVineIssueByIdUseCase.ExecuteAsync(issueLite.Id).Result;
+        if (issue != null)
+        {
+            await AddIssueUseCase.ExecuteAsync(issue);
+            Issues?.Remove(issueLite);
+            await InvokeAsync(StateHasChanged);
+        }
     }
 }

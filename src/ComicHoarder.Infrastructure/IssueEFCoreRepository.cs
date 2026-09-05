@@ -45,6 +45,7 @@ namespace ComicHoarder.Infrastructure
                     Reprint = issue.Reprint,
                     DateAdded = issue.DateAdded,
                     CoverDate = issue.CoverDate,
+                    ImageLink = issue.ImageLink,
                     DateLastUpdated = issue.DateLastUpdated
                 };
 

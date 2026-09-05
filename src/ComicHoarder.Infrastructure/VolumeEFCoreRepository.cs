@@ -46,6 +46,7 @@ namespace ComicHoarder.Infrastructure
                     CountOfIssues = volume.CountOfIssues,
                     StartYear = volume.StartYear,
                     Enabled = volume.Enabled,
+                    ImageLink = volume.ImageLink,
                     Complete = volume.Complete
                 };
 

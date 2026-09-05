@@ -52,6 +52,7 @@ namespace ComicHoarder.Infrastructure.ComicVine
                 Collected = false,
                 Enabled = true,
                 Summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
+                ImageLink = cvIssue.image?.original_url,
                 CoverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
                 DateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
                 DateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
@@ -102,6 +103,7 @@ namespace ComicHoarder.Infrastructure.ComicVine
                     Collected = false,
                     Enabled = true,
                     Summary = cvIssue.deck is not null ? cvIssue.ToString() : "",
+                    ImageLink = cvIssue.image?.original_url,
                     CoverDate = ParseHelper.ParseNullableDateTime(cvIssue.cover_date),
                     DateAdded = ParseHelper.ParseNullableDateTime(cvIssue.date_added),
                     DateLastUpdated = ParseHelper.ParseNullableDateTime(cvIssue.date_last_updated)
@@ -157,6 +159,7 @@ namespace ComicHoarder.Infrastructure.ComicVine
             volume.Collectable = true;
             volume.CountOfIssues = cvVolume.count_of_issues;
             volume.StartYear = ParseHelper.ParseInt(cvVolume.start_year);
+            volume.ImageLink = cvVolume?.image?.original_url;
             volume.Enabled = true;
             if (volume.DateLastUpdated > DateTime.Now.AddMonths(-13))
             {

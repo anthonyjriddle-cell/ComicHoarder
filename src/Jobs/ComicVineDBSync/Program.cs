@@ -46,6 +46,9 @@ namespace GetNewIssues
                 }
             }
 
+            CHContext db = new CHContext();
+            var key = db.Settings.Where(x => x.Name == "ComicVineKey").FirstOrDefault().Value;
+
             var services = new ServiceCollection();
 
             // Configuration
@@ -59,6 +62,13 @@ namespace GetNewIssues
             services.AddInfrastructure(connectionString);
 
             // Services
+            services.AddTransient<WebDataService>(x =>
+            {
+                return new WebDataService(key);
+            });
+            services.AddTransient<PublisherEFCoreRepository>();
+            services.AddTransient<VolumeEFCoreRepository>();
+            services.AddTransient<IssueEFCoreRepository>();
             services.AddTransient<VolumeService>();
             services.AddTransient<IssueService>();
             services.AddTransient<ComicVineDBSyncJob>();

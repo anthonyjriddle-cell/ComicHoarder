@@ -69,11 +69,10 @@ namespace ComicVineDBSync
                         _logger.LogInformation("Creating issue {VolumeName} number {IssueNumber} for publisher {PublisherName}", volume.Name, cvIssue.IssueNumber, publisher);
 
                         issues.Add(cvIssue);
-
-                        offset += 100;
-                        cvIssues = _webDataService.GetNewIssues(offset);
-                        Thread.Sleep(2000);
                     }
+                    offset += 100;
+                    cvIssues = _webDataService.GetNewIssues(offset);
+                    Thread.Sleep(2000);
                 }
 
                 issues = issues.OrderBy(x => x.DateAdded).ToList();
